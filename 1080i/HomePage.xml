@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="HomePage">
+ 
+  <control type="group" id="8888">
+    <visible>Container(300).HasFocus(1)</visible>
+ 
+    <control type="group" id="6061"> <!--MOVIES-->
+      <posx>0</posx>
+      <posy>50</posy>
+      <visible>[Control.HasFocus(6001) | Control.HasFocus(6002) | Control.HasFocus(6020)] | [IntegerGreaterThan(System.Time(ss),0) + !IntegerGreaterThan(System.Time(ss),20) + !Control.HasFocus(6003) + !Control.HasFocus(6004) + !Control.HasFocus(6040) + !Control.HasFocus(6005) + !Control.HasFocus(6006) + !Control.HasFocus(6060)]</visible>
+      <animation effect="fade" start="0" end="100" time="300">Visible</animation>
+      <animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+      <control type="multiimage">
+        <posy>-50</posy>
+        <include>Dimensions_Fullscreen</include>
+        <randomize>true</randomize>
+        <timeperimage>5000</timeperimage>
+        <fadetime>3000</fadetime>
+        <pauseatend>0</pauseatend>
+        <loop>true</loop>
+        <imagepath background="true" fallback="fallback/movies.jpg">$INFO[Skin.String(Home_Custom_Back_CustomHomeMovieFolder)]</imagepath>
+        <visible>Skin.HasSetting(Use_CustomHomeMovieFolder)</visible>
+        <colordiffuse>FanartDiffuse</colordiffuse>
+        <animation effect="fade" time="500">Hidden</animation>
+      </control>
+      <control type="image">
+        <posy>-50</posy>
+        <include>Dimensions_Fullscreen</include>
+        <texture background="true">fallback/movies.jpg</texture>
+        <colordiffuse>FanartDiffuse</colordiffuse>
+        <animation effect="fade" time="500">Hidden</animation>
+        <visible>!Skin.HasSetting(Use_CustomHomeMovieFolder)</visible>
+      </control>
+      <control type="label">
+          <posx>20</posx>
+          <posy>100</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>[B]$LOCALIZE[31006][/B]</label>
+          <font>F60</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+      </control>
+      <control type="label">
+          <posx>20</posx>
+          <posy>150</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>[B][COLOR Accent]$INFO[Window(Home).Property(Movies.Count)][/COLOR][/B] $LOCALIZE[20342]</label>
+          <font>FF30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+      </control>
+      <control type="group">  <!----------------------------------------------------------------------------------RECOMMENDED MOVIE-->
+          <visible>!Player.HasAudio</visible>
+          <control type="label">
+            <posx>850</posx>
+            <posy>100</posy>
+            <width>1000</width>
+            <height>50</height>
+            <label>$LOCALIZE[31048]</label>
+            <font>F60</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+          </control>
+          <control id="6001">
+              <type>button</type>
+              <label>RecommendedMovie.1</label>
+              <posx>60</posx>
+              <posy>288</posy>
+              <height>40</height>
+              <width>40</width>
+              <ondown>316</ondown>
+              <onleft>6002</onleft>
+              <onright>6020</onright>
+              <onclick>$INFO[Window(Home).Property(RecommendedMovie.1.Play)]</onclick>
+          </control>
+          <control type="image">
+              <posx>845</posx>
+              <posy>155</posy>
+              <width>310</width>
+              <height>210</height>
+              <aspectratio>stretch</aspectratio>
+              <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+              <visible>Control.HasFocus(6001)</visible>
+          </control>    
+          <control type="image">
+              <posx>850</posx>
+              <posy>160</posy>
+              <width>300</width>
+              <height>200</height>
+              <aspectratio>stretch</aspectratio>
+              <texture background="true" fallback="fallback/movies.jpg" diffuse="other_textures/episode_matte.png">$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</texture> 
+          </control>
+          <control type="image">
+              <posx>960</posx>
+              <posy>215</posy>
+              <width>80</width>
+              <height>80</height>
+              <aspectratio>keep</aspectratio>
+              <colordiffuse>Accent</colordiffuse>
+              <texture>DefaultNextAired.png</texture>
+              <visible>Control.HasFocus(6001)</visible>
+          </control>  
+          <control type="label">
+              <posx>850</posx>
+              <posy>360</posy>
+              <width>1000</width>
+              <height>50</height>
+              <label>[COLOR Accent]$INFO[Window(Home).Property(RecommendedMovie.1.Year)][/COLOR]</label>
+              <font>F30</font>
+              <textcolor>White</textcolor>
+              <shadowcolor>Black</shadowcolor>
+              <align>left</align>
+             
+          </control>
+          <control type="image">
+              <posx>915</posx>
+              <posy>355</posy>
+              <width>60</width>
+              <height>60</height>
+              <aspectratio>keep</aspectratio>
+              <texture fallback="other_textures/flagging/video/sd.png">other_textures/flagging/video/$INFO[Window(Home).Property(RecommendedMovie.1.VideoResolution)].png</texture> 
+              <visible>!IsEmpty($INFO[Window(Home).Property(RecommendedMovie.1.VideoResolution)])</visible>    
+          </control>
+          <control type="image">
+              <posx>850</posx>
+              <posy>360</posy>
+              <width>300</width>
+              <height>200</height>
+              <aspectratio>keep</aspectratio>
+              <texture background="true">$INFO[Window(Home).Property(RecommendedMovie.1.Art(clearlogo))]</texture> 
+          </control>
+          <control type="textbox">
+            <posx>850</posx>
+            <posy>550</posy>
+            <width>300</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RecommendedMovie.1.Tagline)]</label>
+            <font>FF30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>center</align>
+          </control>
+        </control>
+        <!-- ------------------------------------------------------------------------------------------------------------RECENT MOVIE-->
+        <control type="label">
+            <posx>400</posx>
+            <posy>100</posy>
+            <width>1000</width>
+            <height>50</height>
+            <label>$LOCALIZE[31050]</label>
+            <font>F60</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>  
+        <control id="6002">
+          <type>button</type>
+          <label>RecentMovie.1</label>
+          <posx>100</posx>
+          <posy>288</posy>
+          <height>40</height>
+          <width>40</width>
+          <ondown>316</ondown>
+          <onleft>515</onleft>
+          <onright condition="!Player.HasAudio">6001</onright>
+          <onright condition="Player.HasAudio">320</onright>
+          <onclick>$INFO[Window(Home).Property(RecentMovie.1.Play)]</onclick>
+        </control>
+        <control type="image">
+            <posx>395</posx>
+            <posy>155</posy>
+            <width>310</width>
+            <height>210</height>
+            <aspectratio>stretch</aspectratio>
+            <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+            <visible>Control.HasFocus(6002)</visible>
+        </control>
+        <control type="image">
+            <posx>400</posx>
+            <posy>160</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>stretch</aspectratio>
+            <texture background="true" fallback="fallback/movies.jpg" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</texture> 
+        </control>
+        <control type="image">
+              <posx>510</posx>
+              <posy>215</posy>
+              <width>80</width>
+              <height>80</height>
+              <aspectratio>keep</aspectratio>
+              <colordiffuse>Accent</colordiffuse>
+              <texture>DefaultNextAired.png</texture>
+              <visible>Control.HasFocus(6002)</visible>
+          </control>
+        <control type="label">
+            <posx>400</posx>
+            <posy>360</posy>
+            <width>1000</width>
+            <height>50</height>
+            <label>[COLOR Accent]$INFO[Window(Home).Property(RecentMovie.1.Year)][/COLOR]</label>
+            <font>F30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+           
+        </control>
+        <control type="image">
+            <posx>465</posx>
+            <posy>355</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio>keep</aspectratio>
+            <texture fallback="other_textures/flagging/video/sd.png">other_textures/flagging/video/$INFO[Window(Home).Property(RecentMovie.1.VideoResolution)].png</texture>   
+            <visible>!IsEmpty($INFO[Window(Home).Property(RecentMovie.1.VideoResolution)])</visible> 
+        </control>
+        <control type="image">
+            <posx>400</posx>
+            <posy>360</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RecentMovie.1.Art(clearlogo))]</texture> 
+        </control>
+        <control type="textbox">
+            <posx>400</posx>
+            <posy>550</posy>
+            <width>300</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RecentMovie.1.Tagline)]</label>
+            <font>FF30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>center</align>
+        </control>
+        <!-- ------------------------------------------------------------------------------------------------------------------- RANDOM MOVIE -->
+        <control type="label">
+            <posx>1300</posx>
+            <posy>100</posy>
+            <width>1000</width>
+            <height>50</height>
+            <label>$LOCALIZE[31054]</label>
+            <font>F60</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>  
+        <control id="6020">
+          <type>button</type>
+          <label>RandomMovie.1</label>
+          <posx>1000</posx>
+          <posy>288</posy>
+          <height>40</height>
+          <width>40</width>
+          <ondown>316</ondown>
+          <onleft>6001</onleft>
+          <onright condition="!Player.HasAudio">6002</onright>
+          <onright condition="Player.HasAudio">320</onright>
+          <onclick>$INFO[Window(Home).Property(RandomMovie.1.Play)]</onclick>
+        </control>
+        <control type="image">
+            <posx>1295</posx>
+            <posy>155</posy>
+            <width>310</width>
+            <height>210</height>
+            <aspectratio>stretch</aspectratio>
+            <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+            <visible>Control.HasFocus(6020)</visible>
+        </control>
+        <control type="image">
+            <posx>1300</posx>
+            <posy>160</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>stretch</aspectratio>
+            <texture background="true" fallback="fallback/movies.jpg" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</texture> 
+        </control>
+        <control type="image">
+              <posx>1410</posx>
+              <posy>215</posy>
+              <width>80</width>
+              <height>80</height>
+              <aspectratio>keep</aspectratio>
+              <colordiffuse>Accent</colordiffuse>
+              <texture>DefaultNextAired.png</texture>
+              <visible>Control.HasFocus(6020)</visible>
+          </control>
+        <control type="label">
+            <posx>1300</posx>
+            <posy>360</posy>
+            <width>1000</width>
+            <height>50</height>
+            <label>[COLOR Accent]$INFO[Window(Home).Property(RandomMovie.1.Year)][/COLOR]</label>
+            <font>F30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+            
+        </control>
+        <control type="image">
+            <posx>1365</posx>
+            <posy>355</posy>
+            <width>60</width>
+            <height>60</height>
+            <aspectratio>keep</aspectratio>
+            <texture fallback="other_textures/flagging/video/sd.png">other_textures/flagging/video/$INFO[Window(Home).Property(RandomMovie.1.VideoResolution)].png</texture>   
+            <visible>!IsEmpty($INFO[Window(Home).Property(RandomMovie.1.VideoResolution)])</visible> 
+        </control>
+        <control type="image">
+            <posx>1300</posx>
+            <posy>360</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RandomMovie.1.Art(clearlogo))]</texture> 
+        </control>
+        <control type="textbox">
+            <posx>1300</posx>
+            <posy>550</posy>
+            <width>300</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RandomMovie.1.Tagline)]</label>
+            <font>FF30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>center</align>
+        </control>
+    </control>  <!--FIN MOVIES-->
+
+    <control type="group" id="6062"> <!--MUSIC-->
+      <posx>0</posx>
+      <posy>50</posy>
+      <visible>[Control.HasFocus(6005) | Control.HasFocus(6006) | Control.HasFocus(6060)] | [IntegerGreaterThan(System.Time(ss),20) + !IntegerGreaterThan(System.Time(ss),40) + !Control.HasFocus(6003) + !Control.HasFocus(6004) + !Control.HasFocus(6040) + !Control.HasFocus(6001) + !Control.HasFocus(6002) + !Control.HasFocus(6020)]</visible>
+      <animation effect="fade" start="0" end="100" time="300">Visible</animation>
+      <animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+      <control type="multiimage">
+        <posy>-50</posy>
+        <include>Dimensions_Fullscreen</include>
+        <randomize>true</randomize>
+        <timeperimage>5000</timeperimage>
+        <fadetime>3000</fadetime>
+        <pauseatend>0</pauseatend>
+        <loop>true</loop>
+        <imagepath background="true" fallback="fallback/music.jpg">$INFO[Skin.String(Home_Custom_Back_CustomHomeMusicFolder)]</imagepath>
+        <colordiffuse>FanartDiffuse</colordiffuse>
+         <visible>Skin.HasSetting(Use_CustomHomeMusicFolder)</visible>
+        <animation effect="fade" time="500">Hidden</animation>
+      </control>
+      <control type="image">
+        <posy>-50</posy>
+        <include>Dimensions_Fullscreen</include>
+        <texture background="true">fallback/music.jpg</texture>
+        <colordiffuse>FanartDiffuse</colordiffuse>
+        <animation effect="fade" time="500">Hidden</animation>
+        <visible>!Skin.HasSetting(Use_CustomHomeMusicFolder)</visible>
+      </control>
+      <control type="label">
+          <posx>20</posx>
+          <posy>100</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>[B]$LOCALIZE[2][/B]</label>
+          <font>F60</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+      </control>
+      <control type="label">
+          <posx>20</posx>
+          <posy>150</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>[B][COLOR Accent]$INFO[Window(Home).Property(Music.ArtistsCount)][/COLOR][/B] $LOCALIZE[133]</label>
+          <font>FF30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+      </control>
+
+       <control type="group">  <!---------------------------------------------------------------------------------------------------------recommended music-->
+          <visible>!Player.HasAudio</visible>
+          <control type="label">
+            <posx>850</posx>
+            <posy>100</posy>
+            <width>1000</width>
+            <height>50</height>
+            <label>$LOCALIZE[31048]</label>
+            <font>F60</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+          </control>
+          <control id="6005">
+            <type>button</type>
+            <label>RecentAlbum.1</label>
+            <posx>60</posx>
+            <posy>288</posy>
+            <height>40</height>
+            <width>40</width>
+            <ondown>316</ondown>
+            <onleft>6006</onleft>
+            <onright>6060</onright>
+            <onclick>$INFO[Window(Home).Property(RecommendedAlbum.1.Play)]</onclick>
+          </control>
+          <control type="image">
+            <posx>845</posx>
+            <posy>155</posy>
+            <width>310</width>
+            <height>210</height>
+            <aspectratio>stretch</aspectratio>
+            <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+            <visible>Control.HasFocus(6005)</visible>
+          </control>
+          <control type="image">
+            <posx>850</posx>
+            <posy>160</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>stretch</aspectratio>
+            <texture background="true" fallback="fallback/music.jpg" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RecommendedAlbum.1.Art(fanart))]</texture> 
+          </control>
+          <control type="image">
+              <posx>960</posx>
+              <posy>215</posy>
+              <width>80</width>
+              <height>80</height>
+              <aspectratio>keep</aspectratio>
+              <colordiffuse>Accent</colordiffuse>
+              <texture>DefaultNextAired.png</texture>
+              <visible>Control.HasFocus(6005)</visible>
+          </control>
+          <control type="image">
+            <posx>840</posx>
+            <posy>370</posy>
+            <width>100</width>
+            <height>100</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RecommendedAlbum.1.Thumb)]</texture> 
+          </control>
+          <control type="label">
+            <posx>960</posx>
+            <posy>370</posy>
+            <width>300</width>
+            <height>50</height>
+            <label>$INFO[Window(Home).Property(RecommendedAlbum.1.Title)]</label>
+            <font>F30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+          </control>
+          <control type="label">
+            <posx>960</posx>
+            <posy>400</posy>
+            <width>300</width>
+            <height>50</height>
+            <label>[COLOR Accent]$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)][/COLOR]</label>
+            <font>F30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+          </control>
+          <control type="label">
+            <posx>960</posx>
+            <posy>430</posy>
+            <width>300</width>
+            <height>50</height>
+            <label>$INFO[Window(Home).Property(RecommendedAlbum.1.Year)]</label>
+            <font>F30</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+          </control>
+          <control type="image">
+            <posx>840</posx>
+            <posy>480</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[Window(Home).Property(RecommendedAlbum.1.Artist),,\logo.png]</texture> 
+        </control> 
+        </control>  
+        <control type="label"><!---------------------------------------------------------------------------------------------------------recent music-->
+          <posx>400</posx>
+          <posy>100</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>$LOCALIZE[31050]</label>
+          <font>F60</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        <control id="6006">
+          <type>button</type>
+          <label>RecommendedAlbum.1</label>
+          <posx>100</posx>
+          <posy>288</posy>
+          <height>40</height>
+          <width>40</width>
+          <ondown>316</ondown>
+          <onleft>515</onleft>
+          <onright condition="!Player.HasAudio">6005</onright>
+          <onright condition="Player.HasAudio">320</onright>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
+        </control>
+        <control type="image">
+          <posx>395</posx>
+          <posy>155</posy>
+          <width>310</width>
+          <height>210</height>
+          <aspectratio>stretch</aspectratio>
+          <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+          <visible>Control.HasFocus(6006)</visible>
+        </control>
+        <control type="image">
+          <posx>400</posx>
+          <posy>160</posy>
+          <width>300</width>
+          <height>200</height>
+          <aspectratio>stretch</aspectratio>
+          <texture background="true" fallback="fallback/music.jpg" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RecentAlbum.1.fanart)]</texture> 
+        </control>
+        <control type="image">
+          <posx>510</posx>
+          <posy>215</posy>
+          <width>80</width>
+          <height>80</height>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Accent</colordiffuse>
+          <texture>DefaultNextAired.png</texture>
+          <visible>Control.HasFocus(6006)</visible>
+        </control>
+        <control type="image">
+          <posx>400</posx>
+          <posy>370</posy>
+          <width>100</width>
+          <height>100</height>
+          <aspectratio>keep</aspectratio>
+          <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RecentAlbum.1.Thumb)]</texture> 
+        </control>
+        <control type="label">
+          <posx>510</posx>
+          <posy>370</posy>
+          <width>300</width>
+          <height>50</height>
+          <label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
+          <font>F30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        <control type="label">
+          <posx>510</posx>
+          <posy>400</posy>
+          <width>300</width>
+          <height>50</height>
+          <label>[COLOR Accent]$INFO[Window(Home).Property(RecentAlbum.1.Artist)][/COLOR]</label>
+          <font>F30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        <control type="label">
+          <posx>510</posx>
+          <posy>430</posy>
+          <width>300</width>
+          <height>50</height>
+          <label>$INFO[Window(Home).Property(RecentAlbum.1.Year)]</label>
+          <font>F30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+
+        <control type="textbox">
+            <posx>400</posx>
+            <posy>550</posy>
+            <width>400</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RecentAlbum.1.Description)]</label>
+            <font>F20</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>
+        <control type="image">
+            <posx>400</posx>
+            <posy>480</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[Window(Home).Property(RecentAlbum.1.Artist),,\logo.png]</texture> 
+        </control> 
+        <control type="label"><!---------------------------------------------------------------------------------------------------------random music-->
+          <posx>1300</posx>
+          <posy>100</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>$LOCALIZE[31054]</label>
+          <font>F60</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        <control id="6060">
+          <type>button</type>
+          <label>RandomAlbum.1</label>
+          <posx>1000</posx>
+          <posy>288</posy>
+          <height>40</height>
+          <width>40</width>
+          <ondown>316</ondown>
+          <onleft>6005</onleft>
+          <onright condition="!Player.HasAudio">6006</onright>
+          <onright condition="Player.HasAudio">320</onright>
+          <onclick>$INFO[Window(Home).Property(RandomAlbum.1.Play)]</onclick>
+        </control>
+        <control type="image">
+          <posx>1295</posx>
+          <posy>155</posy>
+          <width>310</width>
+          <height>210</height>
+          <aspectratio>stretch</aspectratio>
+          <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+          <visible>Control.HasFocus(6060)</visible>
+        </control>
+        <control type="image">
+          <posx>1300</posx>
+          <posy>160</posy>
+          <width>300</width>
+          <height>200</height>
+          <aspectratio>stretch</aspectratio>
+          <texture background="true" fallback="fallback/music.jpg" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RandomAlbum.1.fanart)]</texture> 
+        </control>
+        <control type="image">
+          <posx>1410</posx>
+          <posy>215</posy>
+          <width>80</width>
+          <height>80</height>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Accent</colordiffuse>
+          <texture>DefaultNextAired.png</texture>
+          <visible>Control.HasFocus(6060)</visible>
+        </control>
+        <control type="image">
+          <posx>1300</posx>
+          <posy>370</posy>
+          <width>100</width>
+          <height>100</height>
+          <aspectratio>keep</aspectratio>
+          <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Window(Home).Property(RandomAlbum.1.Thumb)]</texture> 
+        </control>
+        <control type="label">
+          <posx>1410</posx>
+          <posy>370</posy>
+          <width>300</width>
+          <height>50</height>
+          <label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
+          <font>F30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        <control type="label">
+          <posx>1410</posx>
+          <posy>400</posy>
+          <width>300</width>
+          <height>50</height>
+          <label>[COLOR Accent]$INFO[Window(Home).Property(RandomAlbum.1.Artist)][/COLOR]</label>
+          <font>F30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        <control type="label">
+          <posx>1410</posx>
+          <posy>430</posy>
+          <width>300</width>
+          <height>50</height>
+          <label>$INFO[Window(Home).Property(RandomAlbum.1.Year)]</label>
+          <font>F30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+
+        <control type="textbox">
+            <posx>1300</posx>
+            <posy>550</posy>
+            <width>400</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RandomAlbum.1.Description)]</label>
+            <font>F20</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>
+         <control type="image">
+            <posx>1300</posx>
+            <posy>480</posy>
+            <width>300</width>
+            <height>200</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[Window(Home).Property(RandomAlbum.1.Artist),,\logo.png]</texture> 
+        </control>
+              
+    </control>  <!--FIN MUSIC-->
+
+    <control type="group" id="6063"> <!--TV SHOW-->
+      <posx>0</posx>
+      <posy>50</posy>
+      <visible>[Control.HasFocus(6003) | Control.HasFocus(6004) | Control.HasFocus(6040)] | [IntegerGreaterThan(System.Time(ss),40) + !IntegerGreaterThan(System.Time(ss),61) + !Control.HasFocus(6001) + !Control.HasFocus(6002) + !Control.HasFocus(6020) + !Control.HasFocus(6005) + !Control.HasFocus(6006) + !Control.HasFocus(6060)]</visible>
+      <animation effect="fade" start="0" end="100" time="300">Visible</animation>
+      <animation effect="fade" start="100" end="0" time="400">Hidden</animation>
+      <control type="multiimage">
+        <posy>-50</posy>
+        <include>Dimensions_Fullscreen</include>
+        <randomize>true</randomize>
+        <timeperimage>5000</timeperimage>
+        <fadetime>3000</fadetime>
+        <pauseatend>0</pauseatend>
+        <loop>true</loop>
+        <imagepath background="true" fallback="fallback/tv.jpg">$INFO[Skin.String(Home_Custom_Back_CustomHomeTVFolder)]</imagepath>
+        <colordiffuse>FanartDiffuse</colordiffuse>
+        <animation effect="fade" time="500">Hidden</animation>
+         <visible>Skin.HasSetting(Use_CustomHomeTVFolder)</visible>
+      </control>
+       <control type="image">
+        <posy>-50</posy>
+        <include>Dimensions_Fullscreen</include>
+        <texture background="true">fallback/tv.jpg</texture>
+        <colordiffuse>FanartDiffuse</colordiffuse>
+        <animation effect="fade" time="500">Hidden</animation>
+        <visible>!Skin.HasSetting(Use_CustomHomeTVFolder)</visible>
+      </control>
+      <control type="label">
+          <posx>20</posx>
+          <posy>100</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>[B]$LOCALIZE[31007][/B]</label>
+          <font>F60</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+      </control>
+      <control type="label">
+          <posx>20</posx>
+          <posy>150</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>[B][COLOR Accent]$INFO[Window(Home).Property(Episodes.Count)][/COLOR][/B] $LOCALIZE[20360]</label>
+          <font>FF30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+      </control>
+      <control type="group"> <!-- ----------------------------------------------------------------------------------------------------recommended tv show-->
+        <visible>!Player.HasAudio</visible>
+        <control type="label">
+          <posx>850</posx>
+          <posy>100</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>$LOCALIZE[31048]</label>
+          <font>F60</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        <control id="6003">
+          <type>button</type>
+          <label>RecentEpisode.1</label>
+          <posx>60</posx>
+          <posy>288</posy>
+          <height>40</height>
+          <width>40</width>
+          <ondown>316</ondown>
+          <onleft>6004</onleft>
+          <onright>6040</onright>
+          <onclick>$INFO[Window(Home).Property(RecommendedEpisode.1.Play)]</onclick>
+        </control>
+        <control type="image">
+          <posx>845</posx>
+          <posy>155</posy>
+          <width>310</width>
+          <height>210</height>
+          <aspectratio>stretch</aspectratio>
+          <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+          <visible>Control.HasFocus(6003)</visible>
+        </control>
+        <control type="image">
+          <posx>850</posx>
+          <posy>160</posy>
+          <width>300</width>
+          <height>200</height>
+          <aspectratio>stretch</aspectratio>
+          <texture background="true" fallback="fallback/tv.jpg" diffuse="other_textures/episode_matte.png">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</texture> 
+        </control>
+        <control type="image">
+              <posx>960</posx>
+              <posy>215</posy>
+              <width>80</width>
+              <height>80</height>
+              <aspectratio>keep</aspectratio>
+              <colordiffuse>Accent</colordiffuse>
+              <texture>DefaultNextAired.png</texture>
+              <visible>Control.HasFocus(6003)</visible>
+          </control>
+        <control type="label">
+          <posx>850</posx>
+          <posy>360</posy>
+          <width>1000</width>
+          <height>50</height>
+          <label>$LOCALIZE[20373] [B][COLOR Accent]$INFO[Window(Home).Property(RecommendedEpisode.1.Season)][/COLOR][/B] $LOCALIZE[20452] [B][COLOR Accent]$INFO[Window(Home).Property(RecommendedEpisode.1.Episode)][/COLOR][/B]</label>
+          <font>F30</font>
+          <textcolor>White</textcolor>
+          <shadowcolor>Black</shadowcolor>
+          <align>left</align>
+        </control>
+        
+         <control type="image">
+              <posx>850</posx>
+              <posy>360</posy>
+              <width>300</width>
+              <height>200</height>
+              <aspectratio>keep</aspectratio>
+              <texture background="true">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(clearlogo))]</texture> 
+          </control>
+         <control type="textbox">
+            <posx>850</posx>
+            <posy>550</posy>
+            <width>400</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RecommendedEpisode.1.Plot)]</label>
+            <font>FF20</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>
+      </control> 
+      <control type="label"><!---------------------------------------------------------------------------------------------------------recent episode-->
+        <posx>400</posx>
+        <posy>100</posy>
+        <width>1000</width>
+        <height>50</height>
+        <label>$LOCALIZE[31050]</label>
+        <font>F60</font>
+        <textcolor>White</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+      </control>
+      <control id="6004">
+        <type>button</type>
+        <label>RecommendedEpisode.1</label>
+        <posx>100</posx>
+        <posy>288</posy>
+        <height>40</height>
+        <width>40</width>
+        <ondown>316</ondown>
+        <onleft>515</onleft>
+        <onright condition="!Player.HasAudio">6003</onright>
+        <onright condition="Player.HasAudio">320</onright>
+        <onclick>$INFO[Window(Home).Property(RecentEpisode.1.Play)]</onclick>
+      </control>
+      <control type="image">
+        <posx>395</posx>
+        <posy>155</posy>
+        <width>310</width>
+        <height>210</height>
+        <aspectratio>stretch</aspectratio>
+        <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+        <visible>Control.HasFocus(6004)</visible>
+      </control>
+      <control type="image">
+        <posx>400</posx>
+        <posy>160</posy>
+        <width>300</width>
+        <height>200</height>
+        <aspectratio>stretch</aspectratio>
+        <texture background="true" fallback="fallback/tv.jpg" diffuse="other_textures/episode_matte.png">$INFO[Window(Home).Property(RecentEpisode.1.Art(thumb))]</texture> 
+      </control>
+      <control type="image">
+          <posx>510</posx>
+          <posy>215</posy>
+          <width>80</width>
+          <height>80</height>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Accent</colordiffuse>
+          <texture>DefaultNextAired.png</texture>
+          <visible>Control.HasFocus(6004)</visible>
+        </control>
+      <control type="label">
+        <posx>400</posx>
+        <posy>360</posy>
+        <width>1000</width>
+        <height>50</height>
+        <label>$LOCALIZE[20373] [B][COLOR Accent]$INFO[Window(Home).Property(RecentEpisode.1.Season)][/COLOR][/B] $LOCALIZE[20452] [B][COLOR Accent]$INFO[Window(Home).Property(RecentEpisode.1.Episode)][/COLOR][/B]</label>
+        <font>F30</font>
+        <textcolor>White</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+      </control>
+      <control type="image">
+        <posx>400</posx>
+        <posy>360</posy>
+        <width>300</width>
+        <height>200</height>
+        <aspectratio>keep</aspectratio>
+        <texture background="true">$INFO[Window(Home).Property(RecentEpisode.1.Art(tvshow.clearlogo))]</texture> 
+      </control>
+        <control type="textbox">
+            <posx>400</posx>
+            <posy>550</posy>
+            <width>400</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RecentEpisode.1.Plot)]</label>
+            <font>FF20</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>
+        <control type="label"><!---------------------------------------------------------------------------------------------------------random episode-->
+        <posx>1300</posx>
+        <posy>100</posy>
+        <width>1000</width>
+        <height>50</height>
+        <label>$LOCALIZE[31054]</label>
+        <font>F60</font>
+        <textcolor>White</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+      </control>
+      <control id="6040">
+        <type>button</type>
+        <label>RandomEpisode.1</label>
+        <posx>1000</posx>
+        <posy>288</posy>
+        <height>40</height>
+        <width>40</width>
+        <ondown>316</ondown>
+        <onleft>6003</onleft>
+        <onright condition="!Player.HasAudio">6004</onright>
+        <onright condition="Player.HasAudio">320</onright>
+        <onclick>$INFO[Window(Home).Property(RandomEpisode.1.Play)]</onclick>
+      </control>
+      <control type="image">
+        <posx>1295</posx>
+        <posy>155</posy>
+        <width>310</width>
+        <height>210</height>
+        <aspectratio>stretch</aspectratio>
+        <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+        <visible>Control.HasFocus(6040)</visible>
+      </control>
+      <control type="image">
+        <posx>1300</posx>
+        <posy>160</posy>
+        <width>300</width>
+        <height>200</height>
+        <aspectratio>stretch</aspectratio>
+        <texture background="true" fallback="fallback/tv.jpg" diffuse="other_textures/episode_matte.png">$INFO[Window(Home).Property(RandomEpisode.1.Art(thumb))]</texture> 
+      </control>
+      <control type="image">
+          <posx>1410</posx>
+          <posy>215</posy>
+          <width>80</width>
+          <height>80</height>
+          <aspectratio>keep</aspectratio>
+          <colordiffuse>Accent</colordiffuse>
+          <texture>DefaultNextAired.png</texture>
+          <visible>Control.HasFocus(6040)</visible>
+        </control>
+      <control type="label">
+        <posx>1300</posx>
+        <posy>360</posy>
+        <width>1000</width>
+        <height>50</height>
+        <label>$LOCALIZE[20373] [B][COLOR Accent]$INFO[Window(Home).Property(RandomEpisode.1.Season)][/COLOR][/B] $LOCALIZE[20452] [B][COLOR Accent]$INFO[Window(Home).Property(RandomEpisode.1.Episode)][/COLOR][/B]</label>
+        <font>F30</font>
+        <textcolor>White</textcolor>
+        <shadowcolor>Black</shadowcolor>
+        <align>left</align>
+      </control>
+      <control type="image">
+        <posx>1300</posx>
+        <posy>360</posy>
+        <width>300</width>
+        <height>200</height>
+        <aspectratio>keep</aspectratio>
+        <texture background="true">$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.clearlogo))]</texture> 
+      </control>
+        <control type="textbox">
+            <posx>1300</posx>
+            <posy>550</posy>
+            <width>400</width>
+            <height>350</height>
+            <label>$INFO[Window(Home).Property(RandomEpisode.1.Plot)]</label>
+            <font>FF20</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>
+    </control>  <!--FIN TV SHOW-->
+
+     <control type="group" id="6067">  <!--AUDIO NOW PLAYING-->
+          <visible>Player.HasAudio</visible>
+           <posx>0</posx>
+           <posy>50</posy>
+            <control type="label">
+              <posx>850</posx>
+              <posy>100</posy>
+              <width>1000</width>
+              <height>50</height>
+              <label>$LOCALIZE[31052]</label>
+              <font>F60</font>
+              <textcolor>White</textcolor>
+              <shadowcolor>Black</shadowcolor>
+              <align>left</align>
+            </control>
+          
+            <control type="image">
+              <posx>845</posx>
+              <posy>155</posy>
+              <width>310</width>
+              <height>210</height>
+              <aspectratio>stretch</aspectratio>
+              <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+              <visible>Control.HasFocus(320)</visible>
+            </control>
+            <control type="image">
+              <posx>850</posx>
+              <posy>160</posy>
+              <width>300</width>
+              <height>200</height>
+              <aspectratio>stretch</aspectratio>
+              <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[MusicPlayer.Property(Fanart_Image)]</texture> 
+            </control>
+            <control type="image">
+              <posx>860</posx>
+              <posy>290</posy>
+              <width>60</width>
+              <height>60</height>
+              <aspectratio>keep</aspectratio>
+              <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[MusicPlayer.Cover]</texture> 
+            </control>
+
+            <control type="list" id="320">
+              <description>Audio Playlist</description>
+              <posx>860</posx>
+              <posy>370</posy>
+              <width>620</width>
+              <height>500</height>
+              <onleft condition="Control.IsVisible(6061)">6002</onleft>
+              <onleft condition="Control.IsVisible(6063)">6004</onleft>
+              <onleft condition="Control.IsVisible(6062)">6006</onleft>
+
+              <orientation>vertical</orientation>
+              <focusposition>0</focusposition>
+              <scrolltime tween="sine" easing="out">300</scrolltime>
+              <visible>Player.HasAudio</visible>
+              <itemlayout width="300" height="35">
+      
+                <control type="image">
+                  <posx>0</posx>
+                  <posy>5</posy>
+                  <width>30</width>
+                  <height>30</height>
+                  <aspectratio>keep</aspectratio>
+                  <texture>$INFO[ListItem.Thumb]</texture>
+                </control>
+                <control type="label">
+                  <posx>50</posx>
+                  <posy>5</posy>
+                  <height>30</height>
+                  <width>400</width>
+                  <font>F20</font>
+                  <info>ListItem.Label</info>
+                  <align>left</align>
+                  <textcolor>White</textcolor>
+                  <shadowcolor>Black</shadowcolor>
+                  <visible>!IsEmpty(ListItem.Label)</visible>
+                </control>
+              </itemlayout>
+              
+
+              <focusedlayout width="65" height="35">
+
+                <control type="group">
+                  <visible>Control.HasFocus(320)</visible>  
+                  <control type="image">
+                      <posx>0</posx>
+                      <posy>5</posy>
+                      <width>30</width>
+                      <height>30</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <texture>DefaultNextAired.png</texture>
+                      <visible>!IsEmpty(ListItem.Label)</visible>
+                  </control>
+                  <control type="label">
+                      <posx>50</posx>
+                       <posy>5</posy>
+                       <height>30</height>
+                       <width>400</width>
+                       <font>F20</font>
+                       <info>ListItem.Label</info>
+                       <align>left</align>
+                      <textcolor>Accent</textcolor>
+                      <shadowcolor>Black</shadowcolor>
+                      <visible>!IsEmpty(ListItem.Label)</visible>
+                   </control>
+                </control>
+                <control type="group">
+                  <visible>!Control.HasFocus(320) + !IsEmpty(ListItem.Label)</visible>  
+                  <control type="image">
+                      <posx>0</posx>
+                      <posy>5</posy>
+                      <width>30</width>
+                      <height>30</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture>DefaultNextAired.png</texture>
+                      <visible>!IsEmpty(ListItem.Label)</visible>
+                  </control>
+                  <control type="label">
+                      <posx>50</posx>
+                       <posy>5</posy>
+                       <height>30</height>
+                       <width>400</width>
+                       <font>F20</font>
+                       <info>ListItem.Label</info>
+                       <align>left</align>
+                      <textcolor>White</textcolor>
+                      <shadowcolor>Black</shadowcolor>
+                      <visible>!IsEmpty(ListItem.Label)</visible>
+                   </control>
+                </control>
+
+              </focusedlayout>
+              <content>
+                <item id="1">
+                  <description>en cours</description>
+                  <label>$INFO[MusicPlayer.Artist,,] $INFO[MusicPlayer.Title]</label>
+                  <onclick>ActivateWindow(Programs,Addons)</onclick>
+                  <thumb>$INFO[MusicPlayer.cover]</thumb>
+                </item>
+
+                <item id="2">
+                  <description>next1</description>
+                  <label>$INFO[MusicPlayer.offset(1).Artist,,] $INFO[MusicPlayer.offset(1).Title]</label>
+                  <onclick>Playlist.PlayOffset(1)</onclick>
+                  <thumb>$INFO[MusicPlayer.offset(1).Cover]</thumb>
+                </item>
+
+                <item id="3">
+                  <description>next2</description>
+                  <label>$INFO[MusicPlayer.offset(2).Artist,,] $INFO[MusicPlayer.offset(2).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(2).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(2)</onclick>
+                </item>
+                 <item id="4">
+                  <description>next3</description>
+                  <label>$INFO[MusicPlayer.offset(3).Artist,,] $INFO[MusicPlayer.offset(3).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(3).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(3)</onclick>
+                </item>
+                 <item id="5">
+                  <description>next4</description>
+                  <label>$INFO[MusicPlayer.offset(4).Artist,,] $INFO[MusicPlayer.offset(4).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(4).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(4)</onclick>
+                </item>
+                 <item id="6">
+                  <description>next5</description>
+                  <label>$INFO[MusicPlayer.offset(5).Artist,,] $INFO[MusicPlayer.offset(5).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(5).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(5)</onclick>
+                </item>
+                <item id="7">
+                  <description>next6</description>
+                  <label>$INFO[MusicPlayer.offset(6).Artist,,] $INFO[MusicPlayer.offset(6).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(6).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(6)</onclick>
+                </item>
+                <item id="8">
+                  <description>next7</description>
+                  <label>$INFO[MusicPlayer.offset(7).Artist,,] $INFO[MusicPlayer.offset(7).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(7).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(7)</onclick>
+                </item>
+                <item id="9">
+                  <description>next8</description>
+                  <label>$INFO[MusicPlayer.offset(8).Artist,,] $INFO[MusicPlayer.offset(8).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(8).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(8)</onclick>
+                </item>
+                <item id="10">
+                  <description>next9</description>
+                  <label>$INFO[MusicPlayer.offset(9).Artist,,] $INFO[MusicPlayer.offset(9).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(9).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(9)</onclick>
+                </item>
+                <item id="11">
+                  <description>next10</description>
+                  <label>$INFO[MusicPlayer.offset(10).Artist,,] $INFO[MusicPlayer.offset(10).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(10).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(10)</onclick>
+                </item>
+                <item id="12">
+                  <description>next11</description>
+                  <label>$INFO[MusicPlayer.offset(11).Artist,,] $INFO[MusicPlayer.offset(11).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(11).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(11)</onclick>
+                </item>
+                <item id="13">
+                  <description>next12</description>
+                  <label>$INFO[MusicPlayer.offset(12).Artist,,] $INFO[MusicPlayer.offset(12).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(12).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(12)</onclick>
+                </item>
+                <item id="14">
+                  <description>next13</description>
+                  <label>$INFO[MusicPlayer.offset(13).Artist,,] $INFO[MusicPlayer.offset(13).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(13).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(13)</onclick>
+                </item>
+                <item id="15">
+                  <description>next14</description>
+                  <label>$INFO[MusicPlayer.offset(14).Artist,,] $INFO[MusicPlayer.offset(14).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(14).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(14)</onclick>
+                </item>
+                <item id="16">
+                  <description>next15</description>
+                  <label>$INFO[MusicPlayer.offset(15).Artist,,] $INFO[MusicPlayer.offset(15).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(15).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(15)</onclick>
+                </item>
+                <item id="17">
+                  <description>next16</description>
+                  <label>$INFO[MusicPlayer.offset(16).Artist,,] $INFO[MusicPlayer.offset(16).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(16).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(16)</onclick>
+                </item>
+                <item id="18">
+                  <description>next17</description>
+                  <label>$INFO[MusicPlayer.offset(17).Artist,,] $INFO[MusicPlayer.offset(17).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(17).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(17)</onclick>
+                </item>
+                <item id="19">
+                  <description>next18</description>
+                  <label>$INFO[MusicPlayer.offset(18).Artist,,] $INFO[MusicPlayer.offset(18).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(18).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(18)</onclick>
+                </item>
+                <item id="20">
+                  <description>next19</description>
+                  <label>$INFO[MusicPlayer.offset(19).Artist,,] $INFO[MusicPlayer.offset(19).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(19).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(19)</onclick>
+                </item>
+                <item id="21">
+                  <description>next20</description>
+                  <label>$INFO[MusicPlayer.offset(20).Artist,,] $INFO[MusicPlayer.offset(20).Title]</label>
+                  <thumb>$INFO[MusicPlayer.offset(20).Cover]</thumb>
+                  <onclick>Playlist.PlayOffset(20)</onclick>
+                </item>
+
+
+              </content>
+          </control>
+     </control> <!-- FIN NOW PLAYING-->
+	
+	</control>
+	</include>
+</includes>

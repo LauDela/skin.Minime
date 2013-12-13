@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="ShutdownSubMenus">
+  <!--******************************* SHUTDOWN ******************************-->
+  <control type="group">
+   <visible>Container(300).HasFocus(12)</visible>
+	  <control type="List" id="3012">
+			<description>Home Wraplist</description>
+			<posx>-30</posx>
+			<posy>520</posy>
+			<width>620</width>
+			<height>150</height>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>3012</onleft>
+			<onright>3012</onright>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+			<itemlayout width="65" height="80">
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+			</itemlayout>
+			<focusedlayout width="65" height="80">
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <visible>Control.HasFocus(3012)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <visible>!Control.HasFocus(3012)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+
+                  <control type="label">
+					            <posx>50</posx>
+                       <posy>45</posy>
+                       <height>50</height>
+					             <width>600</width>
+					             <font>Medium</font>
+					             <info>ListItem.Label</info>
+					             <align>left</align>
+                       <visible>Control.HasFocus(3012)</visible>
+                      <textcolor>Accent</textcolor>
+				           </control>
+    	</focusedlayout>
+      	<content>
+        <item id="1">
+					<description>Exit XBMC button</description>
+          <label>13012</label>
+          <onclick>Quit()</onclick>
+          <visible>System.ShowExitButton</visible>
+          <thumb>icons/exit.png</thumb>
+
+        </item>
+        <item id="2">
+					<description>Master mode button</description>
+          <label>20046</label>
+          <onclick>xbmc.mastermode</onclick>
+          <visible>System.HasLocks</visible>
+          <thumb>icons/master.png</thumb>
+      </item>
+      <item id="3">
+					<description>LogOff Profile</description>
+          <include>SettingsLabel</include>
+          <label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+          <onclick>dialog.close(all,true)</onclick>
+					<onclick>System.LogOff</onclick>
+					<visible>System.Loggedon + System.HasLoginScreen</visible>
+          <thumb>icons/logoff.png</thumb>
+      </item>
+      <item id="4">
+					<description>Custom Shutdown Timer button</description>
+          <label>20151</label>
+          <onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+          <thumb>icons/alarm.png</thumb>
+      </item>
+      <item id="5">
+					<description>Custom Shutdown Timer button</description>
+          <label>20150</label>
+          <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+					<visible>!System.HasAlarm(shutdowntimer)</visible>
+          <thumb>icons/timer.png</thumb>
+      </item>
+      <item id="6">
+					<description>Shutdown</description>
+				  <label>13005</label>
+					<onclick>ShutDown()</onclick>
+          <thumb>icons/Power_Button.png</thumb>
+      </item>
+      <item id="7">
+					<description>Suspend xbmc</description>
+					<label>13011</label>
+					<onclick>XBMC.Suspend()</onclick>
+          <thumb>icons/Swap_Down.png</thumb>
+      </item>
+      <item id="8">
+					<description>Reboot button</description>
+					<label>13013</label>
+					<onclick>XBMC.Reset()</onclick>
+          <thumb>icons/Synchronize.png</thumb>
+      </item>
+      <item id="9">
+					<description>Alarm Time</description>
+					<label>$LOCALIZE[20145] [B]$INFO[System.Alarmpos][/B]</label>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+          <thumb></thumb>
+      </item>
+      <item id="10">
+					<description>Open Player Controls</description>
+					<onclick>ActivateWindow(playercontrols)</onclick>
+					<visible>Player.HasMedia</visible>
+          <thumb></thumb>
+      </item>
+        </content>
+	</control>
+    <!--FIN LAST ADDED-->
+	</control>
+<!--***************************** FIN SOUS MENU FILMS ****************************-->
+	</include>
+</includes>

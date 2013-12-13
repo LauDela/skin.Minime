@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="MusicSubMenus">
+  <!--******************************* MUSIC ******************************-->
+  <control type="group">
+   <visible>Container(300).HasFocus(3)</visible>
+      <!--fanart-->
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.1.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(1)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.2.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(2)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.3.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(3)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.4.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(4)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.5.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(5)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.6.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(6)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.7.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(7)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.8.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(8)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.9.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(9)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.10.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(10)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.11.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(11)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.12.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(12)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.13.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(13)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.14.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(14)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.15.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(15)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.16.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(16)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.17.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(17)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.18.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(18)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.19.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(19)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.20.Fanart)]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3030)+Container(3030).HasFocus(20)</visible>
+    </control>
+    <!--fin fanart-->
+    
+	  <control type="List" id="303">
+			<description>Home Wraplist</description>
+			<posx>-30</posx>
+			<posy>800</posy>
+			<width>1200</width>
+			<height>150</height>
+			<onup>3030</onup>
+			<ondown>300</ondown>
+			<onleft>301</onleft>
+			<onright>3030</onright>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+			<itemlayout width="128" height="80">
+      
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>128</width>
+                      <height>128</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+      </itemlayout>
+			<focusedlayout width="128" height="80">
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>128</width>
+                      <height>128</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <visible>Control.HasFocus(303)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+
+                  </control>
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>128</width>
+                      <height>128</height>
+                      <aspectratio>keep</aspectratio>
+                      <visible>!Control.HasFocus(303)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+                  
+                  <control type="label">
+					            <posx>60</posx>
+                       <posy>90</posy>
+                       <height>50</height>
+					             <width>400</width>
+					             <font>FF20</font>
+					             <info>ListItem.Label</info>
+					             <align>left</align>
+                       <visible>Control.HasFocus(303)</visible>
+                      <textcolor>Accent</textcolor>
+				           </control>
+    	</focusedlayout>
+      	<content>
+				<item id="1">
+        	<description>Artist</description>
+					<label>15103</label>
+          <thumb>icons/Voice_Search.png</thumb>
+          <property name="foo2">icons/Voice_Search.png</property>
+          <onclick>activatewindow(MusicLibrary,Artists,return)</onclick>
+       	</item>
+				<item id="3">
+        	<description>Albums</description>
+					<label>358</label>
+          <thumb>icons/albums.png</thumb>
+          <property name="foo2">icons/albums.png</property>
+          <onclick>activatewindow(MusicLibrary,albums,return)</onclick>
+       	</item>
+        <item id="4">
+       	<description>Rafraichir</description>
+					<label>184</label>
+          <thumb>icons/refresh.png</thumb>
+          <property name="foo2">icons/refresh-a.png</property>
+          <onclick>UpdateLibrary(music)</onclick>
+       	</item>
+        <item id="5">
+       	<description>best</description>
+					<label>31043</label>
+          <thumb>icons/Thumbs_up.png</thumb>
+          <property name="foo2">icons/Thumbs_up.png</property>
+          <onclick>XBMC.ActivateWindow(10502,special://skin/playlists/Lesmieuxnotees.xsp,return)</onclick>
+       	</item>
+			</content>
+		</control>
+     
+    <!--LAST ADDED-->
+	  <control type="FixedList" id="3030">
+			<description>Home Wraplist</description>
+			<posx>1300</posx>
+			<posy>100</posy>
+			<width>640</width>
+			<height>200</height>
+			<onup>303</onup>
+			<ondown>300</ondown>
+			<onleft>303</onleft>
+			<onright>3030</onright>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+			<itemlayout width="100" height="120">
+      
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>90</width>
+                      <height>90</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture background="true" diffuse="other_textures/cover_matte.png">$INFO[ListItem.Thumb]</texture>
+                  </control>
+			</itemlayout>
+			<focusedlayout width="125" height="250">
+                  <control type="image">
+                      <posx>0</posx>
+                      <posy>-1</posy>
+                      <width>159</width>
+                      <height>152</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture background="true" diffuse="other_textures/cover_matte.png">orange.png</texture>
+                       <visible>Control.HasFocus(3030)</visible>
+                       <animation type="Focus" reversible="false">
+                          <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+                       </animation>
+                   </control>    
+                  <control type="image">
+                      <posx>5</posx>
+                      <posy>0</posy>
+                      <width>150</width>
+                      <height>150</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture background="true" diffuse="other_textures/cover_matte.png">$INFO[ListItem.Thumb]</texture>
+                       <visible>Control.HasFocus(3030)</visible>
+                       <animation type="Focus" reversible="false">
+                          <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+                       </animation>
+                  </control>
+        <control type="image">
+                      <posx>55</posx>
+                      <posy>5</posy>
+                      <width>90</width>
+                      <height>90</height>
+                      <aspectratio>keep</aspectratio>
+                      <visible>!Control.HasFocus(3030)</visible>
+                      <texture background="true" diffuse="other_textures/cover_matte.png">$INFO[ListItem.Thumb]</texture>
+                  </control>
+<control type="image">
+                      <posx>40</posx>
+                      <posy>30</posy>
+                      <width>80</width>
+                      <height>80</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <texture>DefaultNextAired.png</texture>
+                      <visible>Control.HasFocus(3030)</visible>
+                  </control>
+                  
+    	</focusedlayout>
+      <content>
+        <item id="1">
+					<description>Dernier album 1</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.1.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.1.Art(thumb))]</thumb>
+        </item>
+        
+        <item id="2">
+					<description>Dernier Film 2</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.2.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.2.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.2.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.2.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="3">
+					<description>Dernier Film 3</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.3.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.3.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.3.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.3.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="4">
+					<description>Dernier Film 4</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.4.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.4.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.4.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.4.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="5">
+					<description>Dernier Film 5</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.5.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.5.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.5.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.5.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="6">
+					<description>Dernier Film 6</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.6.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.6.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.6.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.6.Art(thumb))]</thumb>
+        </item>
+        
+        <item id="7">
+					<description>Dernier Film 7</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.7.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.7.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.7.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.7.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="8">
+					<description>Dernier Film 8</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.8.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.8.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.8.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.8.Art(thumb))]</thumb>
+        </item>
+
+        <item id="9">
+					<description>Dernier Film 9</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.9.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.9.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.9.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.9.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="10">
+					<description>Dernier Film 10</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.10.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.10.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.10.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.10.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="11">
+					<description>Dernier Film 11</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.11.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.11.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.11.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.11.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="12">
+					<description>Dernier Film 12</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.12.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.12.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.12.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.12.Art(thumb))]</thumb>
+        </item>
+        
+        <item id="13">
+					<description>Dernier Film 13</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.13.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.13.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.13.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.13.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="14">
+					<description>Dernier Film 10</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.14.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.14.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.14.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.14.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="15">
+					<description>Dernier Film 15</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.15.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.15.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.15.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.15.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="16">
+					<description>Dernier Film 16</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.16.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.16.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.16.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.16.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="17">
+					<description>Dernier Film 17</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.17.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.17.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.17.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.17.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="18">
+					<description>Dernier Film 18</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.18.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.18.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.18.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.18.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="19">
+					<description>Dernier Film 19</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.19.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.19.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.19.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.19.Art(thumb))]</thumb>
+        </item>
+      
+        <item id="20">
+					<description>Dernier Film 20</description>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.20.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentAlbum.20.Title)]</label>
+          <onclick>$INFO[Window(Home).Property(RecentAlbum.20.Play)]</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentAlbum.20.Art(thumb))]</thumb>
+        </item>
+      </content>
+	</control>
+    <!--FIN LAST ADDED-->
+     <!--LABELS LAST ADDED FOCUS-->
+     <control type="label">
+        <posx>150</posx>
+        <posy>700</posy>
+        <font>F90</font>
+        <label>$INFO[Container(3030).ListItem.Label]</label>
+        <shadowcolor>Black</shadowcolor>
+        <visible>Control.HasFocus(3030)</visible>
+     </control>
+     <control type="label">
+        <posx>150</posx>
+        <posy>770</posy>
+        <font>F50</font>
+        <textcolor>Accent</textcolor>
+        <label>$INFO[Container(3030).ListItem.Label2]</label>
+        <shadowcolor>Black</shadowcolor>
+        <visible>Control.HasFocus(3030)</visible>
+     </control>
+     <control type="image">
+        <posx>20</posx>
+        <posy>670</posy>
+        <width>100</width>
+        <height>150</height>
+        <aspectratio>keep</aspectratio>
+        <texture background="true">$INFO[Container(3030).ListItem.thumb]</texture>
+        <visible>Control.HasFocus(3030)</visible>
+    </control>
+    <!-- FIN LABELS LAST ADDED FOCUS-->
+	</control>
+<!--***************************** FIN SOUS MENU FILMS ****************************-->
+	</include>
+</includes>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="OthersSubMenus">
+  <!--******************************* FILMS ******************************-->
+  <control type="group">
+   <visible>Control.HasFocus(302)</visible>
+  <animation effect="slide" start="-70,0" time="180" tween="cubic" easing="out">Focus</animation>
+<control type="image">
+					<posx>0</posx>
+					<posy>350</posy>
+					<width>1280</width>
+					<height>170</height>
+					<texture>elements/gris02.png</texture>
+         
+					<aspectratio>scale</aspectratio>
+			</control>
+	<control type="wraplist" id="302">
+			<description>Home Wraplist</description>
+			<posx>20</posx>
+			<posy>380</posy>
+			<width>1280</width>
+			<height>150</height>
+			<onup>301</onup>
+			<ondown>300</ondown>
+			<onleft>301</onleft>
+			<onright>301</onright>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+     
+			<itemlayout width="200" height="120">
+
+      <control type="label">
+					             <posx>80</posx>
+                       <posy>80</posy>
+                       <height>50</height>
+					             <width>200</width>
+					             <font>Medium</font>
+					             <info>ListItem.Label</info>
+					             <align>center</align>
+                      <textcolor>FF999999</textcolor>
+				           </control>
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>90</width>
+                      <height>90</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+        <control type="image">
+                        <posx>-40</posx>
+                        <posy></posy>
+                        <width>200</width>
+                        <height>1</height>
+                        <texture>gris.png</texture>
+                    </control>
+
+			</itemlayout>
+
+			<focusedlayout width="200" height="120">
+
+<control type="image">
+                      <posx>40</posx>
+                      <posy>0</posy>
+                      <width>90</width>
+                      <height>90</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+
+ <control type="label">
+					            <posx>85</posx>
+                       <posy>80</posy>
+                       <height>50</height>
+					             <width>200</width>
+					             <font>Medium</font>
+					             <info>ListItem.Label</info>
+					             <align>center</align>
+                       <visible>Control.HasFocus(302)</visible>
+                      <textcolor>Accent</textcolor>
+				           </control>
+                   <control type="label">
+					            <posx>80</posx>
+                       <posy>80</posy>
+                       <height>50</height>
+					             <width>200</width>
+					             <font>Medium</font>
+					             <info>ListItem.Label</info>
+					             <align>center</align>
+                       <visible>!Control.HasFocus(302)</visible>
+                      <textcolor>FF999999</textcolor>
+				           </control>
+
+    	</focusedlayout>
+      	<content>
+				<item id="1">
+        	<description>Programs</description>
+					<label>31002</label>
+					<onclick>ActivateWindow(Programs,Addons)</onclick>
+          <thumb>icons/programmes.png</thumb>
+          <property name="foo2">icons/programmes-a.png</property>
+       	</item>
+				<item id="3">
+					<description>Videos</description>
+					<label>31003</label>
+					<onclick>ActivateWindow(Video,Files)</onclick>
+          <thumb>icons/Monitor.png</thumb>
+          <property name="foo2">icons/Monitor-a.png</property>
+       	</item>
+        <item id="4">
+ 					<description>Favourites</description>
+					<label>31008</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+          <thumb>icons/Thumbs_up.png</thumb>
+          <property name="foo2">icons/Thumbs_up-a.png</property>
+       	</item>
+        <item id="5">
+					<description>Profiles</description>
+					<label>31009</label>
+					<onclick>ActivateWindow(Profiles)</onclick>
+          <thumb>icons/Businesscard.png</thumb>
+          <property name="foo2">icons/Businesscard-a.png</property>
+       	</item>
+        <item id="6">
+					<description>File manager</description>
+					<label>31011</label>
+					<onclick>ActivateWindow(filemanager)</onclick>
+          <thumb>icons/Tag.png</thumb>
+          <property name="foo2">icons/Tag-a.png</property>
+       	</item>
+			</content>
+		</control>
+	</control>
+<!--***************************** FIN SOUS MENU AUTRES ****************************-->
+	</include>
+</includes>

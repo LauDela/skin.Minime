@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="2006">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+  <onload>RunScript(script.artistslideshow)</onload>
+	<controls>
+
+		<control type="visualisation" id="2">
+			<description>visualisation</description>
+			<include>Dimensions_Fullscreen</include>
+		</control>
+		
+		<control type="multiimage">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+			<aspectratio>strecht</aspectratio>
+			<timeperimage>10000</timeperimage>
+			<fadetime>2000</fadetime>
+			<randomize>true</randomize>
+		</control>
+		
+		<control type="group"> <!--infos en cours-->
+			<visible>![Window.IsVisible(VisualisationSettings) | Window.IsVisible(VisualisationPresetList)]</visible>
+			
+			<control type="image">
+					<posx>0</posx>
+					<posy>850</posy>
+					<width>1920</width>
+					<height>250</height>
+					<texture border="22">elements/gris01t.png</texture>
+			</control>
+			<control type="image">
+	          <description>Music cd art image</description>
+	          <posx>130</posx>
+	          <posy>865</posy>
+	          <width>190</width>
+	          <height>190</height>
+	 	      <texture background="true" fallback="cd.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,/,/cdart.png]</texture>
+			</control>
+			<control type="image">
+              		<posx>10</posx>
+              		<posy>840</posy>
+              		<width>301</width>
+              		<height>244</height>
+              		<aspectratio>keep</aspectratio>
+              		<texture background="true">cd_cover_disk.png</texture> 
+          		</control>  
+			<control type="image">
+				<description>Music cover image</description>
+				<posx>15</posx>
+				<posy>860</posy>
+				<width>207</width>
+				<height>200</height>
+				<fadetime>200</fadetime>
+				<texture background="true">$INFO[MusicPlayer.cover]</texture>	
+			</control>			
+			
+			<control type="label">
+				<posx>400</posx>
+				<posy>870</posy>
+				<width>1500</width>
+				<label>$INFO[MusicPlayer.Album]</label>
+				<align>left</align>
+				<font>F60</font>
+				<textcolor>Orange</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<posx>400</posx>
+				<posy>930</posy>
+				<width>1500</width>
+				<label>$INFO[MusicPlayer.Artist]</label>
+				<align>left</align>
+				<font>F60</font>
+				<textcolor>Accent</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+			<control type="label">
+				<posx>400</posx>
+				<posy>990</posy>
+				<width>1500</width>
+				<label>$INFO[MusicPlayer.Title]</label>
+				<scroll>true</scroll>
+				<align>left</align>
+				<font>F60</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+
+			
+
+			<control type="label">
+				<description>Player Times</description>
+				<posx>1900</posx>
+				<posy>900</posy>
+				<width>800</width>
+				<label>$INFO[MusicPlayer.Time]</label>
+				<align>right</align>
+				<font>F90</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Player Times</description>
+				<posx>1900</posx>
+				<posy>950</posy>
+				<width>800</width>
+				<label>$INFO[MusicPlayer.Duration]</label>
+				<align>right</align>
+				<font>F30</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+                    <posx>1400</posx>
+                    <posy>0</posy> 
+                    <width>400</width>
+                    <height></height>
+                    <aligny>center</aligny>
+                    <texture background="true" fallback="DefaultArtist.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist,,\logo.png]</texture>
+                    <aspectratio>keep</aspectratio>
+                    <include>VisibleFadeEffect</include>
+                    <fadetime>IconCrossfadeTime</fadetime>
+                </control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<posx>0</posx>
+				<posy>20r</posy>
+				<width>1920</width>
+				<height>10</height>
+				<info>Player.Progress</info>
+			</control>
+       <!--
+			<control type="image">
+				<description>fond bio</description>
+				<posx>0</posx>
+				<posy>265</posy>
+				<width>1280</width>
+				<height>340</height>
+				<texture background="true">elements/gris01t.png</texture>
+				<aspectratio>strech</aspectratio>
+				<visible>!IsEmpty(Window(Visualisation).Property(ArtistSlideshow.ArtistBiography))</visible>
+			</control>
+      
+			<control type="textbox">
+				<description>Bio</description>
+				<posx>40</posx>
+				<posy>280</posy>
+				<width>1200</width>
+				<height>300</height>
+				<label>$INFO[Window(Visualisation).Property(ArtistSlideshow.ArtistBiography)]</label>
+				<align>left</align>
+				<font>F20</font>
+				<shadowcolor>black</shadowcolor>
+				<autoscroll delay="40000" time="1000" repeat="50000"></autoscroll>
+			</control>
+      -->
+		</control>
+
+		<!--A SUIVRE-->
+			<control type="group">
+					<animation type="Conditional" reversible="false" condition="MusicPlayer.HasNext" loop="true">
+						<effect type="slide" start="-900,0" end="0,0" time="500" delay="21500" />
+						<effect type="slide" start="0,0" end="-800,0" time="500" delay="38000" />
+					</animation>
+					 <posx>210</posx>
+                     <posy>750</posy>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>620</width>
+						<height>100</height>
+						<texture border="22">elements/gris01t.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>100</height>
+						<texture>orange.png</texture>
+					</control>
+					<control type="image">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture>icons/droite.png</texture>
+					</control>
+					<control type="image">
+						<description>Music cover image</description>
+						<posx>80</posx>
+						<posy>8</posy>
+						<width>80</width>
+						<height>80</height>
+						<fadetime>200</fadetime>
+						<texture background="true" diffuse="other_textures/cover_matte.png">$INFO[MusicPlayer.offset(1).Cover]</texture>
+				</control>
+					<control type="label">
+						<description>Now Playing Info</description>
+						<posx>170</posx>
+						<posy>0</posy>
+						<width>500</width>
+						<font>F20</font>
+						<label>A suivre [COLOR Accent]$INFO[MusicPlayer.offset(1).Artist,,][/COLOR]</label>
+						<shadowcolor>black</shadowcolor>
+						<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<description>Now Playing Info</description>
+					<posx>170</posx>
+					<posy>25</posy>
+					<width>500</width>
+					<font>F20</font>
+					<label>$INFO[MusicPlayer.offset(1).TrackNumber]-$INFO[MusicPlayer.offset(1).Title]</label>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+        
+				<control type="label">
+					<description>Now Playing Info</description>
+					<posx>170</posx>
+					<posy>52</posy>
+					<width>500</width>
+					<font>F20</font>
+					<label>$INFO[MusicPlayer.Album] ($INFO[MusicPlayer.Year])</label>
+					<shadowcolor>black</shadowcolor>
+					<scroll>true</scroll>
+				</control>
+					
+			</control>
+			<!--FIN A SUIVRE-->
+		
+	</controls>
+
+</window>

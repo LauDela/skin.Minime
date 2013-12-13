@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="HomeSubMenus">
+  <!--******************************* Home ******************************-->
+  <control type="group">
+   <visible>Container(300).HasFocus(1)</visible>
+    
+    
+	  <control type="List" id="316">
+			<description>Home Wraplist</description>
+			<posx>-30</posx>
+			<posy>800</posy>
+			<width>620</width>
+			<height>150</height>
+      <onup condition="Control.IsVisible(6061)">6002</onup>
+      <onup condition="Control.IsVisible(6063)">6004</onup>
+      <onup condition="Control.IsVisible(6062)">6006</onup>
+			<ondown>300</ondown>
+			<onleft>316</onleft>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+			<itemlayout width="128" height="80">
+      
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>128</width>
+                      <height>128</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+      </itemlayout>
+			<focusedlayout width="128" height="80">
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>128</width>
+                      <height>128</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <visible>Control.HasFocus(316)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>128</width>
+                      <height>128</height>
+                      <aspectratio>keep</aspectratio>
+                      <visible>!Control.HasFocus(316)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+
+                  <control type="label">
+					            <posx>60</posx>
+                       <posy>95</posy>
+                       <height>50</height>
+					             <width>400</width>
+					             <font>FF20</font>
+					             <info>ListItem.Label</info>
+					             <align>left</align>
+                       <visible>Control.HasFocus(316)</visible>
+                      <textcolor>Accent</textcolor>
+				           </control>
+    	</focusedlayout>
+      	<content>
+			       <item id="1">
+                <description>Programs</description>
+                <label>31002</label>
+                <onclick>ActivateWindow(Programs,Addons)</onclick>
+                <thumb>icons/programmes.png</thumb>
+                <property name="foo2">icons/programmes-a.png</property>
+            </item>
+
+            <item id="2">
+                <description>Favourites</description>
+                <label>31008</label>
+                <onclick>ActivateWindow(Favourites)</onclick>
+                <thumb>icons/Thumbs_up.png</thumb>
+                <property name="foo2">icons/Thumbs_up-a.png</property>
+            </item>
+
+            <item id="3">
+                <description>add on</description>
+                <label>$LOCALIZE[24001]</label>
+                <thumb>icons/Gear.png</thumb>
+                <onclick>ActivateWindow(addonbrowser,Root,return)</onclick>
+            </item>
+
+
+			</content>
+		</control>
+     
+
+	</control>
+<!--***************************** FIN SOUS MENU HOME ****************************-->
+	</include>
+</includes>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="MoviesSubMenus">
+  <!--******************************* FILMS ******************************-->
+  <control type="group">
+   <visible>Container(300).HasFocus(5)</visible>
+    
+    
+	  <control type="List" id="301">
+			<description>Home Wraplist</description>
+			<posx>-30</posx>
+			<posy>520</posy>
+			<width>620</width>
+			<height>150</height>
+			<onup>3010</onup>
+			<ondown>300</ondown>
+			<onleft>301</onleft>
+			<onright>3010</onright>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+			<itemlayout width="65" height="80">
+      
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+      </itemlayout>
+			<focusedlayout width="65" height="80">
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <visible>Control.HasFocus(301)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <visible>!Control.HasFocus(301)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+
+                  <control type="label">
+					            <posx>50</posx>
+                       <posy>40</posy>
+                       <height>50</height>
+					             <width>400</width>
+					             <font>Medium</font>
+					             <info>ListItem.Label</info>
+					             <align>left</align>
+                       <visible>Control.HasFocus(301)</visible>
+                      <textcolor>Accent</textcolor>
+				           </control>
+    	</focusedlayout>
+      	<content>
+				<item id="1">
+        	<description>HD</description>
+					<label>$LOCALIZE[31042]</label>
+          <thumb>icons/HD.png</thumb>
+          <property name="foo2">icons/HD.png</property>
+          <onclick>XBMC.ActivateWindow(10025,special://skin/playlists/HDMovies.xsp,return)</onclick>
+       	</item>
+				<item id="3">
+        	<description>Trailers</description>
+					<label>31047</label>
+          <thumb>icons/Monitor.png</thumb>
+          <property name="foo2">icons/Monitor-a.png</property>
+          <onclick>XBMC.RunScript(special://skin/scripts/script.trailers/default.py, stat=tvshow)</onclick>
+       	</item>
+        <item id="4">
+       	<description>Rafraichir</description>
+					<label>184</label>
+          <thumb>icons/refresh.png</thumb>
+          <property name="foo2">icons/refresh-a.png</property>
+          <onclick>UpdateLibrary(video)</onclick>
+       	</item>
+         <item id="300">
+						<description>custom1</description>
+						<label>$INFO[Skin.String(custom1_Playlist_Label)]</label>
+						<thumb>$INFO[Skin.String(custom1_Playlist_Icon)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom1_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom1_Playlist)</visible>
+					</item>
+          <item id="400">
+						<description>custom2</description>
+						<label>$INFO[Skin.String(custom2_Playlist_Label)]</label>
+						<thumb>$INFO[Skin.String(custom2_Playlist_Icon)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom2_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom2_Playlist)</visible>
+					</item>
+          <item id="500">
+						<description>custom3</description>
+						<label>$INFO[Skin.String(custom3_Playlist_Label)]</label>
+						<thumb>$INFO[Skin.String(custom3_Playlist_Icon)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom3_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom3_Playlist)</visible>
+					</item>
+          <item id="600">
+						<description>custom4</description>
+						<label>$INFO[Skin.String(custom4_Playlist_Label)]</label>
+						<thumb>$INFO[Skin.String(custom4_Playlist_Icon)]</thumb>
+						<onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom4_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom4_Playlist)</visible>
+					</item>
+			</content>
+		</control>
+     
+    <!--LAST ADDED-->
+    <!--fanart-->
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.1.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(1)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.2.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(2)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.3.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(3)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.4.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(4)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.5.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(5)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.6.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(6)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.7.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(7)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.8.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(8)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.9.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(9)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.10.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(10)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.11.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(11)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.12.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(12)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.13.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(13)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.14.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(14)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.15.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(15)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.16.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(16)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.17.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(17)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.18.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(18)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.19.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(19)</visible>
+    </control>
+    <control type="image">
+      <animation effect="fade" time="500">VisibleChange</animation>
+      <include>Dimensions_Fullscreen</include>
+      <fadetime>800</fadetime>
+      <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.20.Art(fanart))]</texture>
+      <colordiffuse>FanartDiffuse</colordiffuse>
+      <visible>Control.HasFocus(3010)+Container(3010).HasFocus(20)</visible>
+    </control>
+    <!--fin fanart-->
+	  <control type="FixedList" id="3010">
+			<description>Home Wraplist</description>
+			<posx>885</posx>
+			<posy>100</posy>
+			<width>640</width>
+			<height>200</height>
+			<onup>301</onup>
+			<ondown>300</ondown>
+			<onleft>301</onleft>
+			<onright>3010</onright>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+			<itemlayout width="80" height="120">
+      
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>90</width>
+                      <height>90</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture background="true" diffuse="other_textures/Movie_Thumb_Mask.png">$INFO[ListItem.Thumb]</texture>
+                  </control>
+			</itemlayout>
+			<focusedlayout width="120" height="250">
+          <control type="image">
+            <posx>25</posx>
+            <posy>0</posy>
+            <width>150</width>
+            <height>150</height>
+            <aspectratio>keep</aspectratio>
+            <texture background="true" diffuse="other_textures/Movie_Thumb_Mask.png">$INFO[ListItem.Thumb]</texture>
+            <visible>Control.HasFocus(3010)</visible>
+           <!-- <animation type="Focus" reversible="false">
+              <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+            </animation>-->
+          </control>
+
+        <control type="image">
+              <posx>65</posx>
+              <posy>30</posy>
+              <width>80</width>
+              <height>80</height>
+              <aspectratio>keep</aspectratio>
+              <colordiffuse>Accent</colordiffuse>
+              <texture>DefaultNextAired.png</texture>
+              <visible>Control.HasFocus(3010)</visible>
+          </control>
+
+
+
+        <control type="image">
+                      <posx>75</posx>
+                      <posy>5</posy>
+                      <width>90</width>
+                      <height>90</height>
+                      <aspectratio>keep</aspectratio>
+                      <visible>!Control.HasFocus(3010)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+
+                  <control type="label">
+					            <posx>52</posx>
+                       <posy>140</posy>
+                       <height>50</height>
+					             <width>330</width>
+					             <font>Medium</font>
+					             <info>ListItem.Label</info>
+					             <align>left</align>
+                       <visible>Control.HasFocus(3010)</visible>
+                      <textcolor>Accent</textcolor>
+                      <scroll>true</scroll>
+				           </control>
+
+    	</focusedlayout>
+      	<content>
+        <item id="1">
+					<description>Dernier Film 1</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.1.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.1.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</thumb>
+
+        </item>
+        <item id="2">
+					<description>Dernier Film 2</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.2.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.2.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.2.Art(poster))]</thumb>
+
+      </item>
+      <item id="3">
+					<description>Dernier Film 3</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.3.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.3.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.3.Art(poster))]</thumb>
+
+      </item>
+      <item id="4">
+					<description>Dernier Film 4</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.4.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.4.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.4.Art(poster))]</thumb>
+
+      </item>
+      <item id="5">
+					<description>Dernier Film 5</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.5.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.5.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.5.Art(poster))]</thumb>
+
+      </item>
+      <item id="6">
+					<description>Dernier Film 6</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.6.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.6.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.6.Art(poster))]</thumb>
+
+      </item>
+      <item id="7">
+					<description>Dernier Film 7</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.7.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.7.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.7.Art(poster))]</thumb>
+
+      </item>
+      <item id="8">
+					<description>Dernier Film 8</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.8.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.8.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.8.Art(poster))]</thumb>
+
+      </item>
+      <item id="9">
+					<description>Dernier Film 9</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.9.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.9.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.9.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.9.Art(poster))]</thumb>
+
+      </item>
+      <item id="10">
+					<description>Dernier Film 10</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.10.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.10.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.10.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.10.Art(poster))]</thumb>
+      </item>
+      <item id="11">
+					<description>Dernier Film 11</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.11.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.11.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.11.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.11.Art(poster))]</thumb>
+      </item>
+      <item id="12">
+					<description>Dernier Film 12</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.12.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.12.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.12.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.12.Art(poster))]</thumb>
+      </item>
+      <item id="13">
+					<description>Dernier Film 13</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.13.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.13.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.13.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.13.Art(poster))]</thumb>
+      </item>
+      <item id="14">
+					<description>Dernier Film 10</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.14.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.14.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.14.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.14.Art(poster))]</thumb>
+      </item>
+      <item id="15">
+					<description>Dernier Film 15</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.15.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.15.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.15.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.15.Art(poster))]</thumb>
+      </item>
+      <item id="16">
+					<description>Dernier Film 16</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.16.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.16.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.16.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.16.Art(poster))]</thumb>
+      </item>
+      <item id="17">
+					<description>Dernier Film 17</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.17.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.17.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.17.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.17.Art(poster))]</thumb>
+      </item>
+      <item id="18">
+					<description>Dernier Film 18</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.18.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.18.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.18.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.18.Art(poster))]</thumb>
+      </item>
+      <item id="19">
+					<description>Dernier Film 19</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.19.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.19.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.19.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.19.Art(poster))]</thumb>
+      </item>
+      <item id="20">
+					<description>Dernier Film 20</description>
+					<label2>$INFO[Window(Home).Property(RecentMovie.20.Year)]</label2>
+          <label>$INFO[Window(Home).Property(RecentMovie.20.Title)]</label>
+          <onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.20.File)])</onclick>
+          <thumb>$INFO[Window(Home).Property(RecentMovie.20.Art(poster))]</thumb>
+      </item>
+
+        </content>
+	</control>
+    <!--FIN LAST ADDED-->
+	</control>
+<!--***************************** FIN SOUS MENU FILMS ****************************-->
+	</include>
+</includes>

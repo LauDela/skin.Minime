@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="136">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="group">
+			<posx>980</posx>
+			<posy>680</posy>
+
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>100</height>
+				<texture border="20">elements/gris01.png</texture>
+			</control>
+	
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>30</posy>
+				<width>60</width>
+				<height>5</height>
+				<texture>orange.png</texture>
+				<animation effect="slide" start="0" end="360" time="1200" loop="true" condition="true">conditional</animation>
+			</control>
+			
+			<control type="label">
+				<description>Busy label</description>
+				<posx>-45</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>32</height>
+				<align>center</align>
+				<label>20186</label>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

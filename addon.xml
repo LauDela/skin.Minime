@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.Minime" version="1.0.0" name="Minime" provider-name="LauDela">
+	<requires>
+		<import addon="xbmc.gui" version="4.0.0"/>
+		<import version="0.0.16" addon="service.skin.widgets"/>	
+		<import version="1.5.4" addon="script.artistslideshow"/>
+		<import version="12.0.15" addon="script.artwork.downloader"/>	
+	</requires>
+	<extension  point="xbmc.gui.skin" defaultresolution="1080i"  defaultresolutionwide="1080i" effectslowdown="1.00" debugging="false"/>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>Created by LauDela</summary>
+		<description>A basic skin for XBMC.</description>
+	</extension>
+</addon>

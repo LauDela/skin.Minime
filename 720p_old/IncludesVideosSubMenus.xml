@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+	<include name="VideosSubMenus">
+  <!--******************************* VIDEOS ******************************-->
+  <control type="group">
+   <visible>Container(300).HasFocus(15)</visible>
+    
+    
+	  <control type="List" id="315">
+			<description>Home Wraplist</description>
+			<posx>-30</posx>
+			<posy>520</posy>
+			<width>620</width>
+			<height>150</height>
+			<onup></onup>
+			<ondown>300</ondown>
+			<onleft>315</onleft>
+			<onright>3010</onright>
+      <orientation>horizontal</orientation>
+			<focusposition>0</focusposition>
+			<scrolltime tween="sine" easing="out">300</scrolltime>
+			<itemlayout width="65" height="90">
+      
+        <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+      </itemlayout>
+			<focusedlayout width="65" height="80">
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
+                      <visible>Control.HasFocus(315)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+                  <control type="image">
+                      <posx>35</posx>
+                      <posy>5</posy>
+                      <width>60</width>
+                      <height>60</height>
+                      <aspectratio>keep</aspectratio>
+                      <visible>!Control.HasFocus(315)</visible>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                  </control>
+
+                  <control type="label">
+					            <posx>45</posx>
+                       <posy>50</posy>
+                       <height>50</height>
+					             <width>400</width>
+					             <font>Medium</font>
+					             <info>ListItem.Label</info>
+					             <align>left</align>
+                       <visible>Control.HasFocus(315)</visible>
+                      <textcolor>Accent</textcolor>
+				           </control>
+    	</focusedlayout>
+      	<content>
+				<item id="1">
+        	<description>fichiers</description>
+					<label>7</label>
+          <thumb>icons/Folder-Open.png</thumb>
+          <onclick>ActivateWindow(Videos,Files,return)</onclick>
+       	</item>
+				<item id="3">
+        	<description>playlists</description>
+					<label>136</label>
+          <thumb>icons/playlist.png</thumb>
+          <onclick>ActivateWindow(VideoLibrary,Playlists,return)</onclick>
+       	</item>
+        <item id="4">
+       	<description>extensions</description>
+					<label>$LOCALIZE[1037]</label>
+          <thumb>icons/extensions.png</thumb>
+          <onclick>activatewindow(Videos,addons,return)</onclick>
+       	</item>
+        <item id="5">
+            <description>Videos Root</description>
+            <label>$LOCALIZE[20108]</label>
+            <thumb>icons/racine.png</thumb>
+            <onclick>ActivateWindow(Videos,Root,return)</onclick>
+        </item>
+         
+			</content>
+		</control>
+	</control>
+<!--***************************** FIN SOUS MENU VIDEOS ****************************-->
+	</include>
+</includes>

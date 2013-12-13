@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="songs">
+    <name>Les mieux notées</name>
+    <match>all</match>
+    <rule field="rating" operator="greaterthan">1</rule>
+    <order direction="ascending">random</order>
+</smartplaylist>

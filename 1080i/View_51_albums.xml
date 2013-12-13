@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+  
+	<include name="View_51_Albums">
+	
+		<description>Album View (id=51)</description>
+<!--
+     <control type="multiimage">
+          <include>Dimensions_Fullscreen</include>
+         <animation effect="fade"  time="500" delay="5000" condition="[Container.Content(movies) | Container.Content(tvshows)] + ![Container(50).OnNext | Container(50).OnPrevious] + !IsEmpty(ListItem.Title)">Conditional</animation>
+         <imagepath background="true">$INFO[ListItem.Path]/extrafanart</imagepath>
+         <timeperimage>8500</timeperimage>
+         <randomize>true</randomize>
+         <fadetime>1000</fadetime>
+     </control>
+-->
+    
+		<control type="panel" id="51">
+			<posx>50</posx>
+			<posy>620</posy>
+			<width>1900</width>
+			<height>430</height>
+			<onleft>51</onleft>
+			<onright>51</onright>
+			<ondown>9000</ondown>
+			<orientation>horizontal</orientation>
+			<pagecontrol>60</pagecontrol>
+			<viewtype label="Albums">Albums</viewtype>
+			<scrolltime>100</scrolltime>
+			<visible>Container.Content(albums)</visible>
+			<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
+				<effect type="fade" start="100" end="50" time="200" />
+			</animation>
+			<itemlayout width="200" height="200">
+				
+
+				
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>200</width>
+					<height>200</height>
+					<aspectratio scalediffuse="false" align="center">stretch</aspectratio>
+					<texture fallback="DefaultAddonNone.png" background="true">$INFO[ListItem.icon]</texture>
+					<visible>[Container.Content(albums)]</visible>
+				</control>
+				
+				
+				
+			</itemlayout>
+
+			<focusedlayout width="210" height="210">
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>220</width>
+					<height>220</height>
+					<aspectratio scalediffuse="false" align="center" >stretch</aspectratio>
+					<texture background="true">orange.png</texture>
+					<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>	
+				
+				<!--album-->
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>210</width>
+					<height>210</height>
+					<aspectratio scalediffuse="false" align="center" >stretch</aspectratio>
+					<texture fallback="DefaultAddonNone.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				
+				
+			</focusedlayout>
+		</control>
+	
+		
+		
+		
+		
+		<control type="label">
+			<posx>30</posx>
+			<posy>500</posy>
+			<width>1800</width>
+			<font>F90</font>
+			<label>$INFO[ListItem.Label]</label>
+			<scroll>true</scroll>
+			<shadowcolor>Black</shadowcolor>
+			<visible>Control.IsVisible(51) + Container.Content(albums) </visible>
+		</control>
+		
+		<control type="label">
+			<posx>30</posx>
+			<posy>570</posy>
+			<font>F50</font>
+			<textcolor>Accent</textcolor>
+			<label>$INFO[ListItem.Year]</label>
+			<shadowcolor>Black</shadowcolor>
+			<visible>Control.IsVisible(51) + Container.Content(albums)</visible>
+		</control>
+		
+
+		<control type="label">
+			<posx>150</posx>
+			<posy>570</posy>
+			<font>F50</font>
+			<label>$INFO[ListItem.Genre]</label>
+			<shadowcolor>Black</shadowcolor>
+			<visible>Control.IsVisible(51) + [Container.Content(albums)]</visible>
+		</control>
+		
+       <control type="image"> <!--logo-->
+		     <posx>50</posx>
+		     <posy>730</posy>
+		     <width>380</width>
+		     <height></height>
+		     <aspectratio >keep</aspectratio>
+		     <texture background="true">$INFO[ListItem.Path,,/logo.png]</texture>
+		     <visible>Control.IsVisible(51) + [Container.Content(albums)]</visible>
+		 </control>
+      
+		
+    
+		
+		
+		<control type="label"> <!--nbr elements albums-->
+			<posx>30</posx>
+			<posy>900</posy>
+			<width>525</width>
+			 <height>240</height>
+			<font>F30</font>
+			<angle>90</angle>
+			<shadowcolor>Black</shadowcolor>
+			<label>[B]$INFO[Container().NumItems][/B] $LOCALIZE[132]</label>
+			<visible>Control.IsVisible(51) + [Container.Content(albums) ]</visible>
+		</control>
+
+		
+		
+		
+		
+		<control type="scrollbar" id="60">
+			<posx>0</posx>
+			<posy>1050</posy>
+			<width>1920</width>
+			<onleft>50</onleft>
+			<onright>9000</onright>
+			<!--<visible allowhiddenfocus="true">Control.HasFocus(60) | Container.Scrolling</visible>-->
+			<visible allowhiddenfocus="true">Control.HasFocus(51)</visible>
+			<!--<animation effect="fade" start="0" end="100" time="400" condition="Control.HasFocus(60) | Container.Scrolling">Conditional</animation>-->
+		</control>
+  
+		
+		<!-- FIN SUB MENU-->
+	</include>
+
+</includes>

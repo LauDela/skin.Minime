@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="502">
+	<defaultcontrol always="true">504</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<views>504,503,50,580</views>
+
+	<controls>
+  <include>BarClock</include>
+		<control type="radiobutton" id="19">
+			<description>Filter (hidden)</description>
+			<include>HiddenButton</include>
+		</control>
+
+		<include>GlobalBackground</include>
+
+		<include>View_50_List</include>
+    <include>Viewtype_Songs</include>
+	 <include>Viewtype_defaut</include>
+	 <include>Viewtype_logo</include>
+    <control type="image">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <width>240</width>
+                    <height>720</height>
+                
+                    <texture>elements/gris01.png</texture>
+                    <visible>ControlGroup(9000).HasFocus()</visible>
+                </control>
+
+		<control type="grouplist" id="9000">
+			<posx>10</posx>
+			<posy>140</posy>
+			<width>220</width>
+			<height>600</height>
+			<itemgap>2</itemgap>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<orientation>vertical</orientation>
+			<animation type="Conditional" condition="!ControlGroup(9000).HasFocus()">
+				<effect type="slide" start="0,0" end="-305,0" time="300" easing="out" tween="cubic"/>
+			</animation>
+
+			<control type="button" id="2">
+				<description>View</description>
+				<width>220</width>
+				<align>left</align>
+				<onclick>Container.NextViewMode</onclick>
+			</control>
+			<control type="button" id="20">
+				<align>left</align>
+				<label>$INFO[Container.ViewMode]</label>
+				<onclick>Container.PreviousViewMode</onclick>
+			</control>
+
+			<control type="button" id="3">
+				<description>Sort</description>
+				<width>220</width>
+				<align>left</align>
+			</control>
+
+			<control type="togglebutton" id="4">
+				<description>Ascending</description>
+				<width>220</width>
+				<align>left</align>
+				<label>584</label>
+				<altlabel>585</altlabel>
+			</control>
+
+			<control type="button" id="5">
+				<description>Files</description>
+				<width>220</width>
+				<align>left</align>
+				<label>31001</label>
+				<onclick>SetFocus(50)</onclick>
+			</control>
+
+			<control type="button" id="8">
+				<description>Search</description>
+				<width>220</width>
+				<align>left</align>
+				<label>137</label>
+			</control>
+
+			<control type="radiobutton" id="16">
+				<description>PartyMode</description>
+				<width>220</width>
+				<align>left</align>
+				<label>589</label>
+			</control>
+
+			<control type="button" id="21">
+				<description>Activate Filter</description>
+				<width>220</width>
+				<align>left</align>
+				<label>587</label>
+				<onclick>SendClick(musiclibrary,19)</onclick>
+				<onclick>SetFocus(22)</onclick>
+				<visible>IsEmpty(Window.Property(filter))</visible>
+			</control>
+
+			<control type="button" id="22">
+				<description>Show Filter Label</description>
+				<width>220</width>
+				<align>left</align>
+				<label>$LOCALIZE[587] - $INFO[Window.Property(filter)]</label>
+				<onclick>SendClick(musiclibrary,19)</onclick>
+				<onclick>SetFocus(21)</onclick>
+				<visible>!IsEmpty(Window.Property(filter))</visible>
+			</control>
+
+			<control type="button" id="98">
+				<description>Open Player Controls</description>
+				<width>220</width>
+				<align>left</align>
+				<label>31015</label>
+				<onclick>ActivateWindow(playercontrols)</onclick>
+				<visible>Player.HasMedia</visible>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

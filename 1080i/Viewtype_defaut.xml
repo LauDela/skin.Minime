@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="Viewtype_defaut">
+        <control type="group">
+            <visible>Control.IsVisible(504)</visible>
+            <posx>620</posx>
+            <posy>600</posy>
+
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>884</width>
+                <height>315</height>
+                <texture border="5">elements/blanc.png</texture>
+                <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(504)">Conditional</animation>
+                <visible>Control.IsVisible(504) </visible>
+            </control>
+
+        
+            <control type="list" id="504">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>884</width>
+                <height>315</height>
+                <onup>504</onup>
+                <ondown>504</ondown>
+                <onright>1</onright>
+                <onleft>9000</onleft>
+                <onright>IncreaseRating</onright>
+                <scrolltime>0</scrolltime>
+                <viewtype label="default">Default</viewtype>
+                <orientation>vertical</orientation>
+                <focusposition>0</focusposition>
+                <pagecontrol>63</pagecontrol>
+           
+                <itemlayout height="45">
+                    <control type="label">
+                        <posx>22</posx>
+                        <width>45</width>
+                        <align>center</align>
+                        <label>$INFO[ListItem.TrackNumber]</label>
+                        <visible>Container.Content(songs)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>65</posx>
+                        <width>730</width>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <posx>600</posx>
+                        <width>730</width>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <align>left</align>
+                    </control>
+                   
+					<control type="label">
+                        <posx>870</posx>
+                        <align>right</align>
+                        <width>300</width>
+                        <label>$INFO[ListItem.PictureDatetime]</label>
+                    </control>
+                    <control type="label">
+                        <posx>870</posx>
+                        <align>right</align>
+                        <width>300</width>
+                        <label>$INFO[ListItem.Year]</label>
+                        <visible>Container.Content(albums)</visible>
+                    </control>
+					<control type="image">
+                        <posx>300</posx>
+                        <posy>10</posy>
+                        <width>100</width>
+                        <height>25</height>
+                        <texture>other_textures/camera/$INFO[ListItem.PictureCamMake].png</texture>
+                    </control>
+                     <control type="image">
+                        <posx>680</posx>
+                        <posy>10</posy>
+                        <width>100</width>
+                        <height>25</height>
+                        <texture>rating/$INFO[ListItem.StarRating]</texture>
+                        <visible>Container.Content(songs) | Container.Content(movies)</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="45">
+                    <control type="image">
+                        <width>884</width>
+                        <height>45</height>
+                        <texture border="5">orange.png</texture>
+                        <animation effect="fade" start="100" end="50" condition="!Control.HasFocus(504)">Conditional</animation>
+                    </control>
+                    
+                    <control type="label">
+                        <posx>22</posx>
+                        <width>45</width>
+                        <align>center</align>
+                        <label>[B]$INFO[ListItem.TrackNumber][/B]</label>
+                        <visible>Container.Content(songs)</visible>
+                    </control>
+                    <control type="label">
+                        <posx>65</posx>
+                        <width>730</width>
+                        <label>[COLOR White][B]$INFO[ListItem.Label][/B][/COLOR]</label>
+                    </control>
+                    <control type="label">
+                        <posx>600</posx>
+                        <width>730</width>
+                        <label>[COLOR White][B]$INFO[ListItem.Label2][/B][/COLOR]</label>
+                        <align>left</align>
+                    </control>
+                    <control type="image">
+                        <posx>680</posx>
+                        <posy>10</posy>
+                        <width>100</width>
+                        <height>25</height>
+                        <texture>rating/$INFO[ListItem.StarRating]</texture>
+                        <visible>Container.Content(songs) | Container.Content(movies)</visible>
+                    </control>
+                    
+					<control type="label">
+                        <posx>870</posx>
+                        <align>right</align>
+                        <width>300</width>
+                        <label>$INFO[ListItem.PictureDatetime]</label>
+                    </control>
+                    <control type="label">
+                        <posx>870</posx>
+                        <align>right</align>
+                        <width>300</width>
+                        <label>$INFO[ListItem.Year]</label>
+                        <visible>Container.Content(albums)</visible>
+                    </control>
+					 <control type="image">
+                        <posx>300</posx>
+                        <posy>10</posy>
+                        <width>100</width>
+                        <height>25</height>
+                        <texture>other_textures/camera/$INFO[ListItem.PictureCamMake].png</texture>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="scrollbar" id="63">
+                <posx>885</posx>
+                <posy>0</posy>
+                <width>6</width>
+                <height>315</height>
+                <orientation>vertical</orientation>
+            </control>
+            <control type="label">
+                <posx>0</posx>
+                <posy>-66</posy>
+                <width>300</width>
+                <align>left</align>
+                <aligny>top</aligny>
+                <label>[LOWERCASE]$LOCALIZE[21429][/LOWERCASE]: [COLOR Accent][LOWERCASE]$INFO[Container.SortMethod][/LOWERCASE][/COLOR] </label>
+                <font>F30</font>
+                <textcolor>White</textcolor>
+               
+            </control>
+            <control type="group">
+                <posx>-315</posx>
+                <posy>0</posy>
+                
+                <control type="image">                    
+                    <width>315</width>
+                    <height>315</height>
+                    <texture>orange.png</texture>
+                    <fadetime>200</fadetime>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                </control>
+                <control type="image">
+                    <width>315</width>
+                    <height>315</height>
+                    <texture background="true" diffuse="other_textures/cover_matte.png">$INFO[ListItem.Icon]</texture>
+                    <fadetime>200</fadetime>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <visible>true</visible>
+                    <bordersize>4</bordersize>
+                </control>
+            </control>    
+        </control>
+    </include>
+</includes>

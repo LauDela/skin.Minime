@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.trailers"
+       name="Locals trailers"
+       version="0.1"
+       provider-name="LauDela">
+  <requires>
+    <import addon="xbmc.python" version="2.0"/>
+     <import addon="script.module.simplejson" version="2.0.10"/>
+  </requires>
+  <extension point="xbmc.python.library"
+             library="default.py" />
+ <provides>executable</provides>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Play locals Trailers</summary>
+    <description lang="en">All your locals trailers in list</description>
+  </extension>
+</addon>

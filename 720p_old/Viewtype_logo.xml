@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="Viewtype_logo">
+
+        <control type="group">
+            <visible>Control.IsVisible(580)</visible>
+
+               
+
+                <control type="group">
+
+                    
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>520</posy>
+                        <width>1300</width>
+                        <height>150</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture background="true">elements/gris01t.png</texture>
+                        <visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(artists)]</visible>
+                    </control>
+                        
+
+                    <control type="group">
+                        <posx>20</posx>
+                        <posy>580</posy>
+                    
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1250</width>
+                            <font>F90</font>
+                            <label>$INFO[ListItem.Label]</label>
+                            <shadowcolor>Black</shadowcolor>
+                            <visible>false</visible>
+                            <scroll>true</scroll>
+                        </control>
+
+                        <control type="label">
+                            <posx>0</posx>
+                            <posy>70</posy>
+                            <font>F50</font>
+                            <textcolor>Accent</textcolor>
+                            <label>$INFO[ListItem.Year]</label>
+                            <visible>false</visible>
+                            <shadowcolor>Black</shadowcolor>
+                        </control>
+
+                        <control type="image">
+                            <posx>130</posx>
+                            <posy>75</posy>
+                            <width></width>
+                            <height>30</height>
+                            <visible>false</visible>
+                            <texture>rating/$INFO[ListItem.StarRating]</texture>
+                        </control>
+                    </control>
+                </control>
+           
+
+
+            <control type="fixedlist" id="580">
+                <posx>20</posx>
+                <posy>550</posy>
+                <width>1300</width>
+                <height>400</height>
+                <onup></onup>
+                <ondown>9000</ondown>
+                <onright>580</onright>
+                <onleft>580</onleft>
+                <scrolltime>0</scrolltime>
+                <viewtype label="Logos">logos</viewtype>
+                <orientation>horizontal</orientation>
+                <focusposition>2</focusposition>
+                <pagecontrol>64</pagecontrol>
+                
+                <itemlayout width="240" height="160">
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>200</width>
+                        <height>100</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture background="true" fallback="DefaultNextAiredCanceled.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                        <visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(artists)]</visible>
+                    </control>
+                    
+                </itemlayout>
+
+                <focusedlayout width="240" height="210">
+
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>0</posy>
+                        <width>200</width>
+                        <height>100</height>
+                        <aspectratio>stretch</aspectratio>
+                        <texture background="true" fallback="DefaultNextAiredCanceled.png">$INFO[ListItem.Art(clearlogo)]</texture>
+                        <visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(artists)]</visible>
+                        <animation type="Focus" reversible="false">
+                                <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+                        </animation>
+                    </control>
+                    <control type="image">
+                        <posx>0</posx>
+                        <posy>110</posy>
+                        <width>200</width>
+                        <height>5</height>
+                        
+                        <texture background="true">orange.png</texture>
+                        <visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(artists)]</visible>
+                        <animation type="Focus" reversible="false">
+                                <effect type="zoom" center="auto" start="31" end="100" time="800" tween="back" easing="out" />
+                        </animation>
+                    </control>  
+                </focusedlayout>
+            </control>
+            
+            <control type="scrollbar" id="64">
+                <posx>1274</posx>
+                <posy>288</posy>
+                <width>6</width>
+                <height>315</height>
+                <texturesliderbackground></texturesliderbackground>
+                <textureslidernib>bar.png</textureslidernib>
+                <textureslidernibfocus>scroll_nib.png</textureslidernibfocus>
+                <texturesliderbar></texturesliderbar>
+                <texturesliderbarfocus></texturesliderbarfocus>
+                <showonepage>true</showonepage>
+                <orientation>vertical</orientation>
+            </control>
+
+            
+
+            
+
+        </control>
+    </include>
+</includes>

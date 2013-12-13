@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="112">
+	<defaultcontrol always="true">401</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+
+	<controls>
+
+		<control type="group">
+			<posx>860</posx>
+			<posy>20</posy>
+
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>400</width>
+				<height>130</height>
+				<texture border="20">other_textures/OverlayDialogBackground.png</texture>
+			</control>
+
+			<control type="label" id="401">
+				<description>heading</description>
+				<posx>20</posx>
+				<posy>20</posy>
+				<width>360</width>
+				<height>32</height>
+				<label>-</label>
+			</control>
+
+			<control type="label" id="402">
+				<description>Current Directory Label</description>
+				<posx>20</posx>
+				<posy>52</posy>
+				<width>360</width>
+				<height>32</height>
+				<label>-</label>
+			</control>
+
+			<control type="progress" id="403">
+				<description>progress control</description>
+				<posx>20</posx>
+				<posy>90</posy>
+				<width>360</width>
+				<height>18</height>
+			</control>
+
+		</control>
+
+	</controls>
+
+</window>

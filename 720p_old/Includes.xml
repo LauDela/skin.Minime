@@ -1,0 +1,1725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+
+	<include file="Defaults.xml" />
+	<include file="CommonViews.xml" />
+    <include file="IncludesMoviesSubMenus.xml" />
+    <include file="IncludesVideosSubMenus.xml" />
+    <include file="IncludesMusicSubMenus.xml" />
+    <include file="IncludesHomeSubMenus.xml" />
+    <include file="Viewtype_Songs.xml" />
+    <include file="Viewtype_defaut.xml" />
+    <include file="View_tv.xml" />
+    <include file="Viewtype_full.xml" />
+    <include file="Viewtype_logo.xml" />
+    <include file="IncludesTVShowsSubMenus.xml" />
+    <include file="IncludesShutdownSubMenus.xml" />
+    <include file="IncludesOthers.xml" />
+	<include file="View_50_List.xml" />
+    <include file="HomePage.xml" />
+    <include name="BarClock">
+    
+    <!-- Hide weather somewhere to make sure it loads for widgets -->
+                    <control type="image">
+                        <posx>175</posx>
+                        <posy>30</posy>
+                        <width>128</width>
+                        <height>128</height>
+                        <texture>weather/small/$INFO[Weather.FanartCode].png</texture>
+                        <colordiffuse>Mod_Tags</colordiffuse>
+                        <animation effect="fade" start="0" end="0" time="0" condition="true">Conditional</animation>
+                    </control> 
+
+        <control type="label">
+            <label>[LOWERCASE]$INFO[System.Time(hh:mm)][COLOR Accent]$INFO[System.Time(xx)][/COLOR][/LOWERCASE]</label>
+            <posx>1275</posx>
+            <posy>-20</posy>
+            <height>100</height>
+            <width>550</width>
+            <font>F64</font>
+            <align>right</align>
+            <shadowcolor>Black</shadowcolor>
+        </control>
+        <control type="label">
+            <label>[LOWERCASE][COLOR Accent]$INFO[System.Date(DDD)][/COLOR] $INFO[System.Date(dd)] $INFO[System.Date(MMM)] [/LOWERCASE]</label>
+            <posx>1279</posx>
+            <posy>30</posy>
+            <height>100</height>
+            <width>750</width>
+            <font>F28</font>
+            <shadowcolor>Black</shadowcolor>
+            <align>right</align>
+        </control>
+    </include>
+	<include name="HiddenButton">
+		<posx>-20</posx>
+		<posy>-20</posy>
+		<width>1</width>
+		<height>1</height>
+		<label>-</label>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+	</include>
+
+	<include name="Dimensions_Fullscreen">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+	</include>
+
+	<include name="WindowID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Blue</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>left</align>
+	</include>
+
+	<include name="DialogID">
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Green</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>left</align>
+	</include>
+
+	<include name="PathID">
+		<posx>10r</posx>
+		<posy>10</posy>
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Blue</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>right</align>
+	</include>
+
+	<include name="ControlID">
+		<posx>10r</posx>
+		<posy>32</posy>
+		<width>520</width>
+		<height>14</height>
+		<textcolor>Red</textcolor>
+		<shadowcolor>Black</shadowcolor>
+		<align>right</align>
+	</include>
+
+	<include name="GlobalOverlay">
+
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<texture border="2">other_textures/black-back.png</texture>
+		</control>
+
+	</include>
+
+	<include name="GlobalBackground">
+            
+		<control type="group">
+			<visible>!Player.HasMedia | [Player.HasAudio + Skin.HasSetting(NoBackgroundVisualiser)] | [Player.HasVideo + Skin.HasSetting(NoBackgroundVideo)]</visible>
+
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<fadetime>800</fadetime>
+				<texture background="true" fallback="striped_room.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				<visible>[!IsEmpty(ListItem.foldername) + [Container.Content(Movies) | Container.Content(episodes)] + !Control.IsVisible(566)] | !Window.IsVisible(videolibrary)</visible>
+			</control>
+            
+			
+            <control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<fadetime>800</fadetime>
+				<texture background="true">$INFO[Fanart.Image]</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				<visible>!IsEmpty(ListItem.foldername) + [Container.Content(Seasons)]</visible>
+			</control>
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<fadetime>800</fadetime>
+				<texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+				<colordiffuse>FanartDiffuse</colordiffuse>
+				<visible>!IsEmpty(ListItem.foldername) + [Container.Content(TVShows)]</visible>
+			</control>
+
+		</control>
+
+		<control type="group">
+			<visible>[Player.HasAudio + !Skin.HasSetting(NoBackgroundVisualiser)] | [Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)]</visible>
+
+			<control type="visualisation">
+				<include>Dimensions_Fullscreen</include>
+				<visible>Player.HasAudio + !Skin.HasSetting(NoBackgroundVisualiser)</visible>
+			</control>
+
+			<control type="videowindow">
+				<include>Dimensions_Fullscreen</include>
+				<visible>Player.HasVideo + !Skin.HasSetting(NoBackgroundVideo)</visible>
+			</control>
+
+			<control type="image">
+				<include>Dimensions_Fullscreen</include>
+				<texture border="2">other_textures/black-back.png</texture>
+			</control>
+
+		</control>
+
+	</include>
+    <include name="HomeBackground">
+        <control type="multiimage">
+            <include>Dimensions_Fullscreen</include>
+            <randomize>true</randomize>
+            <timeperimage>8000</timeperimage>
+            <fadetime>3000</fadetime>
+            <pauseatend>0</pauseatend>
+            <loop>true</loop>
+            <aspectratio aligny="top">stretch</aspectratio>
+            <imagepath background="true">backgrounds/shutdown</imagepath>
+            <colordiffuse>FanartDiffuse</colordiffuse>
+            <visible>[Container(300).HasFocus(12)]</visible>
+            <animation effect="fade" time="500">Hidden</animation>
+        </control>
+		 <control type="multiimage">
+            <include>Dimensions_Fullscreen</include>
+            <randomize>true</randomize>
+            <timeperimage>8000</timeperimage>
+            <fadetime>3000</fadetime>
+            <pauseatend>0</pauseatend>
+            <loop>true</loop>
+            <aspectratio aligny="top">stretch</aspectratio>
+            <imagepath background="true">backgrounds/parameters</imagepath>
+            <colordiffuse>FanartDiffuse</colordiffuse>
+            <visible>[Container(300).HasFocus(11)]</visible>
+            <animation effect="fade" time="500">Hidden</animation>
+        </control>
+        <control type="group">
+            <visible>[Container(300).HasFocus(4) + Skin.HasSetting(Use_CustomPicturesFolder)]</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <randomize>true</randomize>
+                <timeperimage>8000</timeperimage>
+                <fadetime>3000</fadetime>
+                <pauseatend>0</pauseatend>
+                <loop>true</loop>
+                <imagepath background="true">$INFO[Skin.String(Home_Custom_Back_CustomPicturesFolder)]</imagepath>
+               
+                <colordiffuse>FanartDiffuse</colordiffuse>
+                <animation effect="fade" time="500">Hidden</animation>
+            </control>
+        </control>
+        <control type="group">
+            <visible>[Container(300).HasFocus(15)]</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <randomize>true</randomize>
+                <timeperimage>8000</timeperimage>
+                <fadetime>3000</fadetime>
+                <pauseatend>0</pauseatend>
+                <loop>true</loop>
+                <imagepath background="true" fallback="videos.jpg">$INFO[Skin.String(Home_Custom_Back_CustomVideosFolder)]</imagepath>
+                <colordiffuse>FanartDiffuse</colordiffuse>
+                <animation effect="fade" time="500">Hidden</animation>
+            </control>
+        </control>  
+        <control type="group">
+            <visible>[Container(300).HasFocus(13)]</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <randomize>true</randomize>
+                <timeperimage>8000</timeperimage>
+                <fadetime>3000</fadetime>
+                <pauseatend>0</pauseatend>
+                <loop>true</loop>
+                <imagepath background="true" fallback="fallback/other.png">$INFO[Skin.String(Home_Custom_Back_CustomOtherFolder)]</imagepath>
+                <colordiffuse>FanartDiffuse</colordiffuse>
+                <visible>Skin.HasSetting(Use_CustomOtherFolder)</visible>
+                <animation effect="fade" time="500">Hidden</animation>
+            </control>
+        </control> 
+        <control type="image">
+            <posy>-50</posy>
+            <include>Dimensions_Fullscreen</include>
+            <texture background="true">fallback/other.png</texture>
+            <colordiffuse>FanartDiffuse</colordiffuse>
+            <animation effect="fade" time="500">Hidden</animation>
+            <visible>[Container(300).HasFocus(13)]+!Skin.HasSetting(Use_CustomOtherFolder)</visible>
+        </control>   
+        <control type="group">
+            <visible>[Container(300).HasFocus(3)]</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <randomize>true</randomize>
+                <timeperimage>8000</timeperimage>
+                <fadetime>3000</fadetime>
+                <pauseatend>0</pauseatend>
+                <loop>true</loop>
+                <imagepath background="true">$INFO[Skin.String(Home_Custom_Back_CustomMusicFolder)]</imagepath>
+                <colordiffuse>FanartDiffuse</colordiffuse>
+                <visible>Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                <animation effect="fade" time="500">Hidden</animation>
+            </control>
+        </control>     
+        <!--mypicdb-->
+        <control type="group">
+            <!--<visible>!Skin.HasSetting(Fanart)</visible>-->
+            <control type="group">
+                <animation effect="fade" time="500">VisibleChange</animation>
+                <visible>[Container(300).HasFocus(4) + System.HasAddon(plugin.image.mypicsdb) + !Skin.HasSetting(Use_CustomPicturesFolder)]</visible>
+				<control type="group">
+					<posx>980</posx>
+					<posy>500</posy>
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>620</width>
+						<height>100</height>
+						<texture border="22">elements/gris01t.png</texture>
+                        <visible>!Player.HasMedia</visible>
+					</control>
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>5</width>
+						<height>100</height>
+						<texture>orange.png</texture>
+                        <visible>!Player.HasMedia</visible>
+					</control>
+				</control>	
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>800</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.1.Path)]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+					<aspectratio>keep</aspectratio>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.1.Date)]</label>
+                    <fadetime>800</fadetime>
+                    <align>right</align>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)+!Player.HasMedia</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.2.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+               
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.2.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)+!Player.HasMedia</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.3.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.3.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)+!Player.HasMedia</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.4.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.4.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)+!Player.HasMedia</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.5.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.5.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)+!Player.HasMedia</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.6.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.6.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)+!Player.HasMedia</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.7.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.7.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)+!Player.HasMedia</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.8.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.8.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)+!Player.HasMedia</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true">$INFO[Window.Property(MyPicsDBLatest.9.Path)]</texture>
+					<aspectratio>keep</aspectratio>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>1000</posx>
+                    <posy>550</posy>
+                    <font>F30</font>
+                    <label>$INFO[Window.Property(MyPicsDBLatest.9.Date)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)+!Player.HasMedia</visible>
+                </control>
+                
+            </control>
+        </control>
+        <!-- fin mypicdb-->
+        <control type="group">
+            <visible>!Skin.HasSetting(Fanart)</visible>
+            <control type="group">
+                <animation effect="fade" time="500">VisibleChange</animation>
+                <visible>[Container(300).HasFocus(5) + Control.HasFocus(300)+!Control.HasFocus(3010) | Control.HasFocus(301)]</visible>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.1.Art(fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>800</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.1.Art(poster))]</texture>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.1.Title)]</label>
+                    <fadetime>800</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.1.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>800</fadetime>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.2.Art(fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>800</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.2.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.2.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.2.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.3.Art(fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.3.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.3.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.3.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.4.Art(fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.4.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.4.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.4.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.5.Art(fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.5.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.5.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.5.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.6.Art(fanart))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.6.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.6.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.6.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.7.Art(fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.7.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.7.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.7.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.8.Art(fanart))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.8.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.8.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.8.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>500</fadetime>
+                    <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.9.Art(fanart))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentMovie.9.Art(poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentMovie.9.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentMovie.9.Year)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+            </control>
+            <control type="group">
+                <animation effect="fade" time="500">VisibleChange</animation>
+                <visible>[Container(300).HasFocus(6) + Control.HasFocus(300)+!Control.HasFocus(3060)]</visible>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.1.Art(tvshow.poster))]</texture>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.1.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.1.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <shadowcolor>Black</shadowcolor>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.1.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.1.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.2.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.2.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.2.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <shadowcolor>Black</shadowcolor>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.2.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.2.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.3.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.3.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.3.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.3.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.3.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.4.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.4.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.4.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.4.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.4.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.5.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.5.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.5.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.5.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.5.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.fanart))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.6.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.6.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.6.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.6.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.6.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.fanart))]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.7.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.7.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.7.Title)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <fadetime>500</fadetime>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.7.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.7.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.fanart))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.8.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentEpisode.8.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.8.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.8.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.8.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/tv.jpg">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.fanart))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentEpisode.9.Art(tvshow.poster))]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$INFO[Window.Property(RecentEpisode.9.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.9.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <width>1100</width>
+                    <scroll>true</scroll>
+                    <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.9.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.9.Episode)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+            </control>
+            <control type="group">
+                <animation effect="fade" time="500">VisibleChange</animation>
+                <visible>[Container(5000).HasFocus(502) + Control.HasFocus(5000)] | [Container(5000).HasFocus(502) + ControlGroup(9000).HasFocus() + SubString(Window(Home).Property(menu),main)] | Control.HasFocus(67) | Container(300).HasFocus(3)</visible>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(RecentAlbum.1.Fanart)]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.1.Thumb)]</texture>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.1.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.2.Fanart)]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.2.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.2.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.3.Fanart)]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.3.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.3.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.3.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.3.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.4.Fanart)]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.4.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.4.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.4.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.4.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.5.Fanart)]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.5.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.5.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.5.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.5.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.6.Fanart)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.6.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.6.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.6.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.6.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.7.Fanart)]</texture>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.7.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.7.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.7.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.7.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.8.Fanart)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.8.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.8.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.8.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.8.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <include>Dimensions_Fullscreen</include>
+                    <fadetime>800</fadetime>
+                    <texture background="true" fallback="fallback/music.jpg">$INFO[Window.Property(LatestAlbum.9.Fanart)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),54) + !Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                    <colordiffuse>FanartDiffuse</colordiffuse>
+                </control>
+                <control type="image">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <fadetime>500</fadetime>
+                    <posx>20</posx>
+                    <posy>370</posy>
+                    <width>100</width>
+                    <height>150</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[Window.Property(RecentAlbum.9.Thumb)]</texture>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>400</posy>
+                    <font>F90</font>
+                    <label>$INFO[Window.Property(RecentAlbum.9.Title)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>150</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <textcolor>Accent</textcolor>
+                    <label>$INFO[Window.Property(RecentAlbum.9.Year)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+                <control type="label">
+                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <posx>270</posx>
+                    <posy>470</posy>
+                    <font>F50</font>
+                    <label>$INFO[Window.Property(RecentAlbum.9.Artist)]</label>
+                    <fadetime>500</fadetime>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
+                </control>
+            </control>
+            <!--
+            <control type="image">
+                <animation effect="fade" time="500">VisibleChange</animation>
+                <include>Dimensions_Fullscreen</include>
+                <fadetime>800</fadetime>
+                <texture background="true">$INFO[ListItem.Property(Fanart_Image)]</texture>
+                <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(Episodes) | Container.Content(Albums) | Container.Content(Artists) | Container.Content(Songs)</visible>
+                <colordiffuse>FanartDiffuse</colordiffuse>
+            </control>
+            -->
+            <control type="image">
+                <animation effect="fade" time="500">VisibleChange</animation>
+                <animation effect="fade" time="500" easing="out" tween="quadratic">WindowOpen</animation>
+                <include>Dimensions_Fullscreen</include>
+                <fadetime>800</fadetime>
+                <texture background="true">$INFO[MusicPlayer.Property(Fanart_Image)]</texture>
+                <visible>Window.IsVisible(2006)</visible>
+                <colordiffuse>FanartDiffuse</colordiffuse>
+            </control>
+        </control>
+        <control type="image">
+            <include>Dimensions_Fullscreen</include>
+            <texture>music_fanart_diffuse_blue.png</texture>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <colordiffuse>Diffuse3</colordiffuse>
+        </control>
+        <control type="image">
+            <include>Dimensions_Fullscreen</include>
+            <texture background="true">other_textures/overlay.png</texture>
+            <colordiffuse>White60</colordiffuse>
+        </control>
+    </include>
+</includes>
