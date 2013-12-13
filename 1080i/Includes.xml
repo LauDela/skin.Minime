@@ -20,7 +20,6 @@
 	<include file="View_50_List.xml" />
     <include file="View_51_albums.xml" />
     <include file="HomePage.xml" />
-   
     <include name="BarClock">
     
     <!-- Hide weather somewhere to make sure it loads for widgets -->
