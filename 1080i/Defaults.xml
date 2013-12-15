@@ -59,7 +59,7 @@
 		<texturenofocus ></texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>
-<!--
+
 	<default type="togglebutton">
 		<posx>0</posx>
 		<posy>0</posy>
@@ -78,8 +78,8 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
-	</default>-->
-	<default type="togglebutton">
+	</default>
+	<!--<default type="togglebutton">
 		<posx>0</posx>
 		<posy>0</posy>
 		<width>300</width>
@@ -97,7 +97,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<pulseonselect>false</pulseonselect>
-	</default>
+	</default>-->
 <!--
 	<default type="radiobutton">
 		<posx>0</posx>

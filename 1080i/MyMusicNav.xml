@@ -23,7 +23,7 @@
     <control type="image">
                     <posx>0</posx>
                     <posy>0</posy>
-                    <width>240</width>
+                    <width>350</width>
                     <height>1080</height>
                 
                     <texture>elements/gris01.png</texture>
@@ -33,7 +33,7 @@
 		<control type="grouplist" id="9000">
 			<posx>10</posx>
 			<posy>140</posy>
-			<width>220</width>
+			<width>350</width>
 			<height>600</height>
 			<itemgap>2</itemgap>
 			<onleft>50</onleft>
@@ -47,7 +47,7 @@
 
 			<control type="button" id="2">
 				<description>View</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
@@ -59,13 +59,13 @@
 
 			<control type="button" id="3">
 				<description>Sort</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 			</control>
 
 			<control type="togglebutton" id="4">
 				<description>Ascending</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<label>584</label>
 				<altlabel>585</altlabel>
@@ -73,7 +73,7 @@
 
 			<control type="button" id="5">
 				<description>Files</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<label>31001</label>
 				<onclick>SetFocus(50)</onclick>
@@ -81,21 +81,21 @@
 
 			<control type="button" id="8">
 				<description>Search</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<label>137</label>
 			</control>
 
 			<control type="radiobutton" id="16">
 				<description>PartyMode</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<label>589</label>
 			</control>
 
 			<control type="button" id="21">
 				<description>Activate Filter</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<label>587</label>
 				<onclick>SendClick(musiclibrary,19)</onclick>
@@ -105,7 +105,7 @@
 
 			<control type="button" id="22">
 				<description>Show Filter Label</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<label>$LOCALIZE[587] - $INFO[Window.Property(filter)]</label>
 				<onclick>SendClick(musiclibrary,19)</onclick>
@@ -115,7 +115,7 @@
 
 			<control type="button" id="98">
 				<description>Open Player Controls</description>
-				<width>220</width>
+				<width>320</width>
 				<align>left</align>
 				<label>31015</label>
 				<onclick>ActivateWindow(playercontrols)</onclick>

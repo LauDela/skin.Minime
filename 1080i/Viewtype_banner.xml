@@ -62,6 +62,37 @@
                             <visible>false</visible>
                             <texture>rating/$INFO[ListItem.StarRating]</texture>
                         </control>
+
+                        <control type="image">
+                            <posx>-30</posx>
+                            <posy>64</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture fallback="other_textures/flagging/video/sd.png">other_textures/flagging/video/$INFO[ListItem.VideoResolution].png</texture>
+                            <visible>!IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(episodes)]</visible>             
+                        </control>
+         
+                        <control type="image">
+                            <posx>50</posx>
+                            <posy>64</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture>other_textures/flagging/audio/$INFO[ListItem.AudioCodec].png</texture>
+                            <visible>!IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(episodes)]</visible>
+                        </control>
+        
+                        <control type="label">
+                            <posx>1900</posx>
+                            <posy>95</posy>
+                            <width>200</width>
+                            <font>F30</font>
+                            <align>right</align>
+                            <shadowcolor>Black</shadowcolor>
+                            <label>$INFO[ListItem.Duration] [COLOR Accent]min.[/COLOR]</label>
+                            <visible>!IsEmpty(ListItem.Title) + [Container.Content(movies)]</visible>
+                        </control>
                     </control>
                 </control>
            

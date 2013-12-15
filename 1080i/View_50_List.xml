@@ -216,13 +216,12 @@
 				<!--FIN VU / ENCOURS-->
 				<!--VU / ENCOURS SERIES TV-->
 				<control type="image">
-					<posx>20</posx>
-					<posy>-15</posy>
-					<width>40</width>
-					<height></height>
+					<posx>125</posx>
+					<posy>95</posy>
+					<width>46</width>
+					<height>50</height>
 					<aspectratio>keep</aspectratio>
-					<texture>icons/Television.png</texture>
-					<colordiffuse>Accent</colordiffuse>
+					<texture>vu.png</texture>
 					<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 				</control>
 				<control type="image">
@@ -328,47 +327,28 @@
 					</animation>-->
 				</control>
 				<!--VU / ENCOURS FILMS-->
-				<control type="image">
-					<posx>0</posx>
-					<posy>-10</posy>
-					<width>40</width>
-					<height></height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/Television.png</texture>
-					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-				</control>
-				<control type="image">
-					<posx>0</posx>
-					<posy>-10</posy>
-					<width>40</width>
-					<height></height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/Media Player.png</texture>
-					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(episodes)] + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-				</control>
-				<!--FIN VU / ENCOURS-->
-				<!--VU / ENCOURS SAISONS TV-->
-				<control type="image">
-					<posx>0</posx>
-					<posy>200</posy>
-					<width>40</width>
-					<height>30</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>elements/gris01t.png</texture>
-					<visible>[Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-				</control>
 				
 				<control type="image">
-					<posx>0</posx>
-					<posy>85</posy>
-					<width>40</width>
-					<height></height>
+					<posx>140</posx>
+					<posy>44</posy>
+					<width>46</width>
+					<height>50</height>
 					<aspectratio>keep</aspectratio>
-					<texture>icons/Television.png</texture>
-					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<texture>vu.png</texture>
+					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+				</control>
+				
+				<!--FIN VU / ENCOURS-->
+				<!--VU / ENCOURS SAISONS TV-->
+				
+				<control type="image">
+					<posx>220</posx>
+					<posy>95</posy>
+					<width>46</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture>vu.png</texture>
+					<visible>[Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -378,7 +358,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>icons/Media Player.png</texture>
 					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows)] + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<visible>[Container.Content(seasons) | Container.Content(tvshows)] + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
 				<!--FIN VU / ENCOURS-->
 			</focusedlayout>
@@ -420,7 +400,7 @@
 		
 		<control type="label">
 			<posx>20</posx>
-			<posy>650</posy>
+			<posy>660</posy>
 			<font>F50</font>
 			<textcolor>Accent</textcolor>
 			<label>$INFO[ListItem.Year]</label>
@@ -450,7 +430,7 @@
         <!--episodes-->
 		<control type="label"> 
 			<posx>150</posx>
-			<posy>650</posy>
+			<posy>660</posy>
 			<font>F50</font>
 			<shadowcolor>Black</shadowcolor>
 			<label>$INFO[ListItem.TVShowTitle] [COLOR Accent]$LOCALIZE[20373][/COLOR] $INFO[ListItem.Season] [COLOR Accent]$LOCALIZE[20452][/COLOR] $INFO[ListItem.Episode]</label>
@@ -461,7 +441,7 @@
        <!--fin episodes-->
 		<control type="image">
 			 <posx>150</posx>
-			 <posy>655</posy>
+			 <posy>665</posy>
 			 <width></width>
 			 <height>30</height>
 			 <texture>rating/$INFO[ListItem.StarRating]</texture>
@@ -469,8 +449,8 @@
 		</control>
 		
 		<control type="label"> <!--playcount-->
-			<posx>150</posx>
-			<posy>675</posy>
+			<posx>950</posx>
+			<posy>990</posy>
 			<font>F20</font>
 			<shadowcolor>Black</shadowcolor>
 			<label>$LOCALIZE[31044] $INFO[ListItem.LastPlayed] ($INFO[ListItem.PlayCount]x)</label>
@@ -612,7 +592,7 @@
 		
 			<control type="label">
 				<posx>290</posx>
-				<posy>248</posy>
+				<posy>260</posy>
 				<width>200</width>
 				<font>F30</font>
 				<align>left</align>
@@ -625,7 +605,7 @@
 			<!--tv show-->
 			<control type="label">
 				<posx>290</posx>
-				<posy>245</posy>
+				<posy>255</posy>
 				<height>50</height>
 				<width>400</width>
 				<font>F30</font>
@@ -650,7 +630,7 @@
 			</control>
 			<!--fin tv show seasons-->
 			<control type="label">
-				<posx>555</posx>
+				<posx>950</posx>
 				<posy>510</posy>
 				<width>200</width>
 				<font>F30</font>

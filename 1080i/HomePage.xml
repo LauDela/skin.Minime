@@ -832,7 +832,7 @@
               <width>300</width>
               <height>200</height>
               <aspectratio>keep</aspectratio>
-              <texture background="true">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(clearlogo))]</texture> 
+              <texture background="true">$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.clearlogo))]</texture> 
           </control>
          <control type="textbox">
             <posx>850</posx>

@@ -255,18 +255,18 @@
 	</control>
 
 
-	<control type="fadelabel">
-		<posx>0</posx>
+	<control type="textbox">
+		<posx>148</posx>
 		<posy>685</posy>
-		<width>1280</width>
-		<height>25</height>
-		<align>center</align>
-		<font>F20</font>
+		<width>1100</width>
+		<height>100</height>
+		<align>left</align>
+		<font>FF20</font>
 		<textcolor>white</textcolor>
 		<label>$INFO[VideoPlayer.Plot]</label>
 		<scroll>true</scroll>
 		<scrollout>false</scrollout>
-		<scrollspeed>100</scrollspeed>
+		<scrollspeed>50</scrollspeed>
 		<pauseatend>5000</pauseatend>
 		<visible>VideoPlayer.Content(Episodes)</visible>
 	</control>
@@ -331,11 +331,11 @@
 		<description>Now Playing</description>
 		<visible>IsEmpty(VideoPlayer.Tagline)</visible>
 		<posx>60</posx>
-		<posy>32</posy>
+		<posy>38</posy>
 		<width>700</width>
-		<label>$INFO[VideoPlayer.TVShowTitle][COLOR Accent] $INFO[VideoPlayer.Season,Saison: ]$INFO[VideoPlayer.Episode, Episode: ][/COLOR]</label>
+		<label>$INFO[VideoPlayer.TVShowTitle][COLOR Accent] $INFO[VideoPlayer.Season,Saison : ]$INFO[VideoPlayer.Episode, Episode : ][/COLOR]</label>
 		<scroll>true</scroll>
-		<font>F30</font>
+		<font>FF30</font>
 		<align>left</align>
 		<visible>VideoPlayer.Content(Episodes)</visible>
 	</control>

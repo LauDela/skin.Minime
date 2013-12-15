@@ -106,16 +106,10 @@
                 </focusedlayout>
             </control>
             <control type="scrollbar" id="63">
-                <posx>1274</posx>
-                <posy>288</posy>
+                <posx>1504</posx>
+                <posy>287</posy>
                 <width>6</width>
-                <height>315</height>
-                <texturesliderbackground></texturesliderbackground>
-                <textureslidernib>bar.png</textureslidernib>
-                <textureslidernibfocus>scroll_nib.png</textureslidernibfocus>
-                <texturesliderbar></texturesliderbar>
-                <texturesliderbarfocus></texturesliderbarfocus>
-                <showonepage>true</showonepage>
+                <height>629</height>
                 <orientation>vertical</orientation>
             </control>
             <control type="label">
@@ -134,7 +128,7 @@
                 <posx>300</posx>
                 <posy>171</posy>
                 <height>30</height>
-                <width>885</width>
+                <width>1500</width>
                 <font>F60</font>
                 <scroll>true</scroll>
                 <scrollout>false</scrollout>
