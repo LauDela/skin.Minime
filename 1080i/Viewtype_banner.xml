@@ -189,7 +189,7 @@
                     <control type="label">
                         <posx>380</posx>
                         <posy>150</posy>
-                        <width>1900</width>
+                        <width>1600</width>
                         <height>50</height>
                         <label>[COLOR Accent]$INFO[ListItem.Label][/COLOR]  $INFO[ListItem.Tagline]</label>
                         <font>FF30</font>
