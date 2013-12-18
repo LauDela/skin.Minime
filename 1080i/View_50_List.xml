@@ -184,12 +184,13 @@
 				</control>-->
 				<control type="image">
 					<posx>45</posx>
-					<posy>92</posy>
+					<posy>100</posy>
 					<width>46</width>
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
-					<texture>vu.png</texture>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<texture>circle_ok.png</texture>
+					<colordiffuse>Accent</colordiffuse>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>
 				<!--<control type="image">
 					<posx>-50</posx>
@@ -202,71 +203,41 @@
 					<visible>[Container.Content(movies) | Container.Content(tvshows) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 				</control>-->
 				<control type="image">
-					<posx>-50</posx>
-					<posy>85</posy>
-					<width>40</width>
-					<height></height>
+					<posx>45</posx>
+					<posy>100</posy>
+					<width>46</width>
+					<height>50</height>
 					<aspectratio>keep</aspectratio>
-					<texture>icons/Media Player.png</texture>
+					<texture>circle_play.png</texture>
 					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(movies) + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows)| Container.Content(seasons)] + [ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 				</control>
 
 				
 				<!--FIN VU / ENCOURS-->
 				<!--VU / ENCOURS SERIES TV-->
 				<control type="image">
-					<posx>125</posx>
-					<posy>95</posy>
-					<width>46</width>
-					<height>50</height>
+					<posx>140</posx>
+					<posy>100</posy>
+					<width>26</width>
+					<height>25</height>
 					<aspectratio>keep</aspectratio>
-					<texture>vu.png</texture>
+					<texture>circle_ok.png</texture>
+					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 				</control>
 				<control type="image">
-					<posx>20</posx>
-					<posy>-15</posy>
-					<width>40</width>
-					<height></height>
+					<posx>140</posx>
+					<posy>100</posy>
+					<width>26</width>
+					<height>25</height>
 					<aspectratio>keep</aspectratio>
-					<texture>icons/Media Player.png</texture>
+					<texture>circle_play.png</texture>
 					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(episodes) + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 				</control>
 				<!--FIN VU / ENCOURS-->
-				<!--VU / ENCOURS SAISONS SERIES TV-->
-				<control type="image">
-					<posx>-50</posx>
-					<posy>200</posy>
-					<width>40</width>
-					<height>30</height>
-					<aspectratio>stretch</aspectratio>
-					<texture>elements/gris01t.png</texture>
-					<visible>[Container.Content(seasons)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-				</control>
 				
-				<control type="image">
-					<posx>-50</posx>
-					<posy>85</posy>
-					<width>40</width>
-					<height></height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/Television.png</texture>
-					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(seasons) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
-				</control>
-				<control type="image">
-					<posx>-50</posx>
-					<posy>85</posy>
-					<width>40</width>
-					<height></height>
-					<aspectratio>keep</aspectratio>
-					<texture>icons/Media Player.png</texture>
-					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(seasons) + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
-				</control>
-				<!--FIN VU / ENCOURS-->
 			</itemlayout>
 
 			<focusedlayout width="260" height="400">
@@ -277,10 +248,10 @@
 					<height>280</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" diffuse="other_textures/poster_matte.png">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)]</visible><!--
+					<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)]</visible>
 					<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>-->
+					</animation>
 				</control>	
 				<!--serie TV-->
 				<control type="image">
@@ -291,10 +262,10 @@
 					<aspectratio aligny="center">keep</aspectratio>
 					<texture background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(thumb)]</texture>
 					<visible>[Container.Content(episodes)]</visible>
-					<!--
+					
 					<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>-->
+					</animation>
 				</control>
 				<!--fin serie TV-->
 				<!--artiste-->
@@ -330,12 +301,29 @@
 				
 				<control type="image">
 					<posx>140</posx>
-					<posy>44</posy>
+					<posy>55</posy>
 					<width>46</width>
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
-					<texture>vu.png</texture>
+					<texture>circle_ok.png</texture>
+					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="0" end="100" time="300"  easing="out" />
+					</animation>
+				</control>
+				<control type="image">
+					<posx>140</posx>
+					<posy>55</posy>
+					<width>46</width>
+					<height>50</height>
+					<aspectratio>keep</aspectratio>
+					<texture>circle_play.png</texture>
+					<colordiffuse>Accent</colordiffuse>
+					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + ListItem.IsResumable + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
+					</animation>
 				</control>
 				
 				<!--FIN VU / ENCOURS-->
@@ -343,22 +331,29 @@
 				
 				<control type="image">
 					<posx>220</posx>
-					<posy>95</posy>
+					<posy>100</posy>
 					<width>46</width>
 					<height>50</height>
 					<aspectratio>keep</aspectratio>
-					<texture>vu.png</texture>
+					<texture>circle_ok.png</texture>
+					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
+					</animation>
 				</control>
 				<control type="image">
-					<posx>0</posx>
-					<posy>-60</posy>
-					<width>40</width>
-					<height></height>
+					<posx>220</posx>
+					<posy>100</posy>
+					<width>46</width>
+					<height>50</height>
 					<aspectratio>keep</aspectratio>
-					<texture>icons/Media Player.png</texture>
+					<texture>circle_play.png</texture>
 					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(seasons) | Container.Content(tvshows)] + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
+					</animation>
 				</control>
 				<!--FIN VU / ENCOURS-->
 			</focusedlayout>

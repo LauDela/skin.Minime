@@ -133,6 +133,26 @@
                         <texture background="true" fallback="Movie-Banner.jpg">$INFO[ListItem.Art(banner)]</texture>
                         <visible>[Container.Content(movies)]</visible>
                     </control>
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>10</posy>
+                        <width>46</width>
+                        <height>50</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>circle_ok.png</texture>
+                        <colordiffuse>Accent</colordiffuse>
+                        <visible>[stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+                    </control>
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>10</posy>
+                        <width>46</width>
+                        <height>50</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>circle_play.png</texture>
+                        <colordiffuse>Accent</colordiffuse>
+                        <visible>[ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+                    </control>
                   
                 </itemlayout>
 
@@ -197,6 +217,32 @@
                         <shadowcolor>Black</shadowcolor>
                         <visible>[Container.Content(movies)|Container.Content(tvshows)]</visible>
                         <align>center</align>
+                    </control>
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>10</posy>
+                        <width>46</width>
+                        <height>50</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>circle_ok.png</texture>
+                        <colordiffuse>Accent</colordiffuse>
+                        <visible>[stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+                        <animation type="Focus" reversible="false">
+                                <effect type="zoom" center="auto" start="50" end="100" time="800" tween="back" easing="out" />
+                        </animation>
+                    </control>
+                    <control type="image">
+                        <posx>10</posx>
+                        <posy>10</posy>
+                        <width>46</width>
+                        <height>50</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>circle_play.png</texture>
+                        <colordiffuse>Accent</colordiffuse>
+                        <visible>[ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+                        <animation type="Focus" reversible="false">
+                                <effect type="zoom" center="auto" start="50" end="100" time="800" tween="back" easing="out" />
+                        </animation>
                     </control>
                 </focusedlayout>
             </control>
