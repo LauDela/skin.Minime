@@ -42,7 +42,7 @@
 			<ondown>9000</ondown>
 			<orientation>vertical</orientation>
 			<animation type="Conditional" condition="!ControlGroup(9000).HasFocus()">
-				<effect type="slide" start="0,0" end="-305,0" time="300" easing="out" tween="cubic"/>
+				<effect type="slide" start="0,0" end="-330,0" time="300" easing="out" tween="cubic"/>
 			</animation>
 
 			<control type="button" id="2">

@@ -469,6 +469,14 @@
 						<onclick>Skin.SetFile(Startup_Playlist_Path,,special://MusicPlaylists/)</onclick>
 						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
 					</control>
+         <control type="radiobutton" id="603">
+			<label>31056</label>
+            <width>750</width>
+            	<align>left</align>
+						<include>Default_SettingRadioButton</include>
+						<onclick>Skin.ToggleSetting(Show_BA)</onclick>
+						<selected>Skin.HasSetting(Show_BA)</selected>
+		</control>
           <!--
 					<control type="label" id="109">
 						<width>750</width>

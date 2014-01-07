@@ -77,6 +77,7 @@
 					<label>31047</label>
           <thumb>icons/Monitor.png</thumb>
           <property name="foo2">icons/Monitor-a.png</property>
+          <visible>Skin.HasSetting(Show_BA)</visible>
           <onclick>XBMC.RunScript(special://skin/scripts/script.trailers/default.py, stat=tvshow)</onclick>
        	</item>
         <item id="4">

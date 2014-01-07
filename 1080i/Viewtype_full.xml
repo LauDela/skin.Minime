@@ -35,7 +35,7 @@
                         <control type="label">
                             <posx>0</posx>
                             <posy>0</posy>
-                            <width>1250</width>
+                            <width>1900</width>
                             <font>F90</font>
                             <label>$INFO[ListItem.Label]</label>
                             <shadowcolor>Black</shadowcolor>
