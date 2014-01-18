@@ -57,9 +57,9 @@
 			<control type="progress">
 				<description>Progressbar</description>
 				<posx>10</posx>
-				<posy>150</posy>
+				<posy>130</posy>
 				<width>500</width>
-				<height>18</height>
+				<height>10</height>
 				<info>System.Progressbar</info>
 			</control>
 

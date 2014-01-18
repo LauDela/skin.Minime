@@ -71,10 +71,10 @@
 				<!--artist-->
 				<control type="image">
 					<posx>0</posx>
-					<posy>-50</posy>
+					<posy>25</posy>
 					<width>200</width>
-					<height>350</height>
-					<aspectratio aligny="center">keep</aspectratio>
+					<height>150</height>
+					<aspectratio aligny="center">stretch</aspectratio>
 					<texture  background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(fanart)]</texture>
 					<visible>[Container.Content(artists)]</visible>
 				</control>
@@ -277,10 +277,10 @@
 					<aspectratio aligny="center">stretch</aspectratio>
 					<texture background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(thumb)]</texture>
 					<visible>[Container.Content(artists)]</visible>
-					<!--
+					
 					<animation type="Focus" reversible="false">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>-->
+					</animation>
 				</control>
 				<!--fin artiste-->
 				<!--album-->

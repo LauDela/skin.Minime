@@ -211,7 +211,7 @@
 		<posx>150</posx>
 		<posy>340</posy>
 		<lefttexture>-</lefttexture>
-		<midtexture border="9">orangep.png</midtexture>
+		<midtexture border="3">orangep.png</midtexture>
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
