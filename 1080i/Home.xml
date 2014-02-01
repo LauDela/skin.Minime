@@ -387,7 +387,15 @@
 				     <fadetime>200</fadetime>
 				     <texture background="true" diffuse="cover.png">$INFO[MusicPlayer.cover]</texture>
 				</control>
-
+				<control type="image">
+				<description>Rating image</description>
+				<posx>10</posx>
+				<posy>190</posy>
+				<width>130</width>
+				<height>25</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>rating/$INFO[Player.StarRating]</texture>
+			</control>
           		<control type="image">
               		<posx>10</posx>
               		<posy>12</posy>

@@ -23,26 +23,29 @@
 			<posy>780</posy>
 			<width>1920</width>
 			<height>400</height>
-			<texture background="true">elements/blanc02.png</texture>
+			<texture background="true">elements/gris02.png</texture>
 		</control>
 
 		<control type="group">
+			<posx>1500</posx>
+			<posy>940</posy>
 			<visible>Player.HasVideo</visible>
 			<control type="progress">
 				<description>Progressbar</description>
-				<posx>527</posx>
-				<posy>960</posy>
+				<posx>0</posx>
+				<posy>0</posy>
 				<width>380</width>
 				<height>5</height>
 				<info>Player.Progress</info>
-				<texturebg>gris.png</texturebg>
+				<texturebg>elements/gris02.png</texturebg>
+				<overlaytexture></overlaytexture>
 				<midtexture>orangepp.png</midtexture>
 			</control>
 
 			<control type="label">
 				<description>Player Times</description>
-				<posx>527</posx>
-				<posy>922</posy>
+				<posx>0</posx>
+				<posy>-40</posy>
 				<width>150</width>
 				<label>[COLOR Accent]$INFO[Player.Time][/COLOR]</label>
 				<align>left</align>
@@ -51,8 +54,8 @@
 
 			<control type="label">
 				<description>Player Times</description>
-				<posx>907</posx>
-				<posy>922</posy>
+				<posx>400</posx>
+				<posy>-40</posy>
 				<width>150</width>
 				<label>$INFO[Player.TimeRemaining,-]</label>
 				<align>right</align>
@@ -64,202 +67,184 @@
 
 
 
-<control type="group">
-<visible>Player.HasAudio + !Player.ShowInfo</visible>
 
-
-			<control type="progress">
-				<description>Progressbar</description>
-				<posx>450</posx>
-				<posy>940</posy>
-				<width>380</width>
-				<height>5</height>
-				<info>Player.Progress</info>
-				<texturebg>ProgressBack.png</texturebg>
-				<midtexture>ProgressMidGreen.png</midtexture>
-			</control>
-
-			<control type="label">
-				<description>Player Times</description>
-				<posx>450</posx>
-				<posy>935</posy>
-				<width>100</width>
-				<label>$INFO[MusicPlayer.Time]</label>
-				<align>left</align>
-				<font>Small</font>
-				<textcolor>white</textcolor>
-			</control>
-
-			<control type="label">
-				<description>Player Times</description>
-				<posx>830</posx>
-				<posy>935</posy>
-				<width>100</width>
-				<label>$INFO[MusicPlayer.TimeRemaining,-]</label>
-				<align>right</align>
-				<font>Small</font>
-				<textcolor>black</textcolor>
-			</control>
-	</control>
 
 <control type="group">
 	<visible>Player.HasAudio</visible>
 
-	<posx>64</posx>
-	<posy>880</posy>
+	<posx>0</posx>
+	<posy>620</posy>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
+		<font>F300</font>
 		<align>center</align>
-		<label>[B]paused[/B]</label>
+		<label>pause</label>
+		<textcolor>Accent</textcolor>
 		<visible>player.paused</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]FFx2[/B]</label>
+		<label>FFx2</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.forwarding2x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]FFx4[/B]</label>
+		<label>FFx4</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.forwarding4x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]FFx8[/B]</label>
+		<label>FFx8</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.forwarding8x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]FFx16[/B]</label>
+		<label>FFx16</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.forwarding16x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
 		<label>FFx32</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.forwarding32x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]RWx2[/B]</label>
+		<label>RWx2</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.rewinding2x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]RWx4[/B]</label>
+		<label>RWx4</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.rewinding4x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]RWx8[/B]</label>
+		<label>RWx8</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.rewinding8x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]RWx16[/B]</label>
+		<label>RWx16</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.rewinding16x</visible>
 	</control>
 
 	<control type="label">
 		<posx>10</posx>
 		<posy>56</posy>
-		<width>1120</width>
+		<width>1920</width>
 		<align>center</align>
-		<label>[B]RWx32[/B]</label>
+		<label>RWx32</label>
+		<font>F300</font>
+		<textcolor>Accent</textcolor>
 		<visible>player.rewinding32x</visible>
 	</control>
 
 
 </control>
-<control type="group">
+<control type="group"> <!--COVER + plot-->
 	<posx>0</posx>
 	<posy>300</posy>
+	<!--
 	<control type="image">
 		<description>Non Movie cover image</description>
-		<posx>148</posx>
-		<posy>472</posy>
+		<posx>100</posx>
+		<posy>270</posy>
 		<width>200</width>
-		<height>200</height>
+		<height></height>
 		<fadetime>200</fadetime>
 		<texture background="true">$INFO[VideoPlayer.Cover]</texture>
-		<aspectratio align="centre" aligny="top">scale</aspectratio>
+		<aspectratio align="centre" aligny="top">keep</aspectratio>
 		<bordertexture>white_box.png</bordertexture>
 		<bordersize>5</bordersize>
 		<visible>!VideoPlayer.Content(Movies)</visible>
 	</control>
-
+	-->
 	<control type="image">
 		<description>Movie cover image</description>
-		<posx>148</posx>
-		<posy>440</posy>
-		<width>156</width>
-		<height>232</height>
+		<posx>20</posx>
+		<posy>270</posy>
+		<width>200</width>
+		<height></height>
 		<fadetime>400</fadetime>
+		<aspectratio>keep</aspectratio>
 		<texture background="true">$INFO[VideoPlayer.Cover]</texture>
 		<visible>VideoPlayer.Content(Movies)</visible>
 	</control>
 
-	<control type="fadelabel">
-		<posx>0</posx>
-		<posy>685</posy>
-		<width>1280</width>
-		<height>25</height>
-		<align>center</align>
-		<font>F20</font>
-		<textcolor>white</textcolor>
-		<label>$INFO[VideoPlayer.Plot]</label>
-		<label>$INFO[VideoPlayer.Genre]</label>
-		<scroll>true</scroll>
-		<scrollout>false</scrollout>
-		<scrollspeed>100</scrollspeed>
-		<pauseatend>5000</pauseatend>
-		<visible>VideoPlayer.Content(movies)</visible>
+	<control type="image">
+		<description>TV Show cover image</description>
+		<posx>20</posx>
+		<posy>440</posy>
+		<width>200</width>
+		<height></height>
+		<fadetime>400</fadetime>
+		<aspectratio>keep</aspectratio>
+		<texture background="true">$INFO[Player.Art(thumb)]</texture>
+		<visible>VideoPlayer.Content(Episodes)</visible>
 	</control>
 
-
 	<control type="textbox">
-		<posx>148</posx>
-		<posy>685</posy>
-		<width>1100</width>
-		<height>100</height>
+		<posx>235</posx>
+		<posy>650</posy>
+		<width>1600</width>
+		<height>150</height>
 		<align>left</align>
 		<font>FF20</font>
 		<textcolor>white</textcolor>
@@ -268,44 +253,30 @@
 		<scrollout>false</scrollout>
 		<scrollspeed>50</scrollspeed>
 		<pauseatend>5000</pauseatend>
-		<visible>VideoPlayer.Content(Episodes)</visible>
+		<visible>VideoPlayer.Content(Episodes) | VideoPlayer.Content(movies)</visible>
 	</control>
 </control>
 
 <control type="group">
-	<posx>325</posx>
+	<posx>230</posx>
 	<posy>815</posy>
 
 	<control type="label">
 		<description>Now Playing</description>
 		<posx>0</posx>
 		<posy>-5</posy>
-		<width>1600</width>
+		<width>1700</width>
 		<label>[COLOR Accent]$INFO[VideoPlayer.Title][/COLOR]</label>
 		<scroll>true</scroll>
 		<font>F80</font>
 		<align>left</align>
-		<visible>VideoPlayer.Content(Movies)</visible>
 	</control>
-
-	<control type="label">
-		<description>Now Playing</description>
-		<posx>58</posx>
-		<posy>-5</posy>
-		<width>1600</width>
-		<label>[COLOR Accent]$INFO[VideoPlayer.Title][/COLOR]</label>
-		<scroll>true</scroll>
-		<font>F80</font>
-		<align>left</align>
-		<visible>!VideoPlayer.Content(Movies)</visible>
-	</control>
-
 
 	<control type="label">
 		<description>Now Playing</description>
 		<posx>4</posx>
-		<posy>32</posy>
-		<width>700</width>
+		<posy>40</posy>
+		<width>1700</width>
 		<label>[LOWERCASE]$INFO[VideoPlayer.Tagline][/LOWERCASE]</label>
 		<scroll>true</scroll>
 		<font>F30</font>
@@ -315,27 +286,26 @@
 
 	<control type="label">
 		<description>Now Playing</description>
-		<visible>IsEmpty(VideoPlayer.Tagline)</visible>
+		<!--<visible>IsEmpty(VideoPlayer.Tagline)</visible>-->
 		<posx>4</posx>
-		<posy>38</posy>
-		<width>700</width>
-		<label>Director: $INFO[VideoPlayer.Director]</label>
+		<posy>100</posy>
+		<width>1700</width>
+		<label>$LOCALIZE[20339] : $INFO[VideoPlayer.Director]</label>
 		<scroll>true</scroll>
 		<font>F30</font>
 		<align>left</align>
-		<visible>VideoPlayer.Content(Movies)</visible>
+		<visible>VideoPlayer.Content(Movies) | VideoPlayer.Content(Episodes)</visible>
 	</control>
 
 
 	<control type="label">
 		<description>Now Playing</description>
-		<visible>IsEmpty(VideoPlayer.Tagline)</visible>
-		<posx>60</posx>
-		<posy>38</posy>
+		<posx>0</posx>
+		<posy>40</posy>
 		<width>700</width>
-		<label>$INFO[VideoPlayer.TVShowTitle][COLOR Accent] $INFO[VideoPlayer.Season,Saison : ]$INFO[VideoPlayer.Episode, Episode : ][/COLOR]</label>
+		<label>$INFO[VideoPlayer.TVShowTitle][COLOR Accent] $INFO[VideoPlayer.Season,Saison ]$INFO[VideoPlayer.Episode, Episode ][/COLOR]</label>
 		<scroll>true</scroll>
-		<font>FF30</font>
+		<font>F30</font>
 		<align>left</align>
 		<visible>VideoPlayer.Content(Episodes)</visible>
 	</control>
@@ -358,24 +328,25 @@
 
 	<control type="label">
 		<description>Now Playing</description>
-		<posx>4</posx>
+		<posx>120</posx>
 		<posy>70</posy>
 		<width>360</width>
 		<label>[LOWERCASE]$INFO[VideoPlayer.Year][/LOWERCASE]</label>
 		<scroll>true</scroll>
-		<font>F20</font>
+		<font>F30</font>
 		<align>left</align>
-		<visible>VideoPlayer.Content(movies)</visible>
+		<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(Episodes)</visible>
 	</control>
 
 	<control type="image">
 		<description>Rating image</description>
-		<posx>60</posx>
+		<posx>4</posx>
 		<posy>78</posy>
 		<width>130</width>
 		<height>25</height>
 		<aspectratio align="left">keep</aspectratio>
 		<texture>rating/$INFO[Player.StarRating]</texture>
+		<visible>VideoPlayer.Content(movies) | VideoPlayer.Content(Episodes)</visible>
 	</control>
 </control>
 

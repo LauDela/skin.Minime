@@ -4,7 +4,7 @@
 	<defaultcontrol always="true">-</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
   <onload>RunScript(script.artistslideshow)</onload>
-  <onload>RunScript(script.cu.lrclyrics)</onload>
+ <!-- <onload>RunScript(script.cu.lrclyrics)</onload>-->
 	<controls>
 
 		<control type="visualisation" id="2">
@@ -34,6 +34,8 @@
 					<height>250</height>
 					<texture border="22">elements/gris01t.png</texture>
 			</control>
+			
+
 			<control type="image">
 	          <description>Music cd art image</description>
 	          <posx>130</posx>
@@ -113,6 +115,15 @@
 				<align>right</align>
 				<font>F30</font>
 				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="image">
+				<description>Rating image</description>
+				<posx>1800</posx>
+				<posy>985</posy>
+				<width>130</width>
+				<height>25</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>rating/$INFO[Player.StarRating]</texture>
 			</control>
 			<control type="image">
                     <posx>1400</posx>

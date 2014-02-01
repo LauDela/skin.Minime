@@ -858,7 +858,7 @@
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.1.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.1.Title)]</label>
                     <shadowcolor>Black</shadowcolor>
@@ -871,7 +871,7 @@
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <shadowcolor>Black</shadowcolor>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.1.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.1.Episode)]</label>
@@ -902,7 +902,7 @@
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.2.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.2.Title)]</label>
                     <shadowcolor>Black</shadowcolor>
@@ -910,12 +910,11 @@
                     <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <shadowcolor>Black</shadowcolor>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.2.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.2.Episode)]</label>
@@ -942,11 +941,10 @@
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.3.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.3.Title)]</label>
                     <shadowcolor>Black</shadowcolor>
@@ -954,12 +952,11 @@
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.3.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.3.Episode)]</label>
                    
@@ -987,11 +984,10 @@
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
                 <control type="label">
-                   
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.4.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.4.Title)]</label>
                     <shadowcolor>Black</shadowcolor>
@@ -999,12 +995,11 @@
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
                 <control type="label">
-                   
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.4.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.4.Episode)]</label>
                     
@@ -1031,11 +1026,10 @@
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.5.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.5.Title)]</label>
                     <shadowcolor>Black</shadowcolor>
@@ -1043,12 +1037,11 @@
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.5.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.5.Episode)]</label>
                     
@@ -1075,11 +1068,10 @@
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
                 <control type="label">
-                   
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.6.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.6.Title)]</label>
                     <shadowcolor>Black</shadowcolor>
@@ -1087,15 +1079,13 @@
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.6.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.6.Episode)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
@@ -1119,11 +1109,10 @@
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.7.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.7.Title)]</label>
                     <shadowcolor>Black</shadowcolor>
@@ -1131,12 +1120,11 @@
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.7.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.7.Episode)]</label>
                     
@@ -1163,26 +1151,22 @@
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentEpisode.8.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.8.Title)]</label>
-                    
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.8.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.8.Episode)]</label>
-                    
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
@@ -1207,27 +1191,23 @@
                     <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>700</posy>
                     <font>F90</font>
-                    <width>1500</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$INFO[Window.Property(RecentEpisode.9.TVshowTitle)] : $INFO[Window.Property(RecentEpisode.9.Title)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                    
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
-                    <width>1100</width>
+                    <width>1700</width>
                     <scroll>true</scroll>
                     <label>$LOCALIZE[20373] $INFO[Window.Property(RecentEpisode.9.Season)] $LOCALIZE[20452] $INFO[Window.Property(RecentEpisode.9.Episode)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>

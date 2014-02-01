@@ -4,35 +4,196 @@
 	<defaultcontrol always="true">15</defaultcontrol>
 
 	<controls>
+		<!--repeat-->
+		<control type="image">
+			<posx>648</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(1)</visible>
+		</control>
+
+		<!--lyrics-->
+		<control type="image">
+			<posx>698</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(9)</visible>
+		</control>
+		<control type="image">
+			<posx>698</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(8)</visible>
+		</control>
+		<!--lastfmN-->
+		<control type="image">
+			<posx>751</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(10)</visible>
+		</control>
+		<!--lastfmY-->
+		<control type="image">
+			<posx>802</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(11)</visible>
+		</control>
+		<!--Playlist-->
+		<control type="image">
+			<posx>856</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(12)</visible>
+		</control>
+		<!--PrevTrack-->
+		<control type="image">
+			<posx>990</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(13)</visible>
+		</control>
+		<!--Rewind-->
+		<control type="image">
+			<posx>1042</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(14)</visible>
+		</control>
+		<!--Pause-->
+		<control type="image">
+			<posx>1094</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(15)</visible>
+		</control>
+		<!--Stop-->
+		<control type="image">
+			<posx>1145</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(16)</visible>
+		</control>
+		<!--Forwad-->
+		<control type="image">
+			<posx>1198</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(17)</visible>
+		</control>
+		<!--Next-->
+		<control type="image">
+			<posx>1249</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(18)</visible>
+		</control>
+		<!--visu-->
+		<control type="image">
+			<posx>1439</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(500)</visible>
+		</control>
+		<!--visu-->
+		<control type="image">
+			<posx>1490</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(19)</visible>
+		</control>
+		<!--visu-->
+		<control type="image">
+			<posx>1542</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(20)</visible>
+		</control>
+		<!--aleat-->
+		<control type="image">
+			<posx>1592</posx>
+			<posy>750</posy>
+			<width>40</width>
+			<height>4</height>
+			<texture>orange.png</texture>
+			<colordiffuse>Accent</colordiffuse>
+			<visible>Control.HasFocus(21)</visible>
+		</control>
+
+
+
 
 		<control type="group">
-			<posx>0</posx>
-			<posy>10</posy>
+			<posx>500</posx>
+			<posy>760</posy>
+
+			
+
 
 			<control type="image">
-				<posx>440</posx>
-				<posy>70</posy>
-				<width>400</width>
-				<height>50</height>
-				<texture border="22,0,22,22">other_textures/DialogContextBottom.png</texture>
+				<posx>120</posx>
+				<posy>-20</posy>
+				<width>1040</width>
+				<height>100</height>
+				<texture border="22">elements/gris01t.png</texture>
 			</control>
 
 			<control type="label">
 				<description>Current Control</description>
 				<posx>470</posx>
-				<posy>63</posy>
+				<posy>44</posy>
 				<width>340</width>
 				<align>center</align>
-				<label>$INFO[System.CurrentControl]</label>
+				<label>$INFO[System.CurrentControl]</label>	
+				<textcolor>Accent</textcolor>
 			</control>
 
-			<control type="image">
-				<posx>120</posx>
-				<posy>-80</posy>
-				<width>1040</width>
-				<height>160</height>
-				<texture border="22">other_textures/ContentPanel.png</texture>
-			</control>
+
 
 			<control type="grouplist" id="100">
 				<posx>90</posx>
@@ -64,15 +225,18 @@
 					<texture>other_textures/OSD/RepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
 					<visible>!Control.HasFocus(1)</visible>
+					<colordiffuse>Accent</colordiffuse>					
 				</control>
 
 				<control type="image" id="3">
 					<width>50</width>
 					<height>50</height>
-					<texture>other_textures/OSD/RepeatFO.png</texture>
+					<texture>other_textures/OSD/RepeatNF.png</texture>
 					<visible>!Playlist.IsRepeat + !Playlist.IsRepeatOne</visible>
+					<colordiffuse>Accent</colordiffuse>
 					<visible>Control.HasFocus(1)</visible>
 				</control>
+
 
 				<control type="image" id="4">
 					<width>50</width>
@@ -85,9 +249,10 @@
 				<control type="image" id="5">
 					<width>50</width>
 					<height>50</height>
-					<texture>other_textures/OSD/RepeatOneFO.png</texture>
+					<texture>other_textures/OSD/RepeatOneNF.png</texture>
 					<visible>Playlist.IsRepeatOne</visible>
 					<visible>Control.HasFocus(1)</visible>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="image" id="6">
@@ -101,9 +266,10 @@
 				<control type="image" id="7">
 					<width>50</width>
 					<height>50</height>
-					<texture>other_textures/OSD/RepeatAllFO.png</texture>
+					<texture>other_textures/OSD/RepeatAllNF.png</texture>
 					<visible>Playlist.IsRepeat</visible>
 					<visible>Control.HasFocus(1)</visible>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="button" id="8">
@@ -112,8 +278,9 @@
 					<height>50</height>
 					<label>24013</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/LyricsFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/LyricsNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/LyricsNF.png</texturenofocus>
+					<colordiffuse>Accent</colordiffuse>
 					<onclick>Close</onclick>
 					<onclick>XBMC.RunScript(script.cu.lyrics)</onclick>
 					<visible>IsEmpty(Skin.String(LyricPath))</visible>
@@ -125,9 +292,10 @@
 					<height>50</height>
 					<label>24013</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/LyricsFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/LyricsNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/LyricsNF.png</texturenofocus>
 					<onclick>Close</onclick>
+					<colordiffuse>Accent</colordiffuse>
 					<onclick>XBMC.RunScript($INFO[Skin.String(LyricPath)])</onclick>
 					<visible>!IsEmpty(Skin.String(LyricPath))</visible>
 				</control>
@@ -139,9 +307,10 @@
 					<label>$LOCALIZE[15200] $LOCALIZE[33080]</label>
 					<align>left</align>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/LastFMHateFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/LastFMHateNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/LastFMHateNF.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 					<onclick>XBMC.LastFM.Ban</onclick>
 					<visible>!LastFM.RadioPlaying</visible>
 				</control>
@@ -152,9 +321,10 @@
 					<height>50</height>
 					<label>$LOCALIZE[15200] $LOCALIZE[33079]</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/LastFMLoveFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/LastFMLoveNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/LastFMLoveNF.png</texturenofocus>
 					<onclick>XBMC.LastFM.Love</onclick>
+					<colordiffuse>Accent</colordiffuse>
 					<visible>!LastFM.RadioPlaying</visible>
 				</control>
 
@@ -164,9 +334,10 @@
 					<height>50</height>
 					<label>10517</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/PlaylistFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/PlaylistNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/PlaylistNF.png</texturenofocus>
 					<onclick>ActivateWindow(MusicPlaylist)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 			</control>
@@ -190,9 +361,10 @@
 					<height>50</height>
 					<label>210</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/PrevTrackFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/PrevTrackNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/PrevTrackNF.png</texturenofocus>
 					<onclick>PlayerControl(Previous)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="button" id="14">
@@ -201,9 +373,10 @@
 					<height>50</height>
 					<label>31036</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/RewindFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/RewindNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/RewindNF.png</texturenofocus>
 					<onclick>PlayerControl(Rewind)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="togglebutton" id="15">
@@ -213,12 +386,13 @@
 					<label>31037</label>
 					<altlabel>208</altlabel>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/PauseFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/PauseNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/PauseNF.png</texturenofocus>
 					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<alttexturefocus>other_textures/OSD/PlayFO.png</alttexturefocus>
+					<alttexturefocus>other_textures/OSD/PlayNF.png</alttexturefocus>
 					<alttexturenofocus>other_textures/OSD/PlayNF.png</alttexturenofocus>
 					<onclick>PlayerControl(Play)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="button" id="16">
@@ -227,9 +401,10 @@
 					<height>50</height>
 					<label>31038</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/StopFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/StopNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/StopNF.png</texturenofocus>
 					<onclick>PlayerControl(Stop)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="button" id="17">
@@ -238,9 +413,10 @@
 					<height>50</height>
 					<label>31039</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/ForwardFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/ForwardNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/ForwardNF.png</texturenofocus>
 					<onclick>PlayerControl(Forward)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="button" id="18">
@@ -249,9 +425,10 @@
 					<height>50</height>
 					<label>209</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/NextTrackFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/NextTrackNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/NextTrackNF.png</texturenofocus>
 					<onclick>PlayerControl(Next)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 			</control>
@@ -275,8 +452,9 @@
 					<height>50</height>
 					<label>12006</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/VizFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/VizNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/VizNF.png</texturenofocus>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="button" id="19">
@@ -285,9 +463,10 @@
 					<height>50</height>
 					<label>$LOCALIZE[250] $LOCALIZE[21417]</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/PresetSettingsFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/PresetSettingsNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/PresetSettingsNF.png</texturenofocus>
 					<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="button" id="20">
@@ -296,9 +475,10 @@
 					<height>50</height>
 					<label>31040</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/PreFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/PreNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/PreNF.png</texturenofocus>
 					<onclick>ActivateWindow(122)</onclick>
+					<colordiffuse>Accent</colordiffuse>
 				</control>
 
 				<control type="togglebutton" id="21">
@@ -307,10 +487,11 @@
 					<height>50</height>
 					<label>$LOCALIZE[590]$INFO[Playlist.Random, : ]</label>
 					<font>-</font>
-					<texturefocus>other_textures/OSD/RandomOffFO.png</texturefocus>
+					<texturefocus>other_textures/OSD/RandomOffNF.png</texturefocus>
 					<texturenofocus>other_textures/OSD/RandomOffNF.png</texturenofocus>
 					<usealttexture>Playlist.IsRandom</usealttexture>
-					<alttexturefocus>other_textures/OSD/RandomOnFO.png</alttexturefocus>
+					<colordiffuse>Accent</colordiffuse>
+					<alttexturefocus>other_textures/OSD/RandomOnNF.png</alttexturefocus>
 					<alttexturenofocus>other_textures/OSD/RandomOnNF.png</alttexturenofocus>
 					<onclick>XBMC.PlayerControl(Random)</onclick>
 				</control>
