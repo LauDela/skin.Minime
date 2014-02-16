@@ -306,22 +306,34 @@
                   </control>
 			</itemlayout>
 			<focusedlayout width="120" height="900">
+           <control type="image">
+              <posx>15</posx>
+              <posy>0</posy>
+              <width>140</width>
+              <height>180</height>
+              <aspectratio>stretch</aspectratio>
+              <texture background="true" diffuse="other_textures/cover_matte.png">orange.png</texture>
+              <visible>Control.HasFocus(3010)</visible>
+              <animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+                  <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+              </animation>
+            </control>   
           <control type="image">
-            <posx>25</posx>
-            <posy>0</posy>
-            <width>150</width>
-            <height>150</height>
-            <aspectratio>keep</aspectratio>
+            <posx>20</posx>
+            <posy>5</posy>
+            <width>130</width>
+            <height>170</height>
+            <aspectratio>stretch</aspectratio>
             <texture background="true" diffuse="other_textures/Movie_Thumb_Mask.png">$INFO[ListItem.Thumb]</texture>
             <visible>Control.HasFocus(3010)</visible>
-           <!-- <animation type="Focus" reversible="false">
+           <animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
               <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
-            </animation>-->
+            </animation>
           </control>
 
         <control type="image">
-              <posx>65</posx>
-              <posy>30</posy>
+              <posx>55</posx>
+              <posy>40</posy>
               <width>80</width>
               <height>80</height>
               <aspectratio>keep</aspectratio>

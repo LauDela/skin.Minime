@@ -249,7 +249,7 @@
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" diffuse="other_textures/poster_matte.png">$INFO[ListItem.Art(thumb)]</texture>
 					<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)]</visible>
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
 				</control>	
@@ -263,7 +263,7 @@
 					<texture background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(thumb)]</texture>
 					<visible>[Container.Content(episodes)]</visible>
 					
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
 				</control>
@@ -278,7 +278,7 @@
 					<texture background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(thumb)]</texture>
 					<visible>[Container.Content(artists)]</visible>
 					
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
 				</control>
@@ -292,10 +292,10 @@
 					<aspectratio scalediffuse="false" align="center" >keep</aspectratio>
 					<texture fallback="DefaultAddonNone.png" background="true" diffuse="other_textures/cover_matte.png">$INFO[ListItem.Art(thumb)]</texture>
 					<visible>[Container.Content(albums)]</visible>
-					<!--
-					<animation type="Focus" reversible="false">
+					
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>-->
+					</animation>
 				</control>
 				<!--VU / ENCOURS FILMS-->
 				
@@ -308,7 +308,7 @@
 					<texture>circle_ok.png</texture>
 					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="0" end="100" time="300"  easing="out" />
 					</animation>
 				</control>
@@ -321,7 +321,7 @@
 					<texture>circle_play.png</texture>
 					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + ListItem.IsResumable + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
 					</animation>
 				</control>
@@ -338,7 +338,7 @@
 					<texture>circle_ok.png</texture>
 					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
 					</animation>
 				</control>
@@ -351,7 +351,7 @@
 					<texture>circle_play.png</texture>
 					<colordiffuse>Accent</colordiffuse>
 					<visible>[Container.Content(seasons) | Container.Content(tvshows)] + ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
 					</animation>
 				</control>

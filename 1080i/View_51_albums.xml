@@ -58,7 +58,7 @@
 					<height>220</height>
 					<aspectratio scalediffuse="false" align="center" >stretch</aspectratio>
 					<texture background="true">orange.png</texture>
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
 				</control>	
@@ -71,7 +71,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false" align="center" >stretch</aspectratio>
 					<texture fallback="DefaultAddonNone.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
-					<animation type="Focus" reversible="false">
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
 				</control>

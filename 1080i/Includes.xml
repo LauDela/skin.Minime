@@ -489,7 +489,7 @@
                 <!--<animation effect="fade" time="500">VisibleChange</animation>-->
                 <visible>[Container(300).HasFocus(5) + Control.HasFocus(300) +!Control.HasFocus(3010) | Control.HasFocus(301)]</visible>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>800</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.1.Art(fanart))]</texture>
@@ -497,7 +497,7 @@
                     <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>800</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -524,8 +524,17 @@
                     <shadowcolor>Black</shadowcolor>
                     <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
                 </control>
+                <control type="label">
+                    <posx>270</posx>
+                    <posy>770</posy>
+                    <font>F50</font>
+                   
+                    <label>$INFO[Window.Property(RecentMovie.1.Genre)]</label>
+                    <shadowcolor>Black</shadowcolor>
+                    <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
+                </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>500</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.2.Art(fanart))]</texture>
@@ -533,7 +542,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>800</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -561,7 +570,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>800</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.3.Art(fanart))]</texture>
@@ -569,7 +578,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -597,7 +606,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>800</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.4.Art(fanart))]</texture>
@@ -605,7 +614,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -633,7 +642,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>500</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.5.Art(fanart))]</texture>
@@ -641,7 +650,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -660,7 +669,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
                 <control type="label">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <posx>150</posx>
                     <posy>770</posy>
                     <font>F50</font>
@@ -677,7 +686,7 @@
                     <colordiffuse>FanartDiffuse</colordiffuse>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -709,7 +718,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>500</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.7.Art(fanart))]</texture>
@@ -717,7 +726,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -749,7 +758,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>500</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.8.Art(fanart))]</texture>
@@ -757,7 +766,7 @@
                     <colordiffuse>FanartDiffuse</colordiffuse>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
@@ -789,7 +798,7 @@
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <include>Dimensions_Fullscreen</include>
                     <fadetime>500</fadetime>
                     <texture background="true" fallback="fallback/movies.jpg">$INFO[Window.Property(RecentMovie.9.Art(fanart))]</texture>
@@ -797,7 +806,7 @@
                     <colordiffuse>FanartDiffuse</colordiffuse>
                 </control>
                 <control type="image">
-                    <animation effect="fade" time="500">VisibleChange</animation>
+                    <animation effect="fade" time="200">VisibleChange</animation>
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>

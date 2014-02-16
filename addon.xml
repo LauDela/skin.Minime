@@ -3,10 +3,12 @@
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0"/>
 		<import version="0.0.16" addon="service.skin.widgets"/>	
-		<import version="1.5.4" addon="script.artistslideshow"/>
-		<import version="12.0.15" addon="script.artwork.downloader"/>	
+		<import version="1.5.9" addon="script.artistslideshow"/>
+		<import version="12.0.23" addon="script.artwork.downloader"/>	
 	</requires>
-	<extension  point="xbmc.gui.skin" defaultresolution="1080i"  defaultresolutionwide="1080i" effectslowdown="1.00" debugging="false"/>
+	<extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary>Created by LauDela</summary>

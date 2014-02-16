@@ -444,38 +444,46 @@
 
         <!--FIN DEFILEMENT AUTO -->
         <!--PLAYLIST DEMARRAGE-->
-					<control type="radiobutton" id="602">
-						<width>750</width>
-						<height>40</height>
-            <align>left</align>
-						<!--<font>font13</font>-->
-						<label>21398</label>
-						<!--<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
-						<texturefocus>MenuItemFO.png</texturefocus>
-						<texturenofocus>MenuItemNF.png</texturenofocus>-->
-						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
-						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
-					</control>
+		<control type="radiobutton" id="602">
+			<width>750</width>
+			<height>40</height>
+        	<align>left</align>
+			<!--<font>font13</font>-->
+			<label>21398</label>
+			<!--<textcolor>grey2</textcolor>
+			<focusedcolor>white</focusedcolor>
+			<texturefocus>MenuItemFO.png</texturefocus>
+			<texturenofocus>MenuItemNF.png</texturenofocus>-->
+			<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+			<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+		</control>
 
-					<control type="button" id="206">
-						<description>Startup Playlist Path</description>
-						<width>750</width>
-            			<align>left</align>
-						<height>80</height>
-						<font>font13</font>
-						<label>15311</label>
-						<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
-						<onclick>Skin.SetFile(Startup_Playlist_Path,,special://MusicPlaylists/)</onclick>
-						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
-					</control>
-         <control type="radiobutton" id="603">
+		<control type="button" id="206">
+			<description>Startup Playlist Path</description>
+			<width>750</width>
+        	<align>left</align>
+			<height>80</height>
+			<font>font13</font>
+			<label>15311</label>
+			<label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+			<onclick>Skin.SetFile(Startup_Playlist_Path,,special://MusicPlaylists/)</onclick>
+			<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+		</control>
+        <control type="radiobutton" id="603">
 			<label>31056</label>
             <width>750</width>
-            	<align>left</align>
-						<include>Default_SettingRadioButton</include>
-						<onclick>Skin.ToggleSetting(Show_BA)</onclick>
-						<selected>Skin.HasSetting(Show_BA)</selected>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(Show_BA)</onclick>
+			<selected>Skin.HasSetting(Show_BA)</selected>
+		</control>
+		<control type="radiobutton" id="604">
+			<label>31057</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(animation_aucune)</onclick>
+			<selected>Skin.HasSetting(animation_aucune)</selected>
 		</control>
           <!--
 					<control type="label" id="109">
