@@ -5,7 +5,7 @@
  
   <control type="group" id="8888">
     <visible>Container(300).HasFocus(1)</visible>
- 
+
     <control type="group" id="6061"> <!--MOVIES-->
       <posx>0</posx>
       <posy>50</posy>
@@ -55,19 +55,11 @@
           <shadowcolor>Black</shadowcolor>
           <align>left</align>
       </control>
+      
       <control type="group">  <!----------------------------------------------------------------------------------RECOMMENDED MOVIE-->
           <visible>!Player.HasAudio</visible>
-          <control type="label">
-            <posx>850</posx>
-            <posy>100</posy>
-            <width>1000</width>
-            <height>50</height>
-            <label>$LOCALIZE[31048]</label>
-            <font>F60</font>
-            <textcolor>White</textcolor>
-            <shadowcolor>Black</shadowcolor>
-            <align>left</align>
-          </control>
+         
+            
           <control id="6001">
               <type>button</type>
               <label>RecommendedMovie.1</label>
@@ -117,7 +109,14 @@
               <textcolor>White</textcolor>
               <shadowcolor>Black</shadowcolor>
               <align>left</align>
-             
+          </control>
+          <control type="image">
+            <posx>915</posx>
+            <posy>360</posy>
+            <width></width>
+            <height>30</height>
+            <texture>rating/$INFO[Window(Home).Property(RecommendedMovie.1.Rating)].png</texture>
+       
           </control>
           <control type="image">
               <posx>915</posx>
@@ -149,17 +148,7 @@
           </control>
         </control>
         <!-- ------------------------------------------------------------------------------------------------------------RECENT MOVIE-->
-        <control type="label">
-            <posx>400</posx>
-            <posy>100</posy>
-            <width>1000</width>
-            <height>50</height>
-            <label>$LOCALIZE[31050]</label>
-            <font>F60</font>
-            <textcolor>White</textcolor>
-            <shadowcolor>Black</shadowcolor>
-            <align>left</align>
-        </control>  
+        
         <control id="6002">
           <type>button</type>
           <label>RecentMovie.1</label>
@@ -241,17 +230,7 @@
             <align>center</align>
         </control>
         <!-- ------------------------------------------------------------------------------------------------------------------- RANDOM MOVIE -->
-        <control type="label">
-            <posx>1300</posx>
-            <posy>100</posy>
-            <width>1000</width>
-            <height>50</height>
-            <label>$LOCALIZE[31054]</label>
-            <font>F60</font>
-            <textcolor>White</textcolor>
-            <shadowcolor>Black</shadowcolor>
-            <align>left</align>
-        </control>  
+        
         <control id="6020">
           <type>button</type>
           <label>RandomMovie.1</label>
@@ -386,17 +365,7 @@
 
        <control type="group">  <!---------------------------------------------------------------------------------------------------------recommended music-->
           <visible>!Player.HasAudio</visible>
-          <control type="label">
-            <posx>850</posx>
-            <posy>100</posy>
-            <width>1000</width>
-            <height>50</height>
-            <label>$LOCALIZE[31048]</label>
-            <font>F60</font>
-            <textcolor>White</textcolor>
-            <shadowcolor>Black</shadowcolor>
-            <align>left</align>
-          </control>
+          
           <control id="6005">
             <type>button</type>
             <label>RecentAlbum.1</label>
@@ -486,17 +455,7 @@
             <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[Window(Home).Property(RecommendedAlbum.1.Artist),,\logo.png]</texture> 
         </control> 
         </control>  
-        <control type="label"><!---------------------------------------------------------------------------------------------------------recent music-->
-          <posx>400</posx>
-          <posy>100</posy>
-          <width>1000</width>
-          <height>50</height>
-          <label>$LOCALIZE[31050]</label>
-          <font>F60</font>
-          <textcolor>White</textcolor>
-          <shadowcolor>Black</shadowcolor>
-          <align>left</align>
-        </control>
+        <!---------------------------------------------------------------------------------------------------------recent music-->
         <control id="6006">
           <type>button</type>
           <label>RecommendedAlbum.1</label>
@@ -598,17 +557,7 @@
             <aspectratio>keep</aspectratio>
             <texture background="true" diffuse="other_textures/poster_matte.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[Window(Home).Property(RecentAlbum.1.Artist),,\logo.png]</texture> 
         </control> 
-        <control type="label"><!---------------------------------------------------------------------------------------------------------random music-->
-          <posx>1300</posx>
-          <posy>100</posy>
-          <width>1000</width>
-          <height>50</height>
-          <label>$LOCALIZE[31054]</label>
-          <font>F60</font>
-          <textcolor>White</textcolor>
-          <shadowcolor>Black</shadowcolor>
-          <align>left</align>
-        </control>
+        <!---------------------------------------------------------------------------------------------------------random music-->
         <control id="6060">
           <type>button</type>
           <label>RandomAlbum.1</label>
@@ -764,17 +713,7 @@
       </control>
       <control type="group"> <!-- ----------------------------------------------------------------------------------------------------recommended tv show-->
         <visible>!Player.HasAudio</visible>
-        <control type="label">
-          <posx>850</posx>
-          <posy>100</posy>
-          <width>1000</width>
-          <height>50</height>
-          <label>$LOCALIZE[31048]</label>
-          <font>F60</font>
-          <textcolor>White</textcolor>
-          <shadowcolor>Black</shadowcolor>
-          <align>left</align>
-        </control>
+        
         <control id="6003">
           <type>button</type>
           <label>RecentEpisode.1</label>
@@ -846,17 +785,8 @@
             <align>left</align>
         </control>
       </control> 
-      <control type="label"><!---------------------------------------------------------------------------------------------------------recent episode-->
-        <posx>400</posx>
-        <posy>100</posy>
-        <width>1000</width>
-        <height>50</height>
-        <label>$LOCALIZE[31050]</label>
-        <font>F60</font>
-        <textcolor>White</textcolor>
-        <shadowcolor>Black</shadowcolor>
-        <align>left</align>
-      </control>
+      <!---------------------------------------------------------------------------------------------------------recent episode-->
+       
       <control id="6004">
         <type>button</type>
         <label>RecommendedEpisode.1</label>
@@ -927,18 +857,8 @@
             <shadowcolor>Black</shadowcolor>
             <align>left</align>
         </control>
-        <control type="label"><!---------------------------------------------------------------------------------------------------------random episode-->
-        <posx>1300</posx>
-        <posy>100</posy>
-        <width>1000</width>
-        <height>50</height>
-        <label>$LOCALIZE[31054]</label>
-        <font>F60</font>
-        <textcolor>White</textcolor>
-        <shadowcolor>Black</shadowcolor>
-        <align>left</align>
-      </control>
-      <control id="6040">
+        <!---------------------------------------------------------------------------------------------------------random episode-->
+        <control id="6040">
         <type>button</type>
         <label>RandomEpisode.1</label>
         <posx>1000</posx>
@@ -1014,18 +934,7 @@
           <visible>Player.HasAudio</visible>
            <posx>0</posx>
            <posy>50</posy>
-            <control type="label">
-              <posx>850</posx>
-              <posy>100</posy>
-              <width>1000</width>
-              <height>50</height>
-              <label>$LOCALIZE[31052]</label>
-              <font>F60</font>
-              <textcolor>White</textcolor>
-              <shadowcolor>Black</shadowcolor>
-              <align>left</align>
-            </control>
-          
+           
             <control type="image">
               <posx>845</posx>
               <posy>155</posy>
@@ -1126,6 +1035,7 @@
                       <width>30</width>
                       <height>30</height>
                       <aspectratio>keep</aspectratio>
+                      <colordiffuse>Accent</colordiffuse>
                       <texture>DefaultNextAired.png</texture>
                       <visible>!IsEmpty(ListItem.Label)</visible>
                   </control>
@@ -1278,7 +1188,83 @@
               </content>
           </control>
      </control> <!-- FIN NOW PLAYING-->
-	
+	  <!-- LABELS -->
+      <!--RECOMMANDE-->
+    <control type="label">
+      <visible>!Player.HasAudio</visible>
+      <posx>850</posx>
+      <posy>100</posy>
+      <width>1000</width>
+      <height>50</height>
+      <label>$LOCALIZE[31048]</label>
+      <font>F60</font>
+      <textcolor>White</textcolor>
+      <shadowcolor>Black</shadowcolor>
+      <align>left</align>
+    </control>
+    <!--now playing-->
+    <control type="label">
+      <visible>Player.HasAudio</visible>
+      <posx>850</posx>
+      <posy>100</posy>
+      <width>1000</width>
+      <height>50</height>
+      <label>$LOCALIZE[31052]</label>
+      <font>F60</font>
+      <textcolor>White</textcolor>
+      <shadowcolor>Black</shadowcolor>
+      <align>left</align>
+    </control>
+    <control type="image">
+      <posx>850</posx>
+      <posy>160</posy>
+      <width>400</width>
+      <height>5</height>
+      <aspectratio>stretch</aspectratio>
+      <texture background="true">orange.png</texture> 
+    </control>
+    <!--Dernier AJOUT-->
+    <control type="label">
+      <posx>400</posx>
+      <posy>100</posy>
+      <width>1000</width>
+      <height>50</height>
+      <label>$LOCALIZE[31058]</label>
+      <font>F60</font>
+      <textcolor>White</textcolor>
+      <shadowcolor>Black</shadowcolor>
+      <align>left</align>
+    </control>  
+    <control type="image">
+      <posx>400</posx>
+      <posy>160</posy>
+      <width>400</width>
+      <height>5</height>
+      <aspectratio>stretch</aspectratio>
+      <texture background="true">orange.png</texture> 
+    </control>
+    <!--AU HASARD--> 
+    <control type="label">
+      <posx>1300</posx>
+      <posy>100</posy>
+      <width>1000</width>
+      <height>50</height>
+      <label>$LOCALIZE[31054]</label>
+      <font>F60</font>
+      <textcolor>White</textcolor>
+      <shadowcolor>Black</shadowcolor>
+      <align>left</align>
+    </control>  
+    <control type="image">
+      <posx>1300</posx>
+      <posy>160</posy>
+      <width>400</width>
+      <height>5</height>
+      <aspectratio>stretch</aspectratio>
+      <texture background="true">orange.png</texture> 
+    </control>
+    
+  <!-- FIN LABELS -->
 	</control>
 	</include>
 </includes>
