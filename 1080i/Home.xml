@@ -18,60 +18,13 @@
           <aspectratio></aspectratio>
           <texture fallback="fallback/meteo.png" background="true">weather/weather_fanart/$INFO[Window(Weather).Property(Day0.FanartCode)].jpg</texture>
       </control>
-	  
-	  <control type="group">
-			<posx>1500</posx>
-			<posy>940</posy>
-			 <visible>Weather.IsFetched+!Player.HasMedia</visible>
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>620</width>
-					<height>100</height>
-					<texture border="22">elements/gris01t.png</texture>
-				</control>
-					
-				<control type="image">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>5</width>
-					<height>100</height>
-					<texture>orange.png</texture>
-				</control>
-				<control type="label">
-      		 		<visible>Weather.IsFetched+!Player.HasMedia</visible>
-					<posx>30</posx>
-         			<posy>-5</posy>
-         			<height>50</height>
-					<width>800</width>
-					<font>F30</font>
-					<label>$INFO[Window(Weather).Property(Location)]</label>
-		 			<align>left</align>
-				</control>
-      			<control type="label">
-      		 		<visible>Weather.IsFetched+!Player.HasMedia</visible>
-					<posx>30</posx>
-         			<posy>25</posy>
-         			<height>50</height>
-					<width>800</width>
-					<font>F30</font>
-					<label>$INFO[Window(Weather).Property(Updated)]</label>
-		 			<align>left</align>
-				</control>
-				<control type="label">
-					<posx>30</posx>
-          			<posy>55</posy>
-					<height>50</height>
-					<width>600</width>
-					<font>FF30</font>
-					<label>10508</label>
-					<align>left</align>
-          			<textcolor>Accent</textcolor>
-           			<visible>Container(300).HasFocus(9)+!Player.HasMedia</visible>
-				</control>		
-		</control>	
-	  
-      	
+      	<control type="image">
+			<posx>0</posx>
+			<posy>100</posy>
+			<width>1920</width>
+			<height>250</height>
+			<texture border="22">elements/gris01t.png</texture>
+		</control>
       	<control type="label">
       		 <visible>Weather.IsFetched</visible>
 			<posx>20</posx>
@@ -107,11 +60,58 @@
          	<align>left</align>
          	<scroll>true</scroll>
 		</control>
+		<control type="image">
+					<description>Day 0 Icon</description>
+					<posx>1530</posx>
+					<posy>100</posy>
+					<height>156</height>
+					<width>156</width>
+					<texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>
+				</control>
+	  
+	  <control type="group">
+			<posx>1500</posx>
+			<posy>250</posy>
+			 <visible>Weather.IsFetched+!Player.HasMedia</visible>
+					
+				<control type="label">
+      		 		<visible>Weather.IsFetched+!Player.HasMedia</visible>
+					<posx>30</posx>
+         			<posy>-5</posy>
+         			<height>50</height>
+					<width>800</width>
+					<font>F30</font>
+					<label>$INFO[Window(Weather).Property(Location)]</label>
+		 			<align>left</align>
+				</control>
+      			<control type="label">
+      		 		<visible>Weather.IsFetched+!Player.HasMedia</visible>
+					<posx>30</posx>
+         			<posy>25</posy>
+         			<height>50</height>
+					<width>800</width>
+					<font>F30</font>
+					<label>$INFO[Window(Weather).Property(Updated)]</label>
+		 			<align>left</align>
+				</control>
+				<control type="label">
+					<posx>30</posx>
+          			<posy>55</posy>
+					<height>50</height>
+					<width>600</width>
+					<font>FF30</font>
+					<label>10508</label>
+					<align>left</align>
+          			<textcolor>Accent</textcolor>
+           			<visible>Container(300).HasFocus(9)+!Player.HasMedia</visible>
+				</control>		
+		</control>	
+	  
 
 </control>
   <!--FIN METEO-->
 		<include>HomeBackground</include>
-    	<include>BarClock</include>
+    	
 
 
 		<control type="wraplist" id="300">
@@ -521,7 +521,7 @@
 			<!--FIN A SUIVRE-->
 		</control>
  		<!-- FIN NOW PLAYING -->
-
+ 		<include>BarClock</include>
 	</controls>
 
 </window>
