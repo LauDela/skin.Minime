@@ -217,7 +217,7 @@
 				</control>
 				 <control type="image">
 					<description>Logo marque</description>
-					<posx>-80</posx>
+					<posx>-70</posx>
 					<posy>10</posy>
 					<height>30</height>
 					<texture>other_textures/camera/$INFO[slideshow.cameramake].png</texture>
