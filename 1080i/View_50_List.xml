@@ -584,7 +584,17 @@
 				<texture>other_textures/flagging/audio/$INFO[ListItem.AudioCodec].png</texture>
 				<visible>!IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(episodes)]</visible>
 			</control>
+			<control type="image">
+				<posx>220</posx>
+				<posy>60</posy>
+				<width>90</width>
+				<height>90</height>
+				<aspectratio>keep</aspectratio>
+				<texture>extras/rating/$INFO[ListItem.Mpaa].png</texture>
+				<visible>!IsEmpty(ListItem.Mpaa) + [Container.Content(movies)]</visible>
+			</control>
 		
+
 			<control type="label">
 				<posx>290</posx>
 				<posy>260</posy>
@@ -651,7 +661,7 @@
 		<!--SUB MENU FILMS TV-->
   
 		<control type="group">
-			<posx>160</posx>
+			<posx>250</posx>
 			<posy>430</posy>
 			<visible>Control.IsVisible(50)+ !IsEmpty(ListItem.Title)</visible>
 			<control type="list" id="501">

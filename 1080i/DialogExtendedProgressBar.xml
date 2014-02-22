@@ -52,7 +52,7 @@
             <control type="progress" id="32">
                 <description>progress control</description>
                 <posx>0</posx>
-                <posy>95</posy>
+                <posy>85</posy>
                 <width>640</width>
                 <height>5</height>
                 <texturebg>elements/gris01.png</texturebg>
