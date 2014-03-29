@@ -255,6 +255,41 @@
           <property name="foo2">icons/Thumbs_up.png</property>
           <onclick>XBMC.ActivateWindow(10502,special://skin/playlists/Lesmieuxnotees.xsp,return)</onclick>
        	</item>
+        <item id="6">
+        <description>videos clip</description>
+          <label>20389</label>
+          <thumb>icons/Guitar.png</thumb>
+          <property name="foo2">icons/Guitar.png</property>
+          <onclick>XBMC.ActivateWindow(10502,special://skin/playlists/videosclips.xsp,return)</onclick>
+        </item>
+         <item id="300">
+            <description>custom1</description>
+            <label>$INFO[Skin.String(custom10_Playlist_Label)]</label>
+            <thumb>$INFO[Skin.String(custom10_Playlist_Icon)]</thumb>
+            <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom10_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom10_Playlist)</visible>
+          </item>
+          <item id="400">
+            <description>custom2</description>
+            <label>$INFO[Skin.String(custom20_Playlist_Label)]</label>
+            <thumb>$INFO[Skin.String(custom20_Playlist_Icon)]</thumb>
+            <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom20_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom20_Playlist)</visible>
+          </item>
+          <item id="500">
+            <description>custom3</description>
+            <label>$INFO[Skin.String(custom30_Playlist_Label)]</label>
+            <thumb>$INFO[Skin.String(custom30_Playlist_Icon)]</thumb>
+            <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom30_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom30_Playlist)</visible>
+          </item>
+          <item id="600">
+            <description>custom4</description>
+            <label>$INFO[Skin.String(custom40_Playlist_Label)]</label>
+            <thumb>$INFO[Skin.String(custom40_Playlist_Icon)]</thumb>
+            <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(custom40_Playlist_Path)],return)</onclick>
+            <visible>Skin.HasSetting(Use_custom40_Playlist)</visible>
+          </item>
 			</content>
 		</control>
      

@@ -27,7 +27,8 @@
 			<onup condition="Container.Content(movies)">SetFocus(501)</onup>
 			<onup condition="Container.Content(songs)">IncreaseRating</onup>
 			<ondown condition="Container.Content(songs)">DecreaseRating</ondown>
-			<ondown condition="!Container.Content(songs)">9000</ondown>
+			<ondown condition="!Container.Content(songs)+!Container.Content(artists)">9000</ondown>
+			<ondown condition="Container.Content(artists)">900</ondown>
 			<orientation>horizontal</orientation>
 			<pagecontrol>60</pagecontrol>
 			<viewtype label="535">list</viewtype>
@@ -435,10 +436,11 @@
 		
        <!--fin episodes-->
 		<control type="image">
-			 <posx>150</posx>
+			 <posx>-1500</posx>
 			 <posy>665</posy>
 			 <width></width>
 			 <height>30</height>
+			 <aspectratio >keep</aspectratio>
 			 <texture>rating/$INFO[ListItem.StarRating]</texture>
 			 <visible>Control.IsVisible(50) + !IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(tvshows)]</visible>
 		</control>
@@ -750,6 +752,97 @@
 			</control>
 		</control>
 		<!-- FIN SUB MENU-->
+
+<!--SPECIF ARTIST : LISTS OF ALBUMS GOTHAM ONLY -->
+<control type="image">
+	<posx>1208</posx>
+	<posy>1040</posy>
+	<width>800</width>
+	<height>50</height>
+	<texture>elements/gris01.png</texture>
+	<visible>Control.HasFocus(900)</visible>
+</control>
+<control type="fixedlist" id="900">
+			<description>Home Wraplist</description>
+			<posx>1205</posx>
+			<posy>880</posy>
+			<width>800</width>
+			<height>300</height>
+			<onup>50</onup>
+			<ondown>300</ondown>
+			<onleft>300</onleft>
+			<onright>300</onright>
+			<focusposition>0</focusposition>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<visible>Container.Content(artists)</visible>
+			<itemlayout width="150" height="150">
+				
+        		<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>150</width>
+					<height>150</height>
+					<texture fallback="DefaultMusicRecentlyPlayed.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</itemlayout>
+
+			<focusedlayout width="160" height="160">
+     
+				<control type="image">
+					<posx>5</posx>
+					<posy>5</posy>
+					<width>160</width>
+					<height>160</height>
+					<aspectratio scalediffuse="false" align="center" >stretch</aspectratio>
+					<texture background="true">orange.png</texture>
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+					<visible>Control.HasFocus(900)</visible>
+				</control>	
+				
+				<!--album-->
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>150</width>
+					<height>150</height>
+					<aspectratio scalediffuse="false" align="center" >stretch</aspectratio>
+					<texture fallback="DefaultMusicRecentlyPlayed.png" background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+					<visible>Control.HasFocus(900)</visible>
+				</control>
+				<control type="image">
+					<posx>10</posx>
+					<posy>10</posy>
+					<width>150</width>
+					<height>150</height>
+					<texture>$INFO[ListItem.Art(thumb)]</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!Control.HasFocus(900)</visible>
+				</control>
+				
+				<control type="label">
+					<posx>10</posx>
+					<posy>160</posy>
+					<height>50</height>
+					<width>600</width>
+					<font>F20</font>
+					<label>$INFO[ListItem.Label]</label>
+					<align>left</align>
+					<shadowcolor>Black</shadowcolor>
+					<textcolor>Accent</textcolor>
+					<visible>Control.HasFocus(900)</visible>
+				</control>
+			</focusedlayout>
+			<content target="music">$INFO[ListItem.DBID,musicdb://artists/,]</content> 
+	</control>		
+<!--FIN SPECIF GOTHAM -->
+
 	</include>
 
 </includes>

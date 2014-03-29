@@ -97,8 +97,13 @@
 				</item>
 
         		<item id="5">
-					<description>Playlists</description>
+					<description>Movie Playlists</description>
 					<label>$LOCALIZE[1034] $LOCALIZE[31006] : $LOCALIZE[136]</label>
+					<onclick>-</onclick>
+				</item>
+				<item id="6">
+					<description>Music Playlists</description>
+					<label>$LOCALIZE[1034] $LOCALIZE[31004] : $LOCALIZE[136]</label>
 					<onclick>-</onclick>
 				</item>
 			</content>
@@ -666,6 +671,175 @@
                 <enable>Skin.HasSetting(Use_custom4_Playlist)</enable>
 					</control>
 <!--FIN CUSTOM MOVIE PLAYLIST 4-->
+
+</control>
+
+<!-- CUSTOM HOME MUSIC PLAYLISTE -->
+
+      <control type="grouplist" id="800">
+				<description>Général Area</description>
+				<width>820</width>
+				<height>900</height>
+				<itemgap>2</itemgap>
+				<onup>500</onup>
+				<ondown>500</ondown>
+				<onleft>100</onleft>
+				<onright>-</onright>
+				<orientation>vertical</orientation>
+				<visible>Container(100).Hasfocus(6)</visible>
+
+        <!--CUSTOM HOME MUSIC PLAYLIST 1-->
+					<control type="radiobutton" id="810">
+						<width>750</width>
+						<height>40</height>
+            			<align>left</align>
+						<label>$LOCALIZE[524] 1</label>
+						<onclick>Skin.ToggleSetting(Use_custom10_Playlist)</onclick>
+						<selected>Skin.HasSetting(Use_custom10_Playlist)</selected>
+					</control>
+					<control type="button" id="811">
+						<description>Startup custom 1 Playlist Path</description>
+						<width>750</width>
+            			<align>left</align>
+						<height>40</height>
+						<font>font13</font>
+						<label>15311</label>
+						<label2>$INFO[Skin.String(custom10_Playlist_Path)]</label2>
+						<onclick>Skin.SetFile(custom10_Playlist_Path,,special://musicplaylists/)</onclick>
+						<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
+					</control>
+          			<control type="button" id="812">
+							<label>Name</label>
+              				<label2>$INFO[Skin.String(custom10_Playlist_Label)]</label2>
+							<onclick>Skin.SetString(custom10_Playlist_Label)</onclick>
+              				<align>left</align>
+              				<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
+					</control>
+          			<control type="button" id="813">
+							<description>Single Image button</description>
+							<width>680</width>
+							<height>40</height>
+                			<align>left</align>
+							<label>Icon</label>
+                			<label2>$INFO[Skin.String(custom10_Playlist_Icon)]</label2>
+							<onclick>Skin.SetFile(custom10_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                			<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
+					</control>
+		<!--FIN CUSTOM MOVIE PLAYLIST 1-->
+		<!--CUSTOM HOME MOVIE PLAYLIST 2-->
+					<control type="radiobutton" id="820">
+						<width>750</width>
+						<height>40</height>
+            			<align>left</align>
+						<label>$LOCALIZE[524] 2</label>
+						<onclick>Skin.ToggleSetting(Use_custom20_Playlist)</onclick>
+						<selected>Skin.HasSetting(Use_custom20_Playlist)</selected>
+					</control>
+					<control type="button" id="821">
+						<description>Startup custom 2 Playlist Path</description>
+						<width>750</width>
+            			<align>left</align>
+						<height>40</height>
+						<font>font13</font>
+						<label>15311</label>
+						<label2>$INFO[Skin.String(custom20_Playlist_Path)]</label2>
+						<onclick>Skin.SetFile(custom20_Playlist_Path,,special://musicplaylists/)</onclick>
+						<enable>Skin.HasSetting(Use_custom20_Playlist)</enable>
+					</control>
+          			<control type="button" id="822">
+						<label>Name</label>
+              			<label2>$INFO[Skin.String(custom20_Playlist_Label)]</label2>
+						<onclick>Skin.SetString(custom20_Playlist_Label)</onclick>
+              			<align>left</align>
+              			<enable>Skin.HasSetting(Use_custom20_Playlist)</enable>
+					</control>
+          			<control type="button" id="823">
+						<description>Single Image button</description>
+						<width>680</width>
+						<height>40</height>
+                		<align>left</align>
+						<label>Icon</label>
+                		<label2>$INFO[Skin.String(custom20_Playlist_Icon)]</label2>
+						<onclick>Skin.SetFile(custom20_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                		<enable>Skin.HasSetting(Use_custom20_Playlist)</enable>
+					</control>
+				<!--FIN CUSTOM MOVIE PLAYLIST 2-->
+				<!--CUSTOM MOVIE PLAYLIST 3-->
+					<control type="radiobutton" id="830">
+						<width>750</width>
+						<height>40</height>
+            			<align>left</align>
+						<label>$LOCALIZE[524] 3</label>
+						<onclick>Skin.ToggleSetting(Use_custom30_Playlist)</onclick>
+						<selected>Skin.HasSetting(Use_custom30_Playlist)</selected>
+					</control>
+					<control type="button" id="831">
+						<description>Startup custom 3 Playlist Path</description>
+						<width>750</width>
+            			<align>left</align>
+						<height>40</height>
+						<font>font13</font>
+						<label>15311</label>
+						<label2>$INFO[Skin.String(custom30_Playlist_Path)]</label2>
+						<onclick>Skin.SetFile(custom30_Playlist_Path,,special://musicplaylists/)</onclick>
+						<enable>Skin.HasSetting(Use_custom30_Playlist)</enable>
+					</control>
+          			<control type="button" id="832">
+						<label>Name</label>
+              			<label2>$INFO[Skin.String(custom30_Playlist_Label)]</label2>
+						<onclick>Skin.SetString(custom30_Playlist_Label)</onclick>
+              			<align>left</align>
+              			<enable>Skin.HasSetting(Use_custom30_Playlist)</enable>
+					</control>
+          			<control type="button" id="833">
+						<description>Single Image button</description>
+						<width>680</width>
+						<height>40</height>
+                		<align>left</align>
+						<label>Icon</label>
+                		<label2>$INFO[Skin.String(custom30_Playlist_Icon)]</label2>
+						<onclick>Skin.SetFile(custom30_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                		<enable>Skin.HasSetting(Use_custom30_Playlist)</enable>
+					</control>
+					<!--FIN CUSTOM MOVIE PLAYLIST 3-->
+					<!--CUSTOM MOVIE PLAYLIST 4-->
+					<control type="radiobutton" id="840">
+						<width>750</width>
+						<height>40</height>
+            			<align>left</align>
+						<label>$LOCALIZE[524] 4</label>
+						<onclick>Skin.ToggleSetting(Use_custom40_Playlist)</onclick>
+						<selected>Skin.HasSetting(Use_custom40_Playlist)</selected>
+					</control>
+					<control type="button" id="841">
+						<description>Startup custom 4 Playlist Path</description>
+						<width>750</width>
+            			<align>left</align>
+						<height>40</height>
+						<font>font13</font>
+						<label>15311</label>
+						<label2>$INFO[Skin.String(custom40_Playlist_Path)]</label2>
+						<onclick>Skin.SetFile(custom40_Playlist_Path,,special://musicplaylists/)</onclick>
+						<enable>Skin.HasSetting(Use_custom40_Playlist)</enable>
+					</control>
+          			<control type="button" id="842">
+						<label>Name</label>
+              			<label2>$INFO[Skin.String(custom40_Playlist_Label)]</label2>
+						<onclick>Skin.SetString(custom40_Playlist_Label)</onclick>
+              			<align>left</align>
+              			<enable>Skin.HasSetting(Use_custom40_Playlist)</enable>
+					</control>
+          			<control type="button" id="843">
+						<description>Single Image button</description>
+						<width>680</width>
+						<height>40</height>
+                		<align>left</align>
+						<label>Icon</label>
+                		<label2>$INFO[Skin.String(custom40_Playlist_Icon)]</label2>
+						<onclick>Skin.SetFile(custom40_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                		<enable>Skin.HasSetting(Use_custom40_Playlist)</enable>
+					</control>
+				<!--FIN CUSTOM MOVIE PLAYLIST 4-->
 
 </control>
 

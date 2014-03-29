@@ -310,7 +310,7 @@
 			<label>$LOCALIZE[31050]</label>
 			<align>right</align>
           	<textcolor>Accent</textcolor>
-           	<visible>Container(300).HasFocus(3)+ !Control.HasFocus(3030)</visible>
+           	<visible>Container(300).HasFocus(3)</visible>
 		</control>
 
 		<control type="label">
@@ -334,7 +334,7 @@
 			<label>$LOCALIZE[31050]</label>
 			<align>right</align>
           	<textcolor>Accent</textcolor>
-           	<visible>Container(300).HasFocus(5)+ !Control.HasFocus(3010)</visible>
+           	<visible>Container(300).HasFocus(5)</visible>
 		</control>
     
     	<control type="label">
@@ -346,7 +346,7 @@
 			<label>$LOCALIZE[31050]</label>
 			<align>right</align>
           	<textcolor>Accent</textcolor>
-           	<visible>Container(300).HasFocus(6)+ !Control.HasFocus(3060)</visible>
+           	<visible>Container(300).HasFocus(6)</visible>
 		</control>
     
     	
