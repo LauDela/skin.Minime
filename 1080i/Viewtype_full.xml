@@ -54,8 +54,9 @@
                         <control type="image">
                             <posx>130</posx>
                             <posy>75</posy>
-                            <width></width>
+                            <width>100</width>
                             <height>30</height>
+                             <aspectratio >keep</aspectratio>
                             <texture>rating/$INFO[ListItem.StarRating]</texture>
                         </control>
                     </control>

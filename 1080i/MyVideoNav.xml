@@ -3,7 +3,7 @@
 <window id="6">
 	<defaultcontrol always="true">504</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>504,50,566,580,581</views>
+	<views>504,50,566,580,581,59</views>
 
 	<controls>
  		<include>BarClock</include>
@@ -16,7 +16,7 @@
 
 		<include>View_50_List</include>
        	<include>Viewtype_defaut</include>
-       	<!--<include>View_tv</include> <!--505--> -->
+       	<include>View_59_BigList</include> 
        	<include>Viewtype_full</include>
        	<include>Viewtype_logo</include>
        	<include>Viewtype_banner</include>
@@ -53,7 +53,7 @@
 				<align>left</align>
         		<onclick>Container.NextViewMode</onclick>
 			</control>
- 			<control type="button" id="20">
+ 			<control type="button" id="23">
       			<align>left</align>
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.NextViewMode</onclick>

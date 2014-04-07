@@ -3,7 +3,7 @@
 <window id="502">
 	<defaultcontrol always="true">504</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>504,503,50,580,581,51</views>
+	<views>504,503,50,580,581,51,59</views>
 
 	<controls>
   <include>BarClock</include>
@@ -15,6 +15,7 @@
 		<include>GlobalBackground</include>
 
 		<include>View_50_List</include>
+		<include>View_59_BigList</include>
 		<include>View_51_Albums</include>
     	<include>Viewtype_Songs</include>
 	 	<include>Viewtype_defaut</include>
@@ -51,7 +52,7 @@
 				<align>left</align>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
-			<control type="button" id="20">
+			<control type="button" id="23">
 				<align>left</align>
 				<label>$INFO[Container.ViewMode]</label>
 				<onclick>Container.PreviousViewMode</onclick>

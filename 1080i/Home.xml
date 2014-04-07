@@ -310,7 +310,7 @@
 			<label>$LOCALIZE[31050]</label>
 			<align>right</align>
           	<textcolor>Accent</textcolor>
-           	<visible>Container(300).HasFocus(3)</visible>
+           	<visible>Container(300).HasFocus(3)+!Skin.HasSetting(show_submenus)</visible>
 		</control>
 
 		<control type="label">
@@ -334,7 +334,7 @@
 			<label>$LOCALIZE[31050]</label>
 			<align>right</align>
           	<textcolor>Accent</textcolor>
-           	<visible>Container(300).HasFocus(5)</visible>
+           	<visible>Container(300).HasFocus(5)+!Skin.HasSetting(show_submenus)</visible>
 		</control>
     
     	<control type="label">
@@ -346,19 +346,19 @@
 			<label>$LOCALIZE[31050]</label>
 			<align>right</align>
           	<textcolor>Accent</textcolor>
-           	<visible>Container(300).HasFocus(6)</visible>
+           	<visible>Container(300).HasFocus(6)+!Skin.HasSetting(show_submenus)</visible>
 		</control>
     
     	
 
- 		<include>MoviesSubMenus</include>
- 		<include>MusicSubMenus</include>
- 		<include>OthersSubMenus</include>
- 		<include>TVShowsSubMenus</include>
- 		<include>ShutdownSubMenus</include>
- 		<include>VideosSubMenus</include>
+ 		<include condition="!Skin.HasSetting(show_submenus)">MoviesSubMenus</include>
+ 		<include condition="!Skin.HasSetting(show_submenus)">MusicSubMenus</include>
+ 		<include condition="!Skin.HasSetting(show_submenus)">OthersSubMenus</include>
+ 		<include condition="!Skin.HasSetting(show_submenus)">TVShowsSubMenus</include>
+ 		<include condition="!Skin.HasSetting(show_submenus)">ShutdownSubMenus</include>
+ 		<include condition="!Skin.HasSetting(show_submenus)">VideosSubMenus</include>
  		<include>HomePage</include>
- 		<include>HomeSubMenus</include>
+ 		<include condition="!Skin.HasSetting(show_submenus)">HomeSubMenus</include>
 
  		<!--NOW PLAYNG -->
 <control type="group"> <!--home-->

@@ -776,6 +776,7 @@
 			<orientation>horizontal</orientation>
 			<scrolltime>200</scrolltime>
 			<visible>Container.Content(artists)</visible>
+			<visible>Control.IsVisible(50)</visible>
 			<itemlayout width="150" height="150">
 				
         		<control type="image">

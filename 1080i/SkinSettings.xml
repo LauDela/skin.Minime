@@ -490,6 +490,14 @@
 			<onclick>Skin.ToggleSetting(animation_aucune)</onclick>
 			<selected>Skin.HasSetting(animation_aucune)</selected>
 		</control>
+		<control type="radiobutton" id="605">
+			<label>31059</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(show_submenus)</onclick>
+			<selected>Skin.HasSetting(show_submenus)</selected>
+		</control>
           <!--
 					<control type="label" id="109">
 						<width>750</width>

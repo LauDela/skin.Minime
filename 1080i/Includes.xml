@@ -18,6 +18,7 @@
     <include file="IncludesShutdownSubMenus.xml" />
     <include file="IncludesOthers.xml" />
 	<include file="View_50_List.xml" />
+    <include file="View_59_BigList.xml" />
     <include file="View_51_albums.xml" />
     <include file="HomePage.xml" />
     <include name="BarClock">
@@ -186,7 +187,7 @@
             <imagepath background="true">backgrounds/shutdown</imagepath>
             <colordiffuse>FanartDiffuse</colordiffuse>
             <visible>[Container(300).HasFocus(12)]</visible>
-            <!--<animation effect="fade" time="500">Hidden</animation>-->
+            <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
         </control>
 		 <control type="multiimage">
             <include>Dimensions_Fullscreen</include>
@@ -199,7 +200,7 @@
             <imagepath background="true">backgrounds/parameters</imagepath>
             <colordiffuse>FanartDiffuse</colordiffuse>
             <visible>[Container(300).HasFocus(11)]</visible>
-            <!--<animation effect="fade" time="500">Hidden</animation>-->
+            <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
         </control>
         <control type="group">
             <visible>Container(300).HasFocus(4)</visible>
@@ -213,7 +214,7 @@
                 <imagepath background="true">$INFO[Skin.String(Home_Custom_Back_CustomPicturesFolder)]</imagepath>
                 <!--<colordiffuse>FanartDiffuse</colordiffuse>-->
                 <visible> Skin.HasSetting(Use_CustomPicturesFolder)]</visible>
-                <!--<animation effect="fade" time="500">Hidden</animation>-->
+                <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
             </control>
             <control type="image">
                     <include>Dimensions_Fullscreen</include>
@@ -232,7 +233,7 @@
                 <loop>true</loop>
                 <imagepath background="true" fallback="videos.jpg">$INFO[Skin.String(Home_Custom_Back_CustomVideosFolder)]</imagepath>
                 <colordiffuse>FanartDiffuse</colordiffuse>
-                <!--<animation effect="fade" time="500">Hidden</animation>-->
+                <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
             </control>
         </control>  
         <control type="group">
@@ -247,7 +248,7 @@
                 <imagepath background="true" fallback="fallback/other.png">$INFO[Skin.String(Home_Custom_Back_CustomOtherFolder)]</imagepath>
                 <colordiffuse>FanartDiffuse</colordiffuse>
                 <visible>Skin.HasSetting(Use_CustomOtherFolder)</visible>
-                <!--<animation effect="fade" time="500">Hidden</animation>-->
+                <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
             </control>
         </control> 
         <control type="image">
@@ -255,7 +256,7 @@
             <include>Dimensions_Fullscreen</include>
             <texture background="true">fallback/other.png</texture>
             <colordiffuse>FanartDiffuse</colordiffuse>
-            <!--<animation effect="fade" time="500">Hidden</animation>-->
+            <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
             <visible>[Container(300).HasFocus(13)]+!Skin.HasSetting(Use_CustomOtherFolder)</visible>
         </control>   
         <control type="group">
@@ -270,7 +271,7 @@
                 <imagepath background="true">$INFO[Skin.String(Home_Custom_Back_CustomMusicFolder)]</imagepath>
                 <colordiffuse>FanartDiffuse</colordiffuse>
                 <visible>Skin.HasSetting(Use_CustomMusicFolder)</visible>
-                <!--<animation effect="fade" time="500">Hidden</animation>-->
+                <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
             </control>
         </control>     
         <!--mypicdb-->
@@ -486,7 +487,7 @@
             <visible>!Skin.HasSetting(Fanart)</visible>
             <!--DERNIERS FILMS-->
             <control type="group">
-                <!--<animation effect="fade" time="500">VisibleChange</animation>-->
+                <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
                 <visible>[Container(300).HasFocus(5) + Control.HasFocus(300) +!Control.HasFocus(3010) | Control.HasFocus(301)]</visible>
                 <control type="image">
                     <animation effect="fade" time="200">VisibleChange</animation>
@@ -841,7 +842,7 @@
 
 
             <control type="group">
-                <!--<animation effect="fade" time="500">VisibleChange</animation>-->
+               <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
                 <visible>[Container(300).HasFocus(6) + Control.HasFocus(300)+!Control.HasFocus(3060)]</visible>
                 <control type="image">
                     <animation effect="fade" time="500">VisibleChange</animation>
@@ -1222,7 +1223,7 @@
                 </control>
             </control>
             <control type="group">
-                <!--<animation effect="fade" time="500">VisibleChange</animation>-->
+                <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
                 <visible>[Container(300).HasFocus(3) + Control.HasFocus(300) +!Control.HasFocus(3030) | Control.HasFocus(303)]</visible>
                
                 <control type="image">
