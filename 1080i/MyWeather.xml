@@ -66,7 +66,7 @@
 					<posx>20</posx>
 					<posy>240</posy>
 					<width>360</width>
-					<label>[COLOR=Red]$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Blue]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<label>[COLOR=Blue]$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Red]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
 					<font>Large</font>
 					<align>left</align>
 				</control>
@@ -126,7 +126,7 @@
 					<posx>20</posx>
 					<posy>240</posy>
 					<width>360</width>
-					<label>[COLOR=Red]$INFO[Window(Weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Blue]$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<label>[COLOR=Blue]$INFO[Window(Weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Red]$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
 					<font>Large</font>
 					<align>left</align>
 				</control>
@@ -187,7 +187,7 @@
 					<posx>20</posx>
 					<posy>240</posy>
 					<width>360</width>
-					<label>[COLOR=Red]$INFO[Window(Weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Blue]$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<label>[COLOR=Blue]$INFO[Window(Weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Red]$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
 					<font>Large</font>
 					<align>left</align>
 				</control>
@@ -254,7 +254,7 @@
 					<posx>20</posx>
 					<posy>240</posy>
 					<width>360</width>
-					<label>[COLOR=Red]$INFO[Window(Weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Blue]$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<label>[COLOR=Blue]$INFO[Window(Weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Red]$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
 					<font>Large</font>
 					<align>left</align>
 				</control>
@@ -314,7 +314,7 @@
 					<posx>20</posx>
 					<posy>240</posy>
 					<width>360</width>
-					<label>[COLOR=Red]$INFO[Window(Weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Blue]$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<label>[COLOR=Blue]$INFO[Window(Weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Red]$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
 					<font>Large</font>
 					<align>left</align>
 				</control>
@@ -375,7 +375,7 @@
 					<posx>20</posx>
 					<posy>240</posy>
 					<width>360</width>
-					<label>[COLOR=Red]$INFO[Window(Weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Blue]$INFO[Window(Weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
+					<label>[COLOR=Blue]$INFO[Window(Weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits][/COLOR] / [COLOR=Red]$INFO[Window(Weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits][/COLOR]</label>
 					<font>Large</font>
 					<align>left</align>
 				</control>

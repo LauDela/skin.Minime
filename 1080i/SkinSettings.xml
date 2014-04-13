@@ -498,6 +498,14 @@
 			<onclick>Skin.ToggleSetting(show_submenus)</onclick>
 			<selected>Skin.HasSetting(show_submenus)</selected>
 		</control>
+		<control type="radiobutton" id="606">
+			<label>31060</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(autoplayTrailer)</onclick>
+			<selected>Skin.HasSetting(autoplayTrailer)</selected>
+		</control>
           <!--
 					<control type="label" id="109">
 						<width>750</width>

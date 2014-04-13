@@ -25,8 +25,6 @@
 			<onleft condition="Container.Content(songs)">9000</onleft>
 			<onright>50</onright>
 			<onup condition="Container.Content(movies)">SetFocus(501)</onup>
-			<onup condition="Container.Content(songs)">IncreaseRating</onup>
-			<ondown condition="Container.Content(songs)">DecreaseRating</ondown>
 			<ondown condition="!Container.Content(songs)+!Container.Content(artists)">9000</ondown>
 			<ondown condition="Container.Content(artists)">900</ondown>
 			<orientation>horizontal</orientation>
@@ -357,6 +355,16 @@
 					</animation>
 				</control>
 				<!--FIN VU / ENCOURS-->
+				<control type="button" id="60">
+                    <description>Run trailer</description>
+                    <width>1</width>
+                    <height>1</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <onright>50</onright>
+                    <visible>Container.Content(movies)</visible>
+                    <onfocus condition="Skin.HasSetting(autoplayTrailer)">XBMC.AlarmClock(PlayTrailer,XBMC.PlayMedia($INFO[ListItem.Trailer],1),00:00:05,silent)</onfocus>
+                </control>
 			</focusedlayout>
 		</control>
 	
@@ -769,7 +777,7 @@
 			<width>800</width>
 			<height>300</height>
 			<onup>50</onup>
-			<ondown>300</ondown>
+			<ondown>9000</ondown>
 			<onleft>300</onleft>
 			<onright>300</onright>
 			<focusposition>0</focusposition>
@@ -843,7 +851,23 @@
 			<content target="music">$INFO[ListItem.DBID,musicdb://artists/,]</content> 
 	</control>		
 <!--FIN SPECIF GOTHAM -->
-
+ <control type="image">
+    <posx>10</posx>
+    <posy>90</posy>
+    <width>670</width>
+    <height>370</height>
+    <aspectratio>stretch</aspectratio>
+    <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
+    <visible>Player.Playing + Control.HasFocus(50) + Container.Content(movies)</visible>
+</control>
+<control type="videowindow" id="200">
+      <description>Player for trailer</description>
+      <posx>20</posx>
+      <posy>-50</posy>
+      <width>650</width>
+      <height>650</height>
+      <visible>Control.HasFocus(50) + Container.Content(movies)</visible>
+</control>
 	</include>
 
 </includes>

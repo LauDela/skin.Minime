@@ -406,7 +406,7 @@
               <visible>Control.HasFocus(6005)</visible>
           </control>
           <control type="image">
-            <posx>840</posx>
+            <posx>850</posx>
             <posy>370</posy>
             <width>100</width>
             <height>100</height>
@@ -446,8 +446,19 @@
             <shadowcolor>Black</shadowcolor>
             <align>left</align>
           </control>
+          <control type="textbox">
+            <posx>850</posx>
+            <posy>700</posy>
+            <width>400</width>
+            <height>275</height>
+            <label>$INFO[Window(Home).Property(RecommendedAlbum.1.Description)]</label>
+            <font>FF20</font>
+            <textcolor>White</textcolor>
+            <shadowcolor>Black</shadowcolor>
+            <align>left</align>
+        </control>
           <control type="image">
-            <posx>840</posx>
+            <posx>850</posx>
             <posy>480</posy>
             <width>300</width>
             <height>200</height>
@@ -540,11 +551,11 @@
 
         <control type="textbox">
             <posx>400</posx>
-            <posy>550</posy>
+            <posy>700</posy>
             <width>400</width>
-            <height>350</height>
+            <height>275</height>
             <label>$INFO[Window(Home).Property(RecentAlbum.1.Description)]</label>
-            <font>F20</font>
+            <font>FF20</font>
             <textcolor>White</textcolor>
             <shadowcolor>Black</shadowcolor>
             <align>left</align>
@@ -642,11 +653,11 @@
 
         <control type="textbox">
             <posx>1300</posx>
-            <posy>550</posy>
+            <posy>700</posy>
             <width>400</width>
-            <height>350</height>
+            <height>275</height>
             <label>$INFO[Window(Home).Property(RandomAlbum.1.Description)]</label>
-            <font>F20</font>
+            <font>FF20</font>
             <textcolor>White</textcolor>
             <shadowcolor>Black</shadowcolor>
             <align>left</align>

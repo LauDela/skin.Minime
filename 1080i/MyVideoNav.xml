@@ -119,7 +119,10 @@
 				<align>left</align>
 				<label>20411</label>
 			</control>
-
+			<control type="button" id="20">
+      			<align>left</align>
+				<label>653</label>
+			</control>
 			<control type="button" id="21">
 				<description>Activate Filter</description>
 				<width>320</width>
