@@ -126,17 +126,7 @@
 				<aspectratio align="left">keep</aspectratio>
 				<texture>rating/$INFO[Player.StarRating]</texture>
 			</control>
-			<control type="image">
-                    <posx>1400</posx>
-                    <posy>0</posy> 
-                    <width>400</width>
-                    <height></height>
-                    <aligny>center</aligny>
-                    <texture background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist,,\logo.png]</texture>
-                    <aspectratio>keep</aspectratio>
-                    <include>VisibleFadeEffect</include>
-                    <fadetime>IconCrossfadeTime</fadetime>
-                </control>
+			
 			<control type="progress">
 				<description>Progressbar</description>
 				<posx>0</posx>
@@ -244,6 +234,18 @@
 					
 			</control>
 			<!--FIN A SUIVRE-->
+
+			<control type="image">
+                    <posx>20</posx>
+                    <posy>-500</posy> 
+                    <width>400</width>
+                    <height>0</height>
+                    <aligny>center</aligny>
+                    <texture background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist,,\logo.png]</texture>
+                    <aspectratio>keep</aspectratio>
+                    <include>VisibleFadeEffect</include>
+                    <fadetime>IconCrossfadeTime</fadetime>
+                </control>
 		
 	</controls>
 

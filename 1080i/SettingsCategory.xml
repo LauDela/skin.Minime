@@ -7,7 +7,7 @@
 	<controls>
 
 		<include>GlobalBackground</include>
-<control type="image">
+			<control type="image">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1920</width>
@@ -24,6 +24,7 @@
 					<texture>separatorV.png</texture>
 					<aspectratio>keep</aspectratio>
 			</control>
+		
 		<control type="grouplist" id="3">
 			<description>Button Area</description>
 			<posx>10</posx>
@@ -34,9 +35,30 @@
 			<onleft>5</onleft>
 			<onright>5</onright>
 			<onup>3</onup>
-			<ondown>3</ondown>
+			<ondown>20</ondown>
 			<orientation>vertical</orientation>
 		</control>
+		<control type="button" id="20">
+				<description>Setting level button</description>
+				<left>10</left>
+				<top>562</top>
+				<height>60</height>
+				<width>260</width>
+				<label>10037</label>
+				<label2>31142</label2>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>28</textoffsety>
+				<align>right</align>
+				<aligny>top</aligny>
+				<font>F30</font>
+				<pulseonselect>false</pulseonselect>
+				<onleft>5</onleft>
+				<onright>5</onright>
+				<onup>3</onup>
+				<ondown>3</ondown>
+				<onclick>SettingsLevelChange</onclick>
+			</control>
+			
 
 		<control type="grouplist" id="5">
 			<description>Control Area</description>
@@ -51,6 +73,8 @@
 			<ondown>5</ondown>
 			<orientation>vertical</orientation>
 		</control>
+
+
 
 		<control type="button" id="7">
 			<description>Default Button</description>
@@ -72,6 +96,23 @@
 			<description>Default Category Button</description>
 			<align>left</align>
 		</control>
+
+		<!-- Settings level -->
+			<control type="button" id="8004">
+				<width>970</width>
+				<height>42</height>
+				<font>F30</font>
+				<label>31016</label>
+				<textcolor>TextColor2</textcolor>
+				<focusedcolor>TextColor1</focusedcolor>
+				<invalidcolor>TextColor4</invalidcolor>
+				<disabledcolor>TextColor4</disabledcolor>
+				<onright>SetProperty(ChangeSettingsLevel,true)</onright>
+				<onright>ActivateWindow(appearancesettings)</onright>
+				<onclick>SetProperty(ChangeSettingsLevel,true)</onclick>
+				<onclick>ActivateWindow(appearancesettings)</onclick>
+			</control>
+
 
 	</controls>
 

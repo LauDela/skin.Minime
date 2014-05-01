@@ -125,7 +125,21 @@
 				
 			</content>
 		</control>
-
+<!-- Settings level -->
+			<control type="button" id="8004">
+				<width>970</width>
+				<height>42</height>
+				<font>F30</font>
+				<label>31016</label>
+				<textcolor>TextColor2</textcolor>
+				<focusedcolor>TextColor1</focusedcolor>
+				<invalidcolor>TextColor4</invalidcolor>
+				<disabledcolor>TextColor4</disabledcolor>
+				<onright>SetProperty(ChangeSettingsLevel,true)</onright>
+				<onright>ActivateWindow(appearancesettings)</onright>
+				<onclick>SetProperty(ChangeSettingsLevel,true)</onclick>
+				<onclick>ActivateWindow(appearancesettings)</onclick>
+			</control>
 	</controls>
 
 </window>
