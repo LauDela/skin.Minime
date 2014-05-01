@@ -18,6 +18,25 @@
 		<control type="group">
 			<posx>400</posx>
 			<posy>270</posy>
+			<control type="label">
+				<description></description>
+				<posx>200</posx>
+				<posy>-45</posy>
+				<width>300</width>
+				<label>24013</label>
+				<font>F90</font>
+				<shadowcolor>Black</shadowcolor>
+				<align>left</align>
+			</control>	
+		<control type="image">
+			<description>background image</description>
+			<posx>200</posx>
+			<posy>20</posy>
+			<width>1500</width>
+			<height>10</height>
+			<texture>orange.png</texture>
+		</control>
+
 		<control type="image">
 			<description>background image</description>
 			<posx>200</posx>

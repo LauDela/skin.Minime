@@ -3,23 +3,21 @@
 <window id="2">
 	<defaultcontrol always="true">504</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>504,50</views>
+	<views>504,59</views>
 
 	<controls>
 
 		<include>GlobalBackground</include>
-
-		<include>View_50_List</include>
+		<include>View_59_BigList</include>
 		<include>Viewtype_defaut</include>
 
 		<control type="image">
-             <posx>0</posx>
-             <posy>0</posy>
-             <width>240</width>
-             <height>720</height>
-             <aspectratio>strecht</aspectratio>
-             <texture>elements/gris01.png</texture>
-             <visible>ControlGroup(9000).HasFocus()</visible>
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>350</width>
+            <height>1080</height>
+            <texture>elements/gris01.png</texture>
+            <visible>ControlGroup(9000).HasFocus()</visible>
         </control>		
 		
 		<control type="grouplist" id="9000">
@@ -28,8 +26,8 @@
 			<width>220</width>
 			<height>600</height>
 			<itemgap>2</itemgap>
-			<onleft>50</onleft>
-			<onright>50</onright>
+			<onleft>59</onleft>
+			<onright>59</onright>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<orientation>vertical</orientation>

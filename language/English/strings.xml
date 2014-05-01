@@ -63,4 +63,14 @@
   <string id="31060">Auto play trailers</string>
   <string id="31502">Live TV</string>
   <string id="31409">[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings</string>
+  <string id="31952">Live TV</string>
+  <string id="31953">Press right for trailer</string>
+  <string id="31954">Press stop</string>
+  <string id="31955">Total time</string>
+  <string id="31956">Show next Home items</string>
+  <string id="31957">Disable logo view</string>
+  <string id="31958">Disable banner view</string>
+  <string id="31959">Disable extrafanart view</string>
+  <string id="31960">Disable clearart view</string>
+  <string id="31961">clearart view : show logo instead of clearart</string>
 </strings>

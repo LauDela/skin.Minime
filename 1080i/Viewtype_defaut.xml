@@ -71,7 +71,7 @@
                         <posy>10</posy>
                         <width>100</width>
                         <height>25</height>
-                        <texture>other_textures/camera/$INFO[ListItem.PictureCamMake].png</texture>
+                        <texture>camera/$INFO[ListItem.PictureCamMake].png</texture>
                     </control>
                      <control type="image">
                         <posx>680</posx>
@@ -135,7 +135,7 @@
                         <posy>10</posy>
                         <width>100</width>
                         <height>25</height>
-                        <texture>other_textures/camera/$INFO[ListItem.PictureCamMake].png</texture>
+                        <texture>camera/$INFO[ListItem.PictureCamMake].png</texture>
                     </control>
                 </focusedlayout>
             </control>

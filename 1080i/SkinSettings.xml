@@ -429,7 +429,7 @@
       <control type="grouplist" id="600">
 				<description>Général Area</description>
 				<width>820</width>
-				<height>480</height>
+				<height>880</height>
 				<itemgap>2</itemgap>
 				<onup>500</onup>
 				<ondown>500</ondown>
@@ -441,11 +441,11 @@
         <control type="radiobutton" id="601">
 			<label>20189</label>
             <width>750</width>
-            	<align>left</align>
-						<include>Default_SettingRadioButton</include>
-						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
-						<selected>Skin.HasSetting(AutoScroll)</selected>
-					</control>
+            <align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+			<selected>Skin.HasSetting(AutoScroll)</selected>
+		</control>
 
         <!--FIN DEFILEMENT AUTO -->
         <!--PLAYLIST DEMARRAGE-->
@@ -499,6 +499,57 @@
 			<selected>Skin.HasSetting(show_submenus)</selected>
 		</control>
 		<control type="radiobutton" id="606">
+			<label>31956</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(show_Home_submenus)</onclick>
+			<selected>Skin.HasSetting(show_Home_submenus)</selected>
+		</control>
+		<control type="radiobutton" id="607">
+			<label>31959</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(cache_vue_extrafanart)</onclick>
+			<selected>Skin.HasSetting(cache_vue_extrafanart)</selected>
+		</control>
+		<control type="radiobutton" id="608">
+			<label>31957</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(cache_vue_logo)</onclick>
+			<selected>Skin.HasSetting(cache_vue_logo)</selected>
+		</control>	
+		<control type="radiobutton" id="609">
+			<label>31958</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(cache_vue_banner)</onclick>
+			<selected>Skin.HasSetting(cache_vue_banner)</selected>
+		</control>
+		<control type="radiobutton" id="610">
+			<label>31960</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(cache_vue_clearart)</onclick>
+			<selected>Skin.HasSetting(cache_vue_clearart)</selected>
+		</control>
+		<control type="radiobutton" id="611">
+			<label>31961</label>
+            <width>750</width>
+           	<align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(vue_clearart_show_logo)</onclick>
+			<selected>Skin.HasSetting(vue_clearart_show_logo)</selected>
+  		    <enable>!Skin.HasSetting(cache_vue_clearart)</enable>
+		</control>
+
+		<!--
+		<control type="radiobutton" id="606">
 			<label>31060</label>
             <width>750</width>
            	<align>left</align>
@@ -506,6 +557,7 @@
 			<onclick>Skin.ToggleSetting(autoplayTrailer)</onclick>
 			<selected>Skin.HasSetting(autoplayTrailer)</selected>
 		</control>
+		-->
           <!--
 					<control type="label" id="109">
 						<width>750</width>

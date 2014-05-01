@@ -3,7 +3,7 @@
 <window id="502">
 	<defaultcontrol always="true">504</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>504,503,50,580,581,51,59</views>
+	<views>50,59,504,503,580,581,51,58</views>
 
 	<controls>
   <include>BarClock</include>
@@ -15,21 +15,21 @@
 		<include>GlobalBackground</include>
 
 		<include>View_50_List</include>
+		<include condition="Skin.HasSetting(CustomArtistLogo) + !Skin.HasSetting(cache_vue_clearart)">View_58_Horizon</include> 
 		<include>View_59_BigList</include>
 		<include>View_51_Albums</include>
     	<include>Viewtype_Songs</include>
 	 	<include>Viewtype_defaut</include>
-	 	<include>Viewtype_logo</include>
-	 	<include>Viewtype_banner</include>
-    <control type="image">
-                    <posx>0</posx>
-                    <posy>0</posy>
-                    <width>350</width>
-                    <height>1080</height>
-                
-                    <texture>elements/gris01.png</texture>
-                    <visible>ControlGroup(9000).HasFocus()</visible>
-                </control>
+	 	<include condition="Skin.HasSetting(CustomArtistLogo) + !Skin.HasSetting(cache_vue_logo)">Viewtype_logo</include>
+	 	<include condition="Skin.HasSetting(CustomArtistLogo) + !Skin.HasSetting(cache_vue_banner)">Viewtype_banner</include>
+    	<control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>350</width>
+            <height>1080</height>
+            <texture>elements/gris01.png</texture>
+            <visible>ControlGroup(9000).HasFocus()</visible>
+        </control>
 
 		<control type="grouplist" id="9000">
 			<posx>10</posx>

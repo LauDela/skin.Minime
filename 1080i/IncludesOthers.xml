@@ -2,9 +2,9 @@
 <!-- Foundation -->
 <includes>
 	<include name="OthersSubMenus">
-  <!--******************************* FILMS ******************************-->
+  <!--******************************* AUTRES ******************************-->
   <control type="group">
-   <visible>Container(300).HasFocus(13)</visible>
+   <visible>Container(300).HasFocus(12)</visible>
   
 
 	<control type="list" id="302">

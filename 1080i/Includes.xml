@@ -11,16 +11,19 @@
     <include file="Viewtype_Songs.xml" />
     <include file="Viewtype_defaut.xml" />
     <include file="View_tv.xml" />
-    <include file="Viewtype_full.xml" />
-    <include file="Viewtype_logo.xml" />
-    <include file="Viewtype_banner.xml" />
+    <include condition="!Skin.HasSetting(cache_vue_extrafanart)" file="Viewtype_full.xml" />
+    <include condition="!Skin.HasSetting(cache_vue_logo)" file="Viewtype_logo.xml" />
+    <include condition="!Skin.HasSetting(cache_vue_banner)" file="Viewtype_banner.xml" />
     <include file="IncludesTVShowsSubMenus.xml" />
     <include file="IncludesShutdownSubMenus.xml" />
     <include file="IncludesOthers.xml" />
 	<include file="View_50_List.xml" />
     <include file="View_59_BigList.xml" />
+    <include condition="!Skin.HasSetting(cache_vue_clearart)" file="View_58_Horizon.xml" />
     <include file="View_51_albums.xml" />
     <include file="HomePage.xml" />
+    <include file="ViewsLiveTV.xml"/>
+    <include file="ViewsPVR.xml"/>
     <include name="BarClock">
     
     <!-- Hide weather somewhere to make sure it loads for widgets -->
@@ -186,7 +189,7 @@
             <aspectratio aligny="top">stretch</aspectratio>
             <imagepath background="true">backgrounds/shutdown</imagepath>
             <colordiffuse>FanartDiffuse</colordiffuse>
-            <visible>[Container(300).HasFocus(12)]</visible>
+            <visible>[Container(300).HasFocus(14)]</visible>
             <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
         </control>
 		 <control type="multiimage">
@@ -237,7 +240,7 @@
             </control>
         </control>  
         <control type="group">
-            <visible>[Container(300).HasFocus(13)]</visible>
+            <visible>[Container(300).HasFocus(12)]</visible>
             <control type="multiimage">
                 <include>Dimensions_Fullscreen</include>
                 <randomize>true</randomize>
@@ -257,7 +260,7 @@
             <texture background="true">fallback/other.png</texture>
             <colordiffuse>FanartDiffuse</colordiffuse>
             <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
-            <visible>[Container(300).HasFocus(13)]+!Skin.HasSetting(Use_CustomOtherFolder)</visible>
+            <visible>[Container(300).HasFocus(12)]+!Skin.HasSetting(Use_CustomOtherFolder)</visible>
         </control>   
         <control type="group">
             <visible>[Container(300).HasFocus(3)]</visible>

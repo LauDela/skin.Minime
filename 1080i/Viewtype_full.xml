@@ -74,7 +74,7 @@
                 <onright>566</onright>
                 <onleft>566</onleft>
                 <scrolltime>0</scrolltime>
-                <viewtype label="extrafanart">Full_Fanart</viewtype>
+                <viewtype label="Extrafanart">Full_Fanart</viewtype>
                 <orientation>horizontal</orientation>
                 <focusposition>4</focusposition>
                 <pagecontrol>63</pagecontrol>

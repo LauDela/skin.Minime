@@ -63,4 +63,14 @@
   <string id="31060">Lire automatiquement les bandes annonces</string>
   <string id="31502">Live TV</string>
   <string id="31409">[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings</string>
+  <string id="31952">TV</string>
+  <string id="31953">Flêche droite pour la bande annonce</string>
+  <string id="31954">Arrêter</string>
+  <string id="31955">Durée totale</string>
+  <string id="31956">Montrer les éléments suivants du menu Home</string>
+  <string id="31957">Désactiver la vue logo</string>
+  <string id="31958">Désactiver la vue banner</string>
+  <string id="31959">Désactiver la vue extrafanart</string>
+  <string id="31960">Désactiver la vue clearart</string>
+  <string id="31961">Vue clearart : montrer le logo à la place du clearart</string>
 </strings>

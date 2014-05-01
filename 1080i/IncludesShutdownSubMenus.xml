@@ -4,7 +4,7 @@
 	<include name="ShutdownSubMenus">
   <!--******************************* SHUTDOWN ******************************-->
   <control type="group">
-   <visible>Container(300).HasFocus(12)</visible>
+   <visible>Container(300).HasFocus(14)</visible>
 	  <control type="List" id="3012">
 			<description>Home Wraplist</description>
 			<posx>-30</posx>

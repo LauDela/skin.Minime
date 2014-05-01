@@ -55,22 +55,23 @@
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="label">
-                        <posx>600</posx>
+                        <posx>850</posx>
                         <width>530</width>
                         <label>$INFO[ListItem.Label2]</label>
-                        <align>left</align>
+                        <align>right</align>
+                        <visible>!Container.Content(episodes)</visible>
                     </control>
                    
 					<control type="label">
-                        <posx>870</posx>
+                        <posx>595</posx>
                         <align>right</align>
                         <width>300</width>
                         <label>$INFO[ListItem.PictureDatetime]</label>
                     </control>
                     <control type="label">
-                        <posx>870</posx>
+                        <posx>500</posx>
                         <align>right</align>
-                        <width>300</width>
+                        <width>200</width>
                         <label>$INFO[ListItem.Year]</label>
                         <visible>Container.Content(albums)</visible>
                     </control>
@@ -86,7 +87,7 @@
                         <posy>10</posy>
                         <width>100</width>
                         <height>25</height>
-                        <texture>other_textures/camera/$INFO[ListItem.PictureCamMake].png</texture>
+                        <texture>camera/$INFO[ListItem.PictureCamMake].png</texture>
                     </control>
                      <control type="image">
                         <posx>680</posx>
@@ -123,13 +124,14 @@
                     <control type="label">
                         <posx>65</posx>
                         <width>530</width>
-                        <label>[COLOR White][B]$INFO[ListItem.Label][/B][/COLOR]</label>
+                        <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="label">
-                        <posx>600</posx>
+                   <control type="label">
+                        <posx>850</posx>
                         <width>530</width>
-                        <label>[COLOR White][B]$INFO[ListItem.Label2][/B][/COLOR]</label>
-                        <align>left</align>
+                        <label>$INFO[ListItem.Label2]</label>
+                        <visible>!Container.Content(episodes)</visible>
+                        <align>right</align>
                     </control>
                     <control type="image">
                         <posx>680</posx>
@@ -148,15 +150,15 @@
                     </control>
                     
 					<control type="label">
-                        <posx>870</posx>
+                        <posx>595</posx>
                         <align>right</align>
                         <width>300</width>
                         <label>$INFO[ListItem.PictureDatetime]</label>
                     </control>
                     <control type="label">
-                        <posx>870</posx>
+                        <posx>500</posx>
                         <align>right</align>
-                        <width>300</width>
+                        <width>200</width>
                         <label>$INFO[ListItem.Year]</label>
                         <visible>Container.Content(albums)</visible>
                     </control>
@@ -165,7 +167,7 @@
                         <posy>10</posy>
                         <width>100</width>
                         <height>25</height>
-                        <texture>other_textures/camera/$INFO[ListItem.PictureCamMake].png</texture>
+                        <texture>camera/$INFO[ListItem.PictureCamMake].png</texture>
                     </control>
                 </focusedlayout>
             </control>
@@ -224,7 +226,7 @@
             <control type="group">
                 <posx>-315</posx>
                 <posy>0</posy>
-                 <visible>!Container.Content(artists) + !Container.Content(albums) + !Container.Content(episodes)</visible>
+                 <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
                 <control type="image">                    
                     <width>315</width>
                     <height>415</height>
@@ -247,6 +249,28 @@
                 <posx>-315</posx>
                 <posy>0</posy>
                  <visible>Container.Content(episodes)</visible>
+                <control type="image">                    
+                    <width>315</width>
+                    <height>215</height>
+                    <texture>orange.png</texture>
+                    <fadetime>200</fadetime>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                </control>
+                <control type="image">
+                    <width>315</width>
+                    <height>215</height>
+                    <texture background="true" diffuse="other_textures/cover_matte.png">$INFO[ListItem.Icon]</texture>
+                    <fadetime>200</fadetime>
+                    <aspectratio scalediffuse="false">stretch</aspectratio>
+                    <visible>true</visible>
+                    <bordersize>4</bordersize>
+                </control>
+            </control>     
+             <!-- PICTURES THUMB-->
+            <control type="group">
+                <posx>-315</posx>
+                <posy>0</posy>
+                 <visible>!Container.Content(episodes) + !Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(artists) + !Container.Content(albums)</visible>
                 <control type="image">                    
                     <width>315</width>
                     <height>215</height>

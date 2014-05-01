@@ -3,7 +3,7 @@
 <window id="6">
 	<defaultcontrol always="true">504</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>504,50,566,580,581,59</views>
+	<views>504,50,566,580,581,59,58</views>
 
 	<controls>
  		<include>BarClock</include>
@@ -16,10 +16,11 @@
 
 		<include>View_50_List</include>
        	<include>Viewtype_defaut</include>
-       	<include>View_59_BigList</include> 
-       	<include>Viewtype_full</include>
-       	<include>Viewtype_logo</include>
-       	<include>Viewtype_banner</include>
+       	<include>View_59_BigList</include>
+       	<include condition="!Skin.HasSetting(cache_vue_clearart)" >View_58_Horizon</include> 
+       	<include condition="!Skin.HasSetting(cache_vue_extrafanart)">Viewtype_full</include>
+       	<include condition="!Skin.HasSetting(cache_vue_logo)" >Viewtype_logo</include>
+       	<include condition="!Skin.HasSetting(cache_vue_banner)" >Viewtype_banner</include>
 	   	<control type="image">
             <posx>0</posx>
             <posy>0</posy>

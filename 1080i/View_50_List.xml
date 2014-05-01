@@ -189,7 +189,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>circle_ok.png</texture>
 					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) ] + stringcompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
 				</control>
 				<!--<control type="image">
 					<posx>-50</posx>
@@ -223,7 +223,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>circle_ok.png</texture>
 					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
+					<visible>[Container.Content(episodes) + stringcompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable]</visible>
 				</control>
 				<control type="image">
 					<posx>140</posx>
@@ -306,7 +306,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>circle_ok.png</texture>
 					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + stringcompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
 					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="0" end="100" time="300"  easing="out" />
 					</animation>
@@ -319,7 +319,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>circle_play.png</texture>
 					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(movies) | Container.Content(seasons) | Container.Content(tvshows) ] + ListItem.IsResumable + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<visible>[Container.Content(movies) | Container.Content(tvshows)| Container.Content(seasons)] + [ListItem.IsResumable + !stringcompare(ListItem.Overlay,OverlayWatched.png)]</visible>
 					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
 					</animation>
@@ -336,7 +336,7 @@
 					<aspectratio>keep</aspectratio>
 					<texture>circle_ok.png</texture>
 					<colordiffuse>Accent</colordiffuse>
-					<visible>[Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+					<visible>[Container.Content(episodes)] + stringcompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
 					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
 					</animation>
@@ -354,7 +354,7 @@
 								<effect type="zoom" center="auto" start="0" end="100" time="300" easing="out" />
 					</animation>
 				</control>
-				<!--FIN VU / ENCOURS-->
+				<!--FIN VU / ENCOURS
 				<control type="button" id="60">
                     <description>Run trailer</description>
                     <width>1</width>
@@ -364,7 +364,7 @@
                     <onright>50</onright>
                     <visible>Container.Content(movies)</visible>
                     <onfocus condition="Skin.HasSetting(autoplayTrailer)">XBMC.AlarmClock(PlayTrailer,XBMC.PlayMedia($INFO[ListItem.Trailer],1),00:00:05,silent)</onfocus>
-                </control>
+                </control>-->
 			</focusedlayout>
 		</control>
 	
@@ -745,7 +745,7 @@
 						<label>20410</label>
 						<thumb>icons/Monitor.png</thumb>
 						<property name="foo2">icons/Monitor-a.png</property>
-						<onclick>XBMC.PlayMedia($INFO[ListItem.Trailer],noresume)</onclick>
+						<onclick>XBMC.PlayMedia($INFO[ListItem.Trailer],1)</onclick>
 						<visible>!IsEmpty(ListItem.Trailer)</visible>
 					</item>
 					<item id="4">
@@ -770,6 +770,26 @@
 	<texture>elements/gris01.png</texture>
 	<visible>Control.HasFocus(900)</visible>
 </control>
+<control type="image">
+            <posx>1205</posx>
+            <posy>880</posy>
+            <width>160</width>
+            <height>160</height>
+            <aspectratio scalediffuse="false" align="center" >stretch</aspectratio>
+            <texture background="true">DefaultMusicRecentlyPlayed.png</texture>
+            <visible>Container.Content(artists) + !Control.HasFocus(900) + !IsEmpty(ListItem.Thumb)</visible>
+            <visible>Control.IsVisible(50)</visible>
+        </control> 
+         <control type="label">
+            <posx>1230</posx>
+            <posy>1010</posy>
+            <width>160</width>
+            <font>F20</font>
+            <label>$LOCALIZE[358]</label>
+            <align>left</align>
+            <visible>Container.Content(artists) + !Control.HasFocus(900)  + !IsEmpty(ListItem.Thumb)</visible>
+            <visible>Control.IsVisible(50)</visible>
+        </control> 
 <control type="fixedlist" id="900">
 			<description>Home Wraplist</description>
 			<posx>1205</posx>
@@ -851,22 +871,14 @@
 			<content target="music">$INFO[ListItem.DBID,musicdb://artists/,]</content> 
 	</control>		
 <!--FIN SPECIF GOTHAM -->
- <control type="image">
-    <posx>10</posx>
-    <posy>90</posy>
-    <width>670</width>
-    <height>370</height>
-    <aspectratio>stretch</aspectratio>
-    <texture background="true" diffuse="other_textures/episode_matte.png">orange.png</texture> 
-    <visible>Player.Playing + Control.HasFocus(50) + Container.Content(movies)</visible>
-</control>
+
 <control type="videowindow" id="200">
       <description>Player for trailer</description>
       <posx>20</posx>
       <posy>-50</posy>
       <width>650</width>
       <height>650</height>
-      <visible>Control.HasFocus(50) + Container.Content(movies)</visible>
+      <visible>Control.HasFocus(501) | Control.HasFocus(50)</visible>
 </control>
 	</include>
 

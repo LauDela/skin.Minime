@@ -6,7 +6,7 @@
 
 	<controls>
 
-		<include>GlobalOverlay</include>
+		<!--<include>GlobalOverlay</include>-->
 
 		<control type="group">
 			<posx>500</posx>
@@ -29,12 +29,12 @@
 
 			<control type="label">
 				<description>Header Label</description>
-				<posx>10</posx>
+				<posx>290</posx>
 				<width>860</width>
 				<label>20159</label>
-				<font>Medium</font>
+				<font>F60</font>
 				<shadowcolor>black</shadowcolor>
-				<align>center</align>
+				<align>left</align>
 			</control>
 
 			<control type="image" id="3">
