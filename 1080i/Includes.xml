@@ -1242,40 +1242,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.1.Thumb)]</texture>
                     <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.1.Title)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.1.Year)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>!IntegerGreaterThan(System.Time(ss),6)</visible>
                 </control>
@@ -1292,40 +1286,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.2.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.2.Title)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.2.Year)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),6) + !IntegerGreaterThan(System.Time(ss),12)</visible>
                 </control>
@@ -1342,40 +1330,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.3.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.3.Title)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.3.Year)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.3.Artist)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),12) + !IntegerGreaterThan(System.Time(ss),18)</visible>
                 </control>
@@ -1392,40 +1374,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.4.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.4.Title)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.4.Year)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.4.Artist)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),18) + !IntegerGreaterThan(System.Time(ss),24)</visible>
                 </control>
@@ -1442,40 +1418,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.5.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.5.Title)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.5.Year)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.5.Artist)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),24) + !IntegerGreaterThan(System.Time(ss),30)</visible>
                 </control>
@@ -1492,40 +1462,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.6.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.6.Title)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.6.Year)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.6.Artist)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),30) + !IntegerGreaterThan(System.Time(ss),38)</visible>
                 </control>
@@ -1542,40 +1506,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.7.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.7.Title)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.7.Year)]</label>
-                   
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.7.Artist)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),38) + !IntegerGreaterThan(System.Time(ss),46)</visible>
                 </control>
@@ -1592,40 +1550,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.8.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.8.Title)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.8.Year)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.8.Artist)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),46) + !IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
@@ -1642,40 +1594,34 @@
                     <fadetime>500</fadetime>
                     <posx>20</posx>
                     <posy>670</posy>
-                    <width>100</width>
+                    <width>150</width>
                     <height>150</height>
                     <aspectratio>keep</aspectratio>
                     <texture background="true">$INFO[Window.Property(RecentAlbum.9.Thumb)]</texture>
                     <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>700</posy>
                     <font>F90</font>
                     <label>$INFO[Window.Property(RecentAlbum.9.Title)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                    
-                    <posx>150</posx>
+                    <posx>190</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <textcolor>Accent</textcolor>
                     <label>$INFO[Window.Property(RecentAlbum.9.Year)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>
                 <control type="label">
-                   
-                    <posx>270</posx>
+                    <posx>310</posx>
                     <posy>770</posy>
                     <font>F50</font>
                     <label>$INFO[Window.Property(RecentAlbum.9.Artist)]</label>
-                    
                     <shadowcolor>Black</shadowcolor>
                     <visible>IntegerGreaterThan(System.Time(ss),54)</visible>
                 </control>

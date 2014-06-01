@@ -343,7 +343,7 @@
                           <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
                        </animation>
                   </control>
-        <control type="image">
+                  <control type="image">
                       <posx>55</posx>
                       <posy>5</posy>
                       <width>90</width>
@@ -367,7 +367,7 @@
       <content>
         <item id="1">
 					<description>Dernier album 1</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.1.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.1.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.1.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.1.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.1.Art(thumb))]</thumb>
@@ -375,7 +375,7 @@
         
         <item id="2">
 					<description>Dernier Film 2</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.2.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.2.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.2.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.2.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.2.Art(thumb))]</thumb>
@@ -383,7 +383,7 @@
       
         <item id="3">
 					<description>Dernier Film 3</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.3.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.3.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.3.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.3.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.3.Art(thumb))]</thumb>
@@ -391,7 +391,7 @@
       
         <item id="4">
 					<description>Dernier Film 4</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.4.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.4.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.4.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.4.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.4.Art(thumb))]</thumb>
@@ -399,7 +399,7 @@
       
         <item id="5">
 					<description>Dernier Film 5</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.5.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.5.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.5.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.5.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.5.Art(thumb))]</thumb>
@@ -407,7 +407,7 @@
       
         <item id="6">
 					<description>Dernier Film 6</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.6.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.6.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.6.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.6.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.6.Art(thumb))]</thumb>
@@ -415,7 +415,7 @@
         
         <item id="7">
 					<description>Dernier Film 7</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.7.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.7.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.7.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.7.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.7.Art(thumb))]</thumb>
@@ -423,7 +423,7 @@
       
         <item id="8">
 					<description>Dernier Film 8</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.8.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.8.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.8.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.8.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.8.Art(thumb))]</thumb>
@@ -431,7 +431,7 @@
 
         <item id="9">
 					<description>Dernier Film 9</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.9.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.9.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.9.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.9.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.9.Art(thumb))]</thumb>
@@ -439,7 +439,7 @@
       
         <item id="10">
 					<description>Dernier Film 10</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.10.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.10.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.10.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.10.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.10.Art(thumb))]</thumb>
@@ -447,7 +447,7 @@
       
         <item id="11">
 					<description>Dernier Film 11</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.11.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.11.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.11.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.11.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.11.Art(thumb))]</thumb>
@@ -455,7 +455,7 @@
       
         <item id="12">
 					<description>Dernier Film 12</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.12.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.12.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.12.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.12.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.12.Art(thumb))]</thumb>
@@ -463,7 +463,7 @@
         
         <item id="13">
 					<description>Dernier Film 13</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.13.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.13.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.13.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.13.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.13.Art(thumb))]</thumb>
@@ -471,7 +471,7 @@
       
         <item id="14">
 					<description>Dernier Film 10</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.14.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.14.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.14.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.14.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.14.Art(thumb))]</thumb>
@@ -479,7 +479,7 @@
       
         <item id="15">
 					<description>Dernier Film 15</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.15.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.15.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.15.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.15.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.15.Art(thumb))]</thumb>
@@ -487,7 +487,7 @@
       
         <item id="16">
 					<description>Dernier Film 16</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.16.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.16.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.16.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.16.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.16.Art(thumb))]</thumb>
@@ -495,7 +495,7 @@
       
         <item id="17">
 					<description>Dernier Film 17</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.17.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.17.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.17.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.17.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.17.Art(thumb))]</thumb>
@@ -503,7 +503,7 @@
       
         <item id="18">
 					<description>Dernier Film 18</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.18.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.18.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.18.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.18.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.18.Art(thumb))]</thumb>
@@ -511,7 +511,7 @@
       
         <item id="19">
 					<description>Dernier Film 19</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.19.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.19.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.19.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.19.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.19.Art(thumb))]</thumb>
@@ -519,7 +519,7 @@
       
         <item id="20">
 					<description>Dernier Film 20</description>
-					<label2>$INFO[Window(Home).Property(RecentAlbum.20.Year)]</label2>
+					<label2>$INFO[Window(Home).Property(RecentAlbum.20.Artist)]</label2>
           <label>$INFO[Window(Home).Property(RecentAlbum.20.Title)]</label>
           <onclick>$INFO[Window(Home).Property(RecentAlbum.20.Play)]</onclick>
           <thumb>$INFO[Window(Home).Property(RecentAlbum.20.Art(thumb))]</thumb>
@@ -529,7 +529,7 @@
     <!--FIN LAST ADDED-->
      <!--LABELS LAST ADDED FOCUS-->
      <control type="label">
-        <posx>150</posx>
+        <posx>190</posx>
         <posy>700</posy>
         <font>F90</font>
         <label>$INFO[Container(3030).ListItem.Label]</label>
@@ -537,7 +537,7 @@
         <visible>Control.HasFocus(3030)</visible>
      </control>
      <control type="label">
-        <posx>150</posx>
+        <posx>190</posx>
         <posy>770</posy>
         <font>F50</font>
         <textcolor>Accent</textcolor>
@@ -548,7 +548,7 @@
      <control type="image">
         <posx>20</posx>
         <posy>670</posy>
-        <width>100</width>
+        <width>150</width>
         <height>150</height>
         <aspectratio>keep</aspectratio>
         <texture background="true">$INFO[Container(3030).ListItem.thumb]</texture>

@@ -59,7 +59,7 @@
                         <width>530</width>
                         <label>$INFO[ListItem.Label2]</label>
                         <align>right</align>
-                        <visible>!Container.Content(episodes)</visible>
+                        <visible>!Container.Content(songs) + !Container.Content(movies) + !Container.Content(episodes)</visible>
                     </control>
                    
 					<control type="label">
@@ -83,7 +83,7 @@
                         <visible>Container.Content(songs) | Container.Content(movies) | Container.Content(episodes)</visible>
                     </control>
 					<control type="image">
-                        <posx>300</posx>
+                        <posx>270</posx>
                         <posy>10</posy>
                         <width>100</width>
                         <height>25</height>
@@ -130,7 +130,7 @@
                         <posx>850</posx>
                         <width>530</width>
                         <label>$INFO[ListItem.Label2]</label>
-                        <visible>!Container.Content(episodes)</visible>
+                        <visible>!Container.Content(songs) + !Container.Content(movies) + !Container.Content(episodes)</visible>
                         <align>right</align>
                     </control>
                     <control type="image">
@@ -163,7 +163,7 @@
                         <visible>Container.Content(albums)</visible>
                     </control>
 					 <control type="image">
-                        <posx>300</posx>
+                        <posx>270</posx>
                         <posy>10</posy>
                         <width>100</width>
                         <height>25</height>
