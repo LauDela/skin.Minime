@@ -44,7 +44,16 @@
 					<height>200</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true" diffuse="other_textures/poster_matte.png">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)]</visible>
+					<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)] + Skin.HasSetting(Show_Rounded)</visible>
+				</control>
+				<control type="image">
+					<posx>-50</posx>
+					<posy>100</posy>
+					<width>150</width>
+					<height>200</height>
+					<aspectratio>stretch</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(Show_Rounded)</visible>
 				</control>
 				<control type="image">
 					<posx>26</posx>
@@ -75,7 +84,16 @@
 					<height>150</height>
 					<aspectratio aligny="center">stretch</aspectratio>
 					<texture  background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(fanart)]</texture>
-					<visible>[Container.Content(artists)]</visible>
+					<visible>[Container.Content(artists)]+ Skin.HasSetting(Show_Rounded)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>25</posy>
+					<width>200</width>
+					<height>150</height>
+					<aspectratio aligny="center">stretch</aspectratio>
+					<texture  background="true">$INFO[ListItem.Art(fanart)]</texture>
+					<visible>[Container.Content(artists)]+ !Skin.HasSetting(Show_Rounded)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -142,7 +160,16 @@
 					<height>350</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<texture background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>[Container.Content(episodes)]</visible>
+					<visible>[Container.Content(episodes)] + Skin.HasSetting(Show_Rounded)</visible>
+				</control>
+				<control type="image">
+					<posx>26</posx>
+					<posy>-35</posy>
+					<width>150</width>
+					<height>350</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>[Container.Content(episodes)] + !Skin.HasSetting(Show_Rounded)</visible>
 				</control>
 				<!--fin serie TV-->
 				<!--tv show seasons-->
@@ -241,17 +268,29 @@
 
 			<focusedlayout width="260" height="400">
 					<control type="image">
-					<posx>0</posx>
-					<posy>50</posy>
-					<width>200</width>
-					<height>280</height>
-					<aspectratio>stretch</aspectratio>
-					<texture background="true" diffuse="other_textures/poster_matte.png">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)]</visible>
-					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+						<posx>0</posx>
+						<posy>50</posy>
+						<width>200</width>
+						<height>280</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true" diffuse="other_textures/poster_matte.png">$INFO[ListItem.Art(thumb)]</texture>
+						<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)] + Skin.HasSetting(Show_Rounded)</visible>
+						<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
-					</animation>
-				</control>	
+						</animation>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>50</posy>
+						<width>200</width>
+						<height>280</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)] + !Skin.HasSetting(Show_Rounded)</visible>
+						<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+						</animation>
+					</control>	
 				<!--serie TV-->
 				<control type="image">
 					<posx>0</posx>
@@ -260,12 +299,25 @@
 					<height>550</height>
 					<aspectratio aligny="center">keep</aspectratio>
 					<texture background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>[Container.Content(episodes)]</visible>
-					
+					<visible>[Container.Content(episodes)]+ Skin.HasSetting(Show_Rounded)</visible>
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>-100</posy>
+					<width>280</width>
+					<height>550</height>
+					<aspectratio aligny="center">keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>[Container.Content(episodes)]+ !Skin.HasSetting(Show_Rounded)</visible>
 					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
 					</animation>
 				</control>
+
 				<!--fin serie TV-->
 				<!--artiste-->
 				<control type="image">
@@ -275,7 +327,21 @@
 					<height>250</height>
 					<aspectratio aligny="center">stretch</aspectratio>
 					<texture background="true" diffuse="other_textures/episode_matte.png">$INFO[ListItem.Art(thumb)]</texture>
-					<visible>[Container.Content(artists)]</visible>
+					<visible>[Container.Content(artists)]+ Skin.HasSetting(Show_Rounded)</visible>
+					
+					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+					</animation>
+				</control>
+				
+				<control type="image">
+					<posx>0</posx>
+					<posy>50</posy>
+					<width>250</width>
+					<height>250</height>
+					<aspectratio aligny="center">stretch</aspectratio>
+					<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+					<visible>[Container.Content(artists)]+ !Skin.HasSetting(Show_Rounded)</visible>
 					
 					<animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
 								<effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
@@ -440,7 +506,14 @@
 			<label>$INFO[ListItem.TVShowTitle] [COLOR Accent]$LOCALIZE[20373][/COLOR] $INFO[ListItem.Season] [COLOR Accent]$LOCALIZE[20452][/COLOR] $INFO[ListItem.Episode]</label>
 			<visible>!IsEmpty(ListItem.Season) + Control.IsVisible(50) + [Container.Content(episodes)]</visible>
 		</control>
-		
+		<control type="label"> 
+			<posx>950</posx>
+			<posy>960</posy>
+			<font>F50</font>
+			<shadowcolor>Black</shadowcolor>
+			<label>[COLOR Accent]$LOCALIZE[20452][/COLOR] $INFO[ListItem.Episode]</label>
+			<visible>!IsEmpty(ListItem.Season) + Control.IsVisible(50) + [Container.Content(episodes)]</visible>
+		</control>
 		
        <!--fin episodes-->
 		<control type="image">

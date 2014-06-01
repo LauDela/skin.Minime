@@ -184,16 +184,26 @@
 			<itemlayout width="80" height="120">
       
         <control type="image">
-                      <posx>35</posx>
-                      <posy>5</posy>
-                      <width>90</width>
-                      <height>90</height>
-                      <aspectratio>keep</aspectratio>
-                      <texture diffuse="other_textures/Movie_Thumb_Mask.png">$INFO[ListItem.Thumb]</texture>
-                  </control>
+          <posx>35</posx>
+          <posy>5</posy>
+          <width>90</width>
+          <height>90</height>
+          <aspectratio>keep</aspectratio>
+          <texture diffuse="other_textures/Movie_Thumb_Mask.png">$INFO[ListItem.Thumb]</texture>
+          <visible>Skin.HasSetting(Show_Rounded)</visible>
+        </control>
+        <control type="image">
+          <posx>35</posx>
+          <posy>5</posy>
+          <width>90</width>
+          <height>90</height>
+          <aspectratio>keep</aspectratio>
+          <texture>$INFO[ListItem.Thumb]</texture>
+          <visible>!Skin.HasSetting(Show_Rounded)</visible>
+        </control>
       </itemlayout>
 			<focusedlayout width="120" height="300">
-                   <control type="image">
+          <control type="image">
               <posx>15</posx>
               <posy>0</posy>
               <width>140</width>
@@ -204,7 +214,8 @@
               <animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
                   <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
               </animation>
-            </control>   
+              <visible>Skin.HasSetting(Show_Rounded)</visible>
+          </control>   
           <control type="image">
             <posx>20</posx>
             <posy>5</posy>
@@ -216,9 +227,36 @@
                         <animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
                           <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
                        </animation>
-                  </control>
+            <visible>Skin.HasSetting(Show_Rounded)</visible>           
+          </control>
+          <control type="image">
+              <posx>15</posx>
+              <posy>0</posy>
+              <width>140</width>
+              <height>180</height>
+              <aspectratio>stretch</aspectratio>
+              <texture background="true">orange.png</texture>
+              <visible>Control.HasFocus(3060)</visible>
+              <animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+                  <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+              </animation>
+              <visible>!Skin.HasSetting(Show_Rounded)</visible>
+          </control>   
+          <control type="image">
+            <posx>20</posx>
+            <posy>5</posy>
+            <width>130</width>
+            <height>170</height>
+            <aspectratio>stretch</aspectratio>
+                      <texture>$INFO[ListItem.Thumb]</texture>
+                       <visible>Control.HasFocus(3060)</visible>
+                        <animation type="Focus" reversible="false" condition="!Skin.HasSetting(animation_aucune)">
+                          <effect type="zoom" center="auto" start="51" end="100" time="600" tween="back" easing="out" />
+                       </animation>
+            <visible>!Skin.HasSetting(Show_Rounded)</visible>           
+          </control>        
                   <control type="image">
-                      <posx>55</posx>
+                      <posx>50</posx>
                       <posy>40</posy>
                       <width>80</width>
                       <height>80</height>

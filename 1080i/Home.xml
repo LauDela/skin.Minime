@@ -174,6 +174,7 @@
 					<description>Music</description>
 					<label>31004</label>
 					<onclick>ActivateWindow(10005)</onclick>
+					<visible>Library.HasContent(Music)</visible>
 				</item>
 
 				<item id="5">
@@ -201,6 +202,7 @@
 					<label>31005</label>
 					<onclick>ActivateWindow(Pictures)</onclick>
            			<thumb>icons/Camera2.png</thumb>
+           			<visible>Skin.HasSetting(Show_Pictures)</visible>
 				</item>
 
 				<item id="9">
@@ -208,12 +210,14 @@
 					<label>31010</label>
 					<onclick>ActivateWindow(weather,return)</onclick>
           			<onfocus>Weather.Refresh</onfocus>
+          			<visible>Skin.HasSetting(Show_Meteo)</visible>
 				</item>
 
 				<item id="15">
 					<description>videos</description>
 					<label>3</label>
 					<onclick>ActivateWindow(Videos,Files,return)</onclick>
+					<visible>Skin.HasSetting(Show_Video)</visible>
 				</item>
 
 				<item id="11">
@@ -227,6 +231,7 @@
 					<label>1047</label>
 					<onclick>ActivateWindow(Video,Files,return)</onclick>
            			<thumb>icons/programmes.png</thumb>
+           			<visible>Skin.HasSetting(Show_Other)</visible>
 				</item>
 
 				<item id="13">

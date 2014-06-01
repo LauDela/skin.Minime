@@ -205,6 +205,7 @@
 		</control>
         
         <!--photo-->
+        
         <control type="radiobutton" id="805">
 			<width>750</width>
 			<height>40</height>
@@ -314,6 +315,7 @@
 				<onclick>Skin.SetPath(Home_Custom_Back_CustomHomeTVFolder)</onclick>
 			    <enable>Skin.HasSetting(Use_CustomHomeTVFolder)</enable>
 		</control>
+		
         
 			</control>
 
@@ -546,6 +548,47 @@
 			<onclick>Skin.ToggleSetting(vue_clearart_show_logo)</onclick>
 			<selected>Skin.HasSetting(vue_clearart_show_logo)</selected>
   		    <enable>!Skin.HasSetting(cache_vue_clearart)</enable>
+		</control>
+		<!--Meteo-->
+        <control type="radiobutton" id="612">
+			<width>750</width>
+			<height>40</height>
+   			<align>left</align>
+			<label>Show Weather Menu</label>
+			<onclick>Skin.ToggleSetting(Show_Meteo)</onclick>
+			<selected>Skin.HasSetting(Show_Meteo)</selected>
+		</control>
+		<control type="radiobutton" id="613">
+			<width>750</width>
+			<height>40</height>
+   			<align>left</align>
+			<label>Show Pictures Menu</label>
+			<onclick>Skin.ToggleSetting(Show_Pictures)</onclick>
+			<selected>Skin.HasSetting(Show_Pictures)</selected>
+		</control>
+		<control type="radiobutton" id="614">
+			<width>750</width>
+			<height>40</height>
+   			<align>left</align>
+			<label>Show Video Menu</label>
+			<onclick>Skin.ToggleSetting(Show_Video)</onclick>
+			<selected>Skin.HasSetting(Show_Video)</selected>
+		</control>
+		<control type="radiobutton" id="615">
+			<width>750</width>
+			<height>40</height>
+   			<align>left</align>
+			<label>Show Other Menu</label>
+			<onclick>Skin.ToggleSetting(Show_Other)</onclick>
+			<selected>Skin.HasSetting(Show_Other)</selected>
+		</control>
+		<control type="radiobutton" id="616">
+			<width>750</width>
+			<height>40</height>
+   			<align>left</align>
+			<label>List View : show rounded corners</label>
+			<onclick>Skin.ToggleSetting(Show_Rounded)</onclick>
+			<selected>Skin.HasSetting(Show_Rounded)</selected>
 		</control>
 
 		<!--

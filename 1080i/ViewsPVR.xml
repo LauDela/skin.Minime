@@ -4,18 +4,18 @@
 		<control type="group">
 			<description>TV Channels group</description>
 			<visible>Control.IsVisible(11)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="group">
 				<left>530</left>
-				<top>490</top>
+				<top>800</top>
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
-					<width>690</width>
+					<width>1300</width>
 					<height>20</height>
-					<font>font13</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F50</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -23,13 +23,13 @@
 				</control>
 				<control type="label">
 					<left>0</left>
-					<top>22</top>
+					<top>40</top>
 					<width>80</width>
 					<height>20</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
+					<font>F30</font>
+					<textcolor>Blue</textcolor>
 					<visible>Container(11).ListItem.HasEpg</visible>
 					<label>$INFO[Container(11).ListItem.StartTime]</label>
 				</control>
@@ -43,38 +43,38 @@
 					<info>Container(11).ListItem.Progress</info>
 				</control>
 				<control type="label">
-					<left>600</left>
-					<top>22</top>
+					<left>1300</left>
+					<top>40</top>
 					<width>80</width>
 					<height>20</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
+					<font>F30</font>
+					<textcolor>Blue</textcolor>
 					<visible>Container(11).ListItem.HasEpg</visible>
 					<label>$INFO[Container(11).ListItem.EndTime]</label>
 				</control>
 				<control type="textbox">
 					<description>Plot Value for TVShow</description>
-					<left>0</left>
-					<top>50</top>
-					<width>690</width>
-					<height>74</height>
-					<font>font13</font>
+					<left>20</left>
+					<top>60</top>
+					<width>1300</width>
+					<height>120</height>
+					<font>F20</font>
 					<align>justify</align>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(11).ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
 				</control>
 				<control type="label">
 					<left>0</left>
-					<top>140</top>
-					<width>690</width>
+					<top>190</top>
+					<width>1300</width>
 					<height>20</height>
-					<font>font12</font>
-					<textcolor>grey2</textcolor>
+					<font>F30</font>
+					<textcolor>Accent</textcolor>
 					<align>right</align>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
@@ -85,8 +85,8 @@
 			<control type="list" id="11">
 				<left>70</left>
 				<top>85</top>
-				<width>390</width>
-				<height>541</height>
+				<width>450</width>
+				<height>900</height>
 				<onleft>32</onleft>
 				<onright>70</onright>
 				<onup>11</onup>
@@ -97,32 +97,32 @@
 				<itemlayout height="60" width="390">
 					<control type="image">
 						<left>0</left>
-						<top>0</top>
-						<width>390</width>
-						<height>61</height>
-						<texture border="2">MenuItemNF.png</texture>
-						<include>VisibleFadeEffect</include>
+						<top>-5</top>
+						<width>490</width>
+						<height>66</height>
+						<texture border="2">elements/gris01.png</texture>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="label">
 						<left>5</left>
 						<top>-4</top>
 						<width>40</width>
 						<height>35</height>
-						<font>font12</font>
+						<font>F30</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>White</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="label">
 						<left>50</left>
 						<top>0</top>
-						<width>270</width>
+						<width>370</width>
 						<height>25</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -130,11 +130,11 @@
 					<control type="label">
 						<left>50</left>
 						<top>25</top>
-						<width>330</width>
+						<width>430</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F20</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -143,11 +143,11 @@
 					<control type="label">
 						<left>50</left>
 						<top>25</top>
-						<width>280</width>
+						<width>380</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F20</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -187,7 +187,7 @@
 						<height>61</height>
 						<texture border="2">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(11)</visible>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -196,28 +196,28 @@
 						<height>61</height>
 						<texture border="2">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(11)</visible>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="label">
 						<left>5</left>
 						<top>-4</top>
 						<width>40</width>
 						<height>35</height>
-						<font>font12</font>
+						<font>F30</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>Accent</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="label">
 						<left>50</left>
 						<top>0</top>
-						<width>270</width>
+						<width>370</width>
 						<height>25</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>Accent</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -225,11 +225,11 @@
 					<control type="label">
 						<left>50</left>
 						<top>25</top>
-						<width>330</width>
+						<width>430</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F20</font>
+						<textcolor>Accent</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -238,11 +238,11 @@
 					<control type="label">
 						<left>50</left>
 						<top>25</top>
-						<width>280</width>
+						<width>380</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F20</font>
+						<textcolor>Accent</textcolor>
+						<selectedcolor>Blue</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -297,13 +297,13 @@
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<font>F30</font>
+				<textcolor>White</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>([COLOR=blue]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
-				<include>Window_OpenClose_Animation</include>
+				<!--<include>Window_OpenClose_Animation</include>-->
 			</control>
 		</control>
 	</include>
@@ -312,7 +312,7 @@
 		<control type="group">
 			<description>Radio Channels group</description>
 			<visible>Control.IsVisible(12)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="group">
 				<left>530</left>
 				<top>490</top>
@@ -321,9 +321,9 @@
 					<top>0</top>
 					<width>690</width>
 					<height>20</height>
-					<font>font13</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<scroll>true</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -336,8 +336,8 @@
 					<height>20</height>
 					<align>right</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
+					<font>F30</font>
+					<textcolor>Blue</textcolor>
 					<visible>Container(12).ListItem.HasEpg</visible>
 					<label>$INFO[Container(12).ListItem.StartTime]</label>
 				</control>
@@ -357,8 +357,8 @@
 					<height>20</height>
 					<align>left</align>
 					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
+					<font>F30</font>
+					<textcolor>Blue</textcolor>
 					<visible>Container(12).ListItem.HasEpg</visible>
 					<label>$INFO[Container(12).ListItem.EndTime]</label>
 				</control>
@@ -368,10 +368,10 @@
 					<top>50</top>
 					<width>690</width>
 					<height>74</height>
-					<font>font13</font>
+					<font>F30</font>
 					<align>justify</align>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<pagecontrol>-</pagecontrol>
 					<label>$INFO[Container(12).ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">true</autoscroll>
@@ -381,8 +381,8 @@
 					<top>140</top>
 					<width>690</width>
 					<height>20</height>
-					<font>font12</font>
-					<textcolor>grey2</textcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
 					<align>right</align>
 					<aligny>center</aligny>
 					<scroll>false</scroll>
@@ -409,18 +409,18 @@
 						<width>390</width>
 						<height>61</height>
 						<texture border="2">MenuItemNF.png</texture>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="label">
 						<left>5</left>
 						<top>-4</top>
 						<width>40</width>
 						<height>35</height>
-						<font>font12</font>
+						<font>F30</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="label">
@@ -428,9 +428,9 @@
 						<top>0</top>
 						<width>270</width>
 						<height>25</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -440,9 +440,9 @@
 						<top>25</top>
 						<width>330</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -453,9 +453,9 @@
 						<top>25</top>
 						<width>280</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -495,7 +495,7 @@
 						<height>61</height>
 						<texture border="2">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(12)</visible>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -504,18 +504,18 @@
 						<height>61</height>
 						<texture border="2">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(12)</visible>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="label">
 						<left>5</left>
 						<top>-4</top>
 						<width>40</width>
 						<height>35</height>
-						<font>font12</font>
+						<font>F30</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="label">
@@ -523,9 +523,9 @@
 						<top>0</top>
 						<width>270</width>
 						<height>25</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -535,9 +535,9 @@
 						<top>25</top>
 						<width>330</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -548,9 +548,9 @@
 						<top>25</top>
 						<width>280</width>
 						<height>20</height>
-						<font>font12</font>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Title]</label>
@@ -605,13 +605,13 @@
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<font>F30</font>
+				<textcolor>White</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>([COLOR=blue]$INFO[Container(12).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(12).CurrentPage]/$INFO[Container(12).NumPages][/COLOR])</label>
-				<include>Window_OpenClose_Animation</include>		
+				<!--<include>Window_OpenClose_Animation</include>-->		
 			</control>
 		</control>
 	</include>
@@ -620,7 +620,7 @@
 		<control type="group">
 			<description>Recordings group</description>
 			<visible>Control.IsVisible(13)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="list" id="13">
 				<left>70</left>
 				<top>75</top>
@@ -640,7 +640,7 @@
 						<width>760</width>
 						<height>41</height>
 						<texture border="2">MenuItemNF.png</texture>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="image">
 						<left>10</left>
@@ -654,9 +654,9 @@
 						<top>0</top>
 						<width>605</width>
 						<height>40</height>
-						<font>font13</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -666,9 +666,9 @@
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Date]</label>
@@ -698,7 +698,7 @@
 						<height>41</height>
 						<texture border="2">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(13)</visible>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -706,7 +706,7 @@
 						<width>760</width>
 						<height>41</height>
 						<texture border="2">MenuItemNF.png</texture>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 						<visible>!Control.HasFocus(13)</visible>
 					</control>
 					<control type="image">
@@ -729,9 +729,9 @@
 						<top>0</top>
 						<width>630</width>
 						<height>40</height>
-						<font>font13</font>
-						<textcolor>white</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Label]</label>
@@ -741,9 +741,9 @@
 						<top>0</top>
 						<width>500</width>
 						<height>40</height>
-						<font>font12</font>
-						<textcolor>grey2</textcolor>
-						<selectedcolor>selected</selectedcolor>
+						<font>F30</font>
+						<textcolor>White</textcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>right</align>
 						<aligny>center</aligny>
 						<label>$INFO[ListItem.Date]</label>
@@ -788,13 +788,13 @@
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<font>F30</font>
+				<textcolor>White</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>([COLOR=blue]$INFO[Container(13).NumItems][/COLOR]) $LOCALIZE[19163] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(13).CurrentPage]/$INFO[Container(13).NumPages][/COLOR])</label>
-				<include>Window_OpenClose_Animation</include>		
+				<!--<include>Window_OpenClose_Animation</include>-->		
 			</control>
 			<control type="group">
 				<left>910</left>
@@ -818,9 +818,9 @@
 					<label>$INFO[Container(13).ListItem.Title]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<font>font13</font>
-					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>Blue</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<scrollout>false</scrollout>
 					<pauseatend>1000</pauseatend>
 				</control>
@@ -830,9 +830,9 @@
 					<top>270</top>
 					<width>290</width>
 					<height>280</height>
-					<font>font13</font>
+					<font>F30</font>
 					<align>justify</align>
-					<textcolor>white</textcolor>
+					<textcolor>White</textcolor>
 					<label>$INFO[Container(13).ListItem.Plot]</label>
 					<autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
@@ -844,7 +844,7 @@
 		<control type="group">
 			<description>TV Guide Timeline</description>
 			<visible>Control.IsVisible(10)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="image">
 				<description>separator image</description>
 				<left>80</left>
@@ -876,9 +876,9 @@
 						<top>0</top>
 						<width>34</width>
 						<height>29</height>
-						<font>font12</font>
+						<font>F20</font>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -897,11 +897,11 @@
 						<top>5</top>
 						<width>40</width>
 						<height>35</height>
-						<font>font12</font>
+						<font>F20</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="image">
@@ -916,9 +916,9 @@
 						<top>0</top>
 						<width>160</width>
 						<height>48</height>
-						<font>special12</font>
+						<font>F30</font>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -931,7 +931,7 @@
 						<height>48</height>
 						<texture border="2">MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="image">
 						<left>0</left>
@@ -940,18 +940,18 @@
 						<height>48</height>
 						<texture border="2">MenuItemFO.png</texture>
 						<visible>Control.HasFocus(10)</visible>
-						<include>VisibleFadeEffect</include>
+						<!--<include>VisibleFadeEffect</include>-->
 					</control>
 					<control type="label">
 						<left>5</left>
 						<top>5</top>
 						<width>40</width>
 						<height>35</height>
-						<font>font12</font>
+						<font>F30</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>grey</textcolor>
-						<selectedcolor>grey</selectedcolor>
+						<textcolor>White</textcolor>
+						<selectedcolor>White</selectedcolor>
 						<info>ListItem.ChannelNumber</info>
 					</control>
 					<control type="image">
@@ -966,9 +966,9 @@
 						<top>0</top>
 						<width>160</width>
 						<height>48</height>
-						<font>special12</font>
+						<font>F20</font>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
@@ -987,9 +987,9 @@
 						<top>3</top>
 						<width>30</width>
 						<height>25</height>
-						<font>font12</font>
+						<font>F30</font>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -1031,9 +1031,9 @@
 						<top>3</top>
 						<width>30</width>
 						<height>25</height>
-						<font>font12</font>
+						<font>F30</font>
 						<aligny>center</aligny>
-						<selectedcolor>selected</selectedcolor>
+						<selectedcolor>Accent</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
 					</control>
@@ -1073,8 +1073,8 @@
 					<width>840</width>
 					<height>20</height>
 					<label>[B]$INFO[ListItem.Label][/B]</label>
-					<font>font13</font>
-					<textcolor>white</textcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
 				</control>
 				<control type="label">
 					<left>280</left>
@@ -1082,8 +1082,8 @@
 					<width>840</width>
 					<height>20</height>
 					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Genre, • ]</label>
-					<font>font12</font>
-					<textcolor>grey</textcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
 				</control>
 				<control type="textbox">
 					<description>Plot value</description>
@@ -1091,9 +1091,9 @@
 					<top>55</top>
 					<width>840</width>
 					<height>65</height>
-					<font>font12</font>
+					<font>F30</font>
 					<align>justify</align>
-					<textcolor>grey</textcolor>
+					<textcolor>White</textcolor>
 					<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
 					<label>$INFO[ListItem.Plot]</label>
 				</control>
@@ -1105,7 +1105,7 @@
 		<control type="group">
 			<description>Timers group</description>
 			<visible>Control.IsVisible(14)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="group">
 				<left>80</left>
 				<top>60</top>
@@ -1115,9 +1115,9 @@
 					<top>20</top>
 					<width>220</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>19029</label>
 				</control>
@@ -1127,9 +1127,9 @@
 					<top>20</top>
 					<width>300</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>369</label>
 				</control>
@@ -1139,9 +1139,9 @@
 					<top>20</top>
 					<width>300</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>31501</label>
 				</control>
@@ -1151,9 +1151,9 @@
 					<top>20</top>
 					<width>150</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>126</label>
 				</control>
@@ -1192,9 +1192,9 @@
 								<top>0</top>
 								<width>150</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
 						</control>
@@ -1212,9 +1212,9 @@
 								<top>0</top>
 								<width>150</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.ChannelName</info>
 							</control>
 							<control type="label">
@@ -1222,9 +1222,9 @@
 								<top>0</top>
 								<width>290</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
@@ -1232,9 +1232,9 @@
 								<top>0</top>
 								<width>400</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Date</info>
 							</control>
 							<control type="label">
@@ -1242,9 +1242,9 @@
 								<top>0</top>
 								<width>170</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Comment</info>
 							</control>
 						</control>
@@ -1273,9 +1273,9 @@
 								<top>0</top>
 								<width>150</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
 						</control>
@@ -1293,9 +1293,9 @@
 								<top>0</top>
 								<width>150</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.ChannelName</info>
 							</control>
 							<control type="label">
@@ -1303,9 +1303,9 @@
 								<top>0</top>
 								<width>290</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
@@ -1313,9 +1313,9 @@
 								<top>0</top>
 								<width>400</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Date</info>
 							</control>
 							<control type="label">
@@ -1323,9 +1323,9 @@
 								<top>0</top>
 								<width>150</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<selectedcolor>selected</selectedcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Comment</info>
 							</control>
 						</control>
@@ -1361,11 +1361,11 @@
 					<top>545</top>
 					<width>1010</width>
 					<height>30</height>
-					<font>font13</font>
+					<font>F30</font>
 					<align>center</align>
 					<aligny>center</aligny>
 					<scroll>true</scroll>
-					<textcolor>white</textcolor>
+					<textcolor>White</textcolor>
 					<label>$INFO[PVR.NextTimer]</label>
 					<visible>PVR.HasTimer</visible>
 				</control>
@@ -1377,13 +1377,13 @@
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<font>F30</font>
+				<textcolor>White</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
 				<label>([COLOR=blue]$INFO[Container(14).NumItems][/COLOR]) $LOCALIZE[19040] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(14).CurrentPage]/$INFO[Container(14).NumPages][/COLOR])</label>
-				<include>Window_OpenClose_Animation</include>		
+				<!--<include>Window_OpenClose_Animation</include>-->		
 			</control>
 		</control>
 	</include>
@@ -1392,7 +1392,7 @@
 		<control type="group">
 			<description>TV Search group</description>
 			<visible>Control.IsVisible(17)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="group">
 				<left>80</left>
 				<top>60</top>
@@ -1402,9 +1402,9 @@
 					<top>20</top>
 					<width>220</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>19148</label>
 				</control>
@@ -1414,9 +1414,9 @@
 					<top>20</top>
 					<width>300</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>369</label>
 				</control>
@@ -1426,9 +1426,9 @@
 					<top>20</top>
 					<width>300</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>21820</label>
 				</control>
@@ -1438,9 +1438,9 @@
 					<top>20</top>
 					<width>140</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<aligny>center</aligny>
 					<label>126</label>
 				</control>
@@ -1479,10 +1479,10 @@
 								<top>0</top>
 								<width>650</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>	
 						</control>
@@ -1500,10 +1500,10 @@
 								<top>0</top>
 								<width>190</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.ChannelName</info>
 							</control>
 							<control type="label">
@@ -1511,10 +1511,10 @@
 								<top>0</top>
 								<width>450</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
@@ -1522,10 +1522,10 @@
 								<top>0</top>
 								<width>270</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Date</info>
 							</control>
 							<control type="image">
@@ -1541,10 +1541,10 @@
 								<top>0</top>
 								<width>80</width>
 								<height>40</height>
-								<font>font10</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<label>19043</label>
 								<visible>ListItem.IsRecording</visible>
 							</control>
@@ -1561,10 +1561,10 @@
 								<top>0</top>
 								<width>80</width>
 								<height>40</height>
-								<font>font10</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<label>31510</label>
 								<visible>ListItem.HasTimer</visible>
 							</control>
@@ -1593,10 +1593,10 @@
 								<top>0</top>
 								<width>650</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>	
 						</control>
@@ -1614,10 +1614,10 @@
 								<top>0</top>
 								<width>190</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.ChannelName</info>
 							</control>
 							<control type="label">
@@ -1625,10 +1625,10 @@
 								<top>0</top>
 								<width>450</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>white</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Label</info>
 							</control>
 							<control type="label">
@@ -1636,10 +1636,10 @@
 								<top>0</top>
 								<width>270</width>
 								<height>40</height>
-								<font>font12</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>white</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<info>ListItem.Date</info>
 							</control>
 							<control type="image">
@@ -1655,10 +1655,10 @@
 								<top>0</top>
 								<width>80</width>
 								<height>40</height>
-								<font>font10</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<label>19043</label>
 								<visible>ListItem.IsRecording</visible>
 							</control>
@@ -1675,10 +1675,10 @@
 								<top>0</top>
 								<width>80</width>
 								<height>40</height>
-								<font>font10</font>
+								<font>F30</font>
 								<aligny>center</aligny>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>selected</selectedcolor>
+								<textcolor>White</textcolor>
+								<selectedcolor>Accent</selectedcolor>
 								<label>31510</label>
 								<visible>ListItem.HasTimer</visible>
 							</control>
@@ -1708,8 +1708,8 @@
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<font>F30</font>
+				<textcolor>White</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -1722,7 +1722,7 @@
 		<control type="group">
 			<description>TV Guide Channel</description>
 			<visible>Control.IsVisible(15)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="group">
 				<left>80</left>
 				<top>60</top>
@@ -1732,9 +1732,9 @@
 					<top>20</top>
 					<width>300</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>21820</label>
@@ -1745,9 +1745,9 @@
 					<top>20</top>
 					<width>600</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>369</label>
@@ -1758,9 +1758,9 @@
 					<top>20</top>
 					<width>140</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>126</label>
@@ -1814,11 +1814,11 @@
 							<top>0</top>
 							<width>280</width>
 							<height>40</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.Date</info>
 						</control>
 						<control type="label">
@@ -1826,11 +1826,11 @@
 							<top>0</top>
 							<width>640</width>
 							<height>40</height>
-							<font>font13</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="image">
@@ -1846,11 +1846,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -1867,11 +1867,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>31510</label>
 							<visible>ListItem.HasTimer</visible>
 						</control>
@@ -1933,11 +1933,11 @@
 							<top>0</top>
 							<width>280</width>
 							<height>40</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.Date</info>
 						</control>
 						<control type="label">
@@ -1945,11 +1945,11 @@
 							<top>0</top>
 							<width>640</width>
 							<height>40</height>
-							<font>font13</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="textbox">
@@ -1958,10 +1958,10 @@
 							<top>40</top>
 							<width>1000</width>
 							<height>60</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>justify</align>
-							<textcolor>grey2</textcolor>
-							<shadowcolor>black</shadowcolor>
+							<textcolor>White</textcolor>
+							<shadowcolor>Black</shadowcolor>
 							<pagecontrol>-</pagecontrol>
 							<label>$INFO[ListItem.Plot]</label>
 						</control>
@@ -1978,11 +1978,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -1999,11 +1999,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>31510</label>
 							<visible>ListItem.HasTimer</visible>
 						</control>
@@ -2032,8 +2032,8 @@
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<font>F30</font>
+				<textcolor>White</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -2046,7 +2046,7 @@
 		<control type="group">
 			<description>TV Guide Now/Next</description>
 			<visible>Control.IsVisible(16)</visible>
-			<include>VisibleFadeEffect</include>
+			<!--<include>VisibleFadeEffect</include>-->
 			<control type="group">
 				<left>80</left>
 				<top>60</top>
@@ -2056,9 +2056,9 @@
 					<top>20</top>
 					<width>100</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>555</label>
@@ -2069,9 +2069,9 @@
 					<top>20</top>
 					<width>250</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>19148</label>
@@ -2082,9 +2082,9 @@
 					<top>20</top>
 					<width>550</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>369</label>
@@ -2095,9 +2095,9 @@
 					<top>20</top>
 					<width>140</width>
 					<height>20</height>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<font>F30</font>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>126</label>
@@ -2151,11 +2151,11 @@
 							<top>0</top>
 							<width>100</width>
 							<height>40</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
 						<control type="image">
@@ -2170,11 +2170,11 @@
 							<top>0</top>
 							<width>190</width>
 							<height>35</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
 						<control type="label">
@@ -2182,11 +2182,11 @@
 							<top>0</top>
 							<width>590</width>
 							<height>35</height>
-							<font>font13</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="image">
@@ -2202,11 +2202,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -2223,11 +2223,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>31510</label>
 							<visible>ListItem.HasTimer</visible>
 						</control>
@@ -2289,11 +2289,11 @@
 							<top>0</top>
 							<width>100</width>
 							<height>40</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.StartTime</info>
 						</control>
 						<control type="image">
@@ -2308,11 +2308,11 @@
 							<top>0</top>
 							<width>190</width>
 							<height>35</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.ChannelName</info>
 						</control>
 						<control type="label">
@@ -2320,11 +2320,11 @@
 							<top>0</top>
 							<width>590</width>
 							<height>35</height>
-							<font>font13</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>white</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="textbox">
@@ -2333,10 +2333,10 @@
 							<top>35</top>
 							<width>1000</width>
 							<height>60</height>
-							<font>font12</font>
+							<font>F30</font>
 							<align>justify</align>
-							<textcolor>grey2</textcolor>
-							<shadowcolor>black</shadowcolor>
+							<textcolor>White</textcolor>
+							<shadowcolor>Black</shadowcolor>
 							<pagecontrol>-</pagecontrol>
 							<label>$INFO[ListItem.Plot]</label>
 						</control>
@@ -2353,11 +2353,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>19043</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -2374,11 +2374,11 @@
 							<top>0</top>
 							<width>80</width>
 							<height>40</height>
-							<font>font10</font>
+							<font>F30</font>
 							<align>left</align>
 							<aligny>center</aligny>
-							<textcolor>grey2</textcolor>
-							<selectedcolor>selected</selectedcolor>
+							<textcolor>White</textcolor>
+							<selectedcolor>Accent</selectedcolor>
 							<label>31510</label>
 							<visible>ListItem.HasTimer</visible>
 						</control>
@@ -2407,8 +2407,8 @@
 				<top>53r</top>
 				<width>500</width>
 				<height>20</height>
-				<font>font12</font>
-				<textcolor>grey</textcolor>
+				<font>F30</font>
+				<textcolor>White</textcolor>
 				<scroll>false</scroll>
 				<align>right</align>
 				<aligny>center</aligny>

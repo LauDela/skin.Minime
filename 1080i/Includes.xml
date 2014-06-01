@@ -216,7 +216,7 @@
                 <loop>true</loop>
                 <imagepath background="true">$INFO[Skin.String(Home_Custom_Back_CustomPicturesFolder)]</imagepath>
                 <!--<colordiffuse>FanartDiffuse</colordiffuse>-->
-                <visible> Skin.HasSetting(Use_CustomPicturesFolder)]</visible>
+                <visible>Skin.HasSetting(Use_CustomPicturesFolder)</visible>
                 <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
             </control>
             <control type="image">

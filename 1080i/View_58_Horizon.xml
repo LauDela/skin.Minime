@@ -147,7 +147,8 @@
                     </control>
                     <control type="image">
                         <posx>1270</posx>
-                        <posy>18</posy>
+                        <posy>20</posy>
+                        <!--<bottom>-42</bottom>-->
                         <width>600</width>
                         <height>400</height>
                         <texture background="true">$INFO[ListItem.Art(clearart)]</texture>
@@ -178,7 +179,7 @@
                         <height>90</height>
                         <aspectratio>keep</aspectratio>
                         <texture fallback="other_textures/flagging/video/sd.png">other_textures/flagging/video/$INFO[ListItem.VideoResolution].png</texture>
-                        <visible>!IsEmpty(ListItem.Title) + [Container.Content(movies) | Container.Content(tvshows)]</visible>             
+                        <visible>!IsEmpty(ListItem.Title) + [Container.Content(movies)]</visible>             
                     </control>
                     <control type="label">
                         <posx>65</posx>
