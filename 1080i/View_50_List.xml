@@ -33,7 +33,7 @@
 			<scrolltime>100</scrolltime>
 			<focusposition>0</focusposition>
 			<!--<visible>!Container.Content(songs)+!Container.Content(albums)</visible>-->
-			<visible>Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)|Container.Content(artists)</visible>
+			<visible>Container.Content(movies)|Container.Content(tvshows)|Container.Content(seasons)|Container.Content(artists)|Container.Content(episodes)</visible>
 			<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">
 				<effect type="fade" start="100" end="50" time="200" />
 			</animation>
