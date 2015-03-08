@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1122" type="dialog">
+	<!-- movieinformation -->
+        
+	
+        <defaultcontrol always="true">5201</defaultcontrol>
+        <allowoverlay>yes</allowoverlay>
+	<coordinates>
+        <posx>40</posx>
+        <posy>50</posy>
+        <origin x="250" y="545">StringCompare(skin.String(colonne),0)</origin>
+        <origin x="450" y="545">StringCompare(skin.String(colonne),1)</origin>
+        <origin x="650" y="545">StringCompare(skin.String(colonne),2)</origin>
+        <origin x="850" y="545">StringCompare(skin.String(colonne),3)</origin>
+        <origin x="1050" y="545">StringCompare(skin.String(colonne),4)</origin>
+        <origin x="1250" y="545">StringCompare(skin.String(colonne),5)</origin>
+        <origin x="850" y="545">StringCompare(skin.String(colonne),6)</origin>
+        <origin x="1050" y="545">StringCompare(skin.String(colonne),7)</origin>
+  </coordinates>
+	
+
+	<controls>
+
+            <control type="group" id="5200">
+                <visible>!Window.IsVisible(10106) + !Window.IsVisible(10000) + !Window.IsVisible(12003) + !StringCompare(skin.String(colonne),100)</visible>
+                <control type="image">
+                    
+                    <width>395</width>
+                    <height>300</height>
+                    <aspectratio >stretch</aspectratio>
+                    <texture>bulle-popupR1.png</texture>
+                </control>
+                <control type="button" id="5201">
+                    <label></label>
+                    <onup>Dialog.Close(1122)</onup>
+                    <onleft>Dialog.Close(1122)</onleft>
+                    <onright>Dialog.Close(1122)</onright>
+                    <texturefocus></texturefocus>
+                    <ondown condition="Container.Content(tvshows)">Dialog.Close(1122)</ondown>
+                    <ondown condition="Container.Content(movies)">5210</ondown>
+                    <onfocus condition="Container.Content(movies)">5210</onfocus>
+                    <onclick>Dialog.Close(1122)</onclick>
+                </control>        
+                <!--MOVIES-->
+                <control type="button" id="5210">
+                    <description>My first button control</description>
+                    <top>10</top>
+                    <width>385</width>
+                    <left>5</left>
+                    <height>100</height>
+                    <label>518</label>
+                    <font>Font20</font>
+                    <textcolor>Blanc</textcolor>
+                    <texturenofocus>menu_select.png</texturenofocus>
+                    <align>center</align>
+                    <focusedcolor>Blanc</focusedcolor>
+                    <texturefocus>menu.png</texturefocus>
+                    <onclick>Dialog.Close(1122)</onclick>
+                    <onclick>XBMC.PlayMedia($INFO[ListItem.FileNameAndPath])</onclick>
+                    <aligny>center</aligny>
+                    <onfocus>-</onfocus>
+                    <onunfocus>-</onunfocus>
+                    <onup>Dialog.Close(1122)</onup>
+                    <ondown>5220</ondown>
+                    <onleft>Dialog.Close(1122)</onleft>
+                    <onright>Dialog.Close(1122)</onright>
+                    <visible>Container.Content(movies)</visible>
+                    <enable>Container.Content(movies)</enable>
+                </control>
+                <control type="button" id="5220">
+                    <description>My first button control</description>
+                    <top>100</top>
+                    <left>5</left>
+                    <width>385</width>
+                    <height>90</height>
+                    <label>20410</label>
+                    <font>Font20</font>
+                    <enable>!IsEmpty(ListItem.Trailer)</enable>
+                    <textcolor>Blanc</textcolor>
+                    <disabledcolor>Gris</disabledcolor>
+                    <texturenofocus>menu_select.png</texturenofocus>
+                    <align>center</align>
+                    <focusedcolor>Blanc</focusedcolor>
+                    <texturefocus>menu.png</texturefocus>
+                    <aligny>center</aligny>
+                    <onclick>Dialog.Close(1122)</onclick>
+                    <onclick>XBMC.PlayMedia($INFO[ListItem.Trailer])</onclick>
+                    <onfocus>-</onfocus>
+                    <onunfocus>-</onunfocus>
+                    <onup>5210</onup>
+                    <ondown>Dialog.Close(1122)</ondown>
+                    <onleft>Dialog.Close(1122)</onleft>
+                    <onright>Dialog.Close(1122)</onright>
+                    <visible>Container.Content(movies)</visible>
+                    <enable>Container.Content(movies)</enable>
+                </control>
+                <!-- END MOVIES-->
+                <!-- TV SHOW-->
+                <control type="group">
+                    <left>0</left>
+                    <top>50</top>
+                    <visible>Container.Content(tvshows)</visible>
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>170</width>
+                        <height>27</height>
+                        <font>Font72</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(TotalSeasons)]</label>
+                        <textcolor>Blanc</textcolor>    
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>50</top>
+                        <width>170</width>
+                        <height>27</height>
+                        <font>Font20</font>
+                        <align>center</align>
+                        <label>Saisons</label>
+                        <textcolor>Blanc</textcolor>
+                    </control>
+                    
+                    
+                </control>
+                <control type="group">
+                    <left>200</left>
+                    <top>50</top>
+                    <visible>Container.Content(tvshows)</visible>
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>170</width>
+                        <height>27</height>
+                        <font>Font72</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(TotalEpisodes)]</label>
+                        <textcolor>Blanc</textcolor>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>50</top>
+                        <width>170</width>
+                        <height>27</height>
+                        <font>Font20</font>
+                        <align>center</align>
+                        <label>Episodes</label>
+                        <textcolor>Blanc</textcolor>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>90</top>
+                        <width>170</width>
+                        <height>27</height>
+                        <font>Font48</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                        <textcolor>Bleu</textcolor>
+                    </control>
+                    <control type="label">
+                        <left>120</left>
+                        <top>110</top>
+                        <width>62</width>
+                        <height>27</height>
+                        <font>Font15</font>
+                        <align>right</align>
+                        <label>non vus</label>
+                        <textcolor>Bleu</textcolor>
+                    </control>
+                </control>  
+                  
+                <!-- END TV SHOW-->
+                <control type="image">
+                    <left>5</left>
+                    <top>185</top>
+                    <width>385</width>
+                    <height>1</height>
+                    <texture>orange.png</texture>
+                    <aspectratio>stretch</aspectratio>
+                </control>
+                <control type="image">
+                    <top>200</top>
+                    <left>50</left>
+                    <height>70</height>
+                    <width>300</width>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$INFO[ListItem.Art(clearlogo)]</texture>
+                </control>    
+                                    
+            </control>
+
+	</controls>
+
+</window>
