@@ -3,7 +3,7 @@
 <window id="502">
 	<defaultcontrol always="true">504</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,59,504,503,580,581,51,58</views>
+	<views>50,59,504,503,580,581,51,58,52</views>
 
 	<controls>
   <include>BarClock</include>
@@ -18,10 +18,11 @@
 		<include condition="Skin.HasSetting(CustomArtistLogo) + !Skin.HasSetting(cache_vue_clearart)">View_58_Horizon</include> 
 		<include>View_59_BigList</include>
 		<include>View_51_Albums</include>
-    	<include>Viewtype_Songs</include>
+                <include>Viewtype_Songs</include>
 	 	<include>Viewtype_defaut</include>
 	 	<include condition="Skin.HasSetting(CustomArtistLogo) + !Skin.HasSetting(cache_vue_logo)">Viewtype_logo</include>
 	 	<include condition="Skin.HasSetting(CustomArtistLogo) + !Skin.HasSetting(cache_vue_banner)">Viewtype_banner</include>
+                <include condition="!Skin.HasSetting(cache_vue_grid)" >Viewtype52</include>
     	<control type="image">
             <posx>0</posx>
             <posy>0</posy>

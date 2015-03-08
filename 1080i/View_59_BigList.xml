@@ -27,7 +27,7 @@
                 <onright>9000</onright>
                 <onleft>901</onleft>
                 <scrolltime>0</scrolltime>
-                <viewtype label="BigList">BigList</viewtype>
+                <viewtype label="BigList">BigList-59</viewtype>
                 <orientation>vertical</orientation>
                 <focusposition>0</focusposition>
                 <pagecontrol>63</pagecontrol>

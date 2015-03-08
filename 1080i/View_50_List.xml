@@ -24,12 +24,12 @@
 			<onleft condition="!Container.Content(songs)">50</onleft>
 			<onleft condition="Container.Content(songs)">9000</onleft>
 			<onright>50</onright>
-			<onup condition="Container.Content(movies)">SetFocus(501)</onup>
+			<onup condition="Container.Content(movies)|Container.Content(tvshows)">SetFocus(501)</onup>
 			<ondown condition="!Container.Content(songs)+!Container.Content(artists)">9000</ondown>
 			<ondown condition="Container.Content(artists)">900</ondown>
 			<orientation>horizontal</orientation>
 			<pagecontrol>60</pagecontrol>
-			<viewtype label="535">list</viewtype>
+			<viewtype label="535">list-50</viewtype>
 			<scrolltime>100</scrolltime>
 			<focusposition>0</focusposition>
 			<!--<visible>!Container.Content(songs)+!Container.Content(albums)</visible>-->
@@ -476,18 +476,10 @@
 			<textcolor>Accent</textcolor>
 			<label>$INFO[ListItem.Year]</label>
 			<shadowcolor>Black</shadowcolor>
-			<visible>Control.IsVisible(50) + !Container.Content(songs) + !Container.Content(albums)</visible>
+			<visible>Control.IsVisible(50) + !Container.Content(songs) + !Container.Content(albums) + !Container.Content(seasons)</visible>
 		</control>
 		
-		<control type="label">
-			<posx>20</posx>
-			<posy>650</posy>
-			<font>F50</font>
-			<textcolor>Accent</textcolor>
-			<label>$INFO[ListItem.Year]</label>
-			<shadowcolor>Black</shadowcolor>
-			<visible>Control.IsVisible(50) + [Container.Content(seasons)]</visible>
-		</control>
+		
 
 		<control type="label">
 			<posx>150</posx>
@@ -508,12 +500,13 @@
 			<visible>!IsEmpty(ListItem.Season) + Control.IsVisible(50) + [Container.Content(episodes)]</visible>
 		</control>
 		<control type="label"> 
-			<posx>950</posx>
-			<posy>960</posy>
-			<font>F50</font>
+			<posx>955</posx>
+			<posy>870</posy>
+			<font>F30</font>
 			<shadowcolor>Black</shadowcolor>
-			<label>[COLOR Accent]$LOCALIZE[20452][/COLOR] $INFO[ListItem.Episode]</label>
+			<label>[B][COLOR Accent]$LOCALIZE[20452][/COLOR] $INFO[ListItem.Episode][/B]</label>
 			<visible>!IsEmpty(ListItem.Season) + Control.IsVisible(50) + [Container.Content(episodes)]</visible>
+			
 		</control>
 		
        <!--fin episodes-->
@@ -760,7 +753,7 @@
 			     <onright>501</onright>
 				 <orientation>horizontal</orientation>
 			     <focusposition>0</focusposition>
-				 <visible>Container.Content(movies)</visible>
+				 <visible>Container.Content(movies)| Container.Content(tvshows)</visible>
 			     <scrolltime tween="sine" easing="out">300</scrolltime>
 			     <itemlayout width="100" height="120">
               
@@ -813,6 +806,7 @@
 						<thumb>icons/Information.png</thumb>
 						<property name="foo2">icons/Information-a.png</property>
 						<onclick>XBMC.ActivateWindow(12003,movieinformation,return)</onclick>
+                                                <visible>Container.Content(movies)</visible>
 					</item>
 					<item id="3">
 						<description>Trailers</description>

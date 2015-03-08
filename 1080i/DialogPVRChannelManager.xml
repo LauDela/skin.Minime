@@ -102,7 +102,7 @@
 				<height>470</height>
 				<onup>20</onup>
 				<ondown>20</ondown>
-				<onleft>9002</onleft>
+				<onleft>9000</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
@@ -120,6 +120,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
+						<aspectratio>keep</aspectratio>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
@@ -129,6 +130,7 @@
 						<height>30</height>
 						<colordiffuse>77FFFFFF</colordiffuse>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
+						<aspectratio>keep</aspectratio>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
@@ -181,6 +183,7 @@
 						<width>30</width>
 						<height>30</height>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
+						<aspectratio>keep</aspectratio>
 						<visible>ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="image">
@@ -190,6 +193,7 @@
 						<height>30</height>
 						<colordiffuse>77FFFFFF</colordiffuse>
 						<texture>$INFO[ListItem.Property(Icon)]</texture>
+						<aspectratio>keep</aspectratio>
 						<visible>!ListItem.Property(ActiveChannel)</visible>
 					</control>
 					<control type="label">
@@ -241,16 +245,21 @@
 				</focusedlayout>
 			</control>
 		</control>
-		<control type="group" id="9002">
-			<control type="group">
+		<control type="group">
+			<control type="grouplist" id="9002">
 				<left>490</left>
-				<top>70</top>
-				<control type="label">
+				<top>75</top>
+				<onleft>60</onleft>
+				<onright>9000</onright>
+				<onup>34</onup>
+				<ondown>30</ondown>
+				<itemgap>5</itemgap>
+				<control type="label" id="9001">
 					<description>channel options Header</description>
 					<left>0</left>
 					<top>0</top>
 					<width>380</width>
-					<height>20</height>
+					<height>25</height>
 					<font>font12</font>
 					<label>$LOCALIZE[31511]</label>
 					<align>left</align>
@@ -261,9 +270,9 @@
 				<control type="radiobutton" id="7">
 					<description>Channel activated</description>
 					<left>0</left>
-					<top>25</top>
+					<top>0</top>
 					<width>380</width>
-					<height>35</height>
+					<height>40</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -274,17 +283,13 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19074</label>
-					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>33</onup>
-					<ondown>8</ondown>
 				</control>
 				<control type="edit" id="8">
 					<description>Channel name</description>
 					<left>0</left>
-					<top>65</top>
+					<top>0</top>
 					<width>380</width>
-					<height>35</height>
+					<height>40</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -292,41 +297,43 @@
 					<texturefocus border="5">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<label>19201</label>
-					<onright>60</onright>
-					<onleft>20</onleft>
-					<onup>7</onup>
-					<ondown>9</ondown>
 				</control>
-				<control type="button" id="9">
-					<description>Channel logo Button</description>
+				<control type="group" id="9005">
 					<left>0</left>
-					<top>105</top>
+					<top>0</top>
 					<width>380</width>
-					<height>35</height>
-					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<label>19202</label>
-					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>8</onup>
-					<ondown>12</ondown>
-				</control>
-				<control type="image" id="10">
-					<description>Current Channel Icon</description>
-					<left>345</left>
-					<top>107</top>
-					<width>30</width>
-					<height>30</height>
-					<aspectratio>keep</aspectratio>
-					<info>ListItem.Property(Icon)</info>
+					<height>40</height>
+					<control type="button" id="9">
+						<description>Channel logo Button</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<height>40</height>
+						<font>font12</font>
+						<texturefocus border="5">button-focus2.png</texturefocus>
+						<texturenofocus border="5">button-nofocus.png</texturenofocus>
+						<label>19202</label>
+						<onleft>60</onleft>
+						<onright>9000</onright>
+						<onup>8</onup>
+						<ondown>12</ondown>
+					</control>
+					<control type="image">
+						<description>Current Channel Icon</description>
+						<left>340</left>
+						<top>3</top>
+						<width>34</width>
+						<height>34</height>
+						<aspectratio>keep</aspectratio>
+						<info>ListItem.Property(Icon)</info>
+					</control>
 				</control>
 				<control type="radiobutton" id="12">
 					<description>EPG activated</description>
 					<left>0</left>
-					<top>145</top>
+					<top>0</top>
 					<width>380</width>
-					<height>35</height>
+					<height>40</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -337,32 +344,24 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19206</label>
-					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>9</onup>
-					<ondown>13</ondown>
 				</control>
 				<control type="spincontrolex" id="13">
 					<description>EPG source</description>
 					<left>0</left>
-					<top>185</top>
+					<top>0</top>
 					<width>380</width>
-					<height>35</height>
+					<height>40</height>
 					<font>font12</font>
 					<texturefocus border="5">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<label>19200</label>
-					<onright>9000</onright>
-					<onleft>20</onleft>
-					<onup>12</onup>
-					<ondown>14</ondown>
 				</control>
 				<control type="radiobutton" id="14">
 					<description>Parental locked</description>
 					<left>0</left>
-					<top>225</top>
+					<top>0</top>
 					<width>380</width>
-					<height>35</height>
+					<height>40</height>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<focusedcolor>white</focusedcolor>
@@ -373,21 +372,23 @@
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<pulseonselect>no</pulseonselect>
 					<label>19267</label>
-					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>13</onup>
-					<ondown>30</ondown>
 				</control>
 			</control>
-			<control type="group">
+			<control type="grouplist">
 				<left>490</left>
-				<top>360</top>
-				<control type="label">
+				<top>375</top>
+				<itemgap>5</itemgap>
+				<onleft>60</onleft>
+				<onright>9000</onright>
+				<onup>14</onup>
+				<ondown>7</ondown>
+				<animation effect="slide" start="0,0" end="0,45" time="0" condition="!Control.IsVisible(31)">Conditional</animation>
+				<control type="label" id="9003">
 					<description>channel options Header</description>
 					<left>0</left>
 					<top>0</top>
 					<width>380</width>
-					<height>20</height>
+					<height>25</height>
 					<font>font12</font>
 					<label>$LOCALIZE[31026]</label>
 					<align>left</align>
@@ -395,103 +396,46 @@
 					<textcolor>blue</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
-				<control type="button" id="30">
-					<description>Group Manager Button</description>
-					<left>0</left>
-					<top>25</top>
-					<width>190</width>
-					<height>35</height>
-					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19205</label>
-					<onleft>20</onleft>
-					<onright>34</onright>
-					<onup>14</onup>
-					<ondown>31</ondown>
-				</control>
-				<control type="button" id="34">
-					<description>TV/Radio Button</description>
-					<left>195</left>
-					<top>25</top>
-					<width>185</width>
-					<height>35</height>
-					<font>font12</font>
-					<visible>IsEmpty(Window.Property(IsRadio))</visible>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19024</label>
-					<onleft>30</onleft>
-					<onright>9000</onright>
-					<onup>14</onup>
-					<ondown>31</ondown>
-				</control>
-				<control type="button" id="34">
-					<description>TV/Radio Button</description>
-					<left>195</left>
-					<top>25</top>
-					<width>185</width>
-					<height>35</height>
-					<font>font12</font>
-					<visible>!IsEmpty(Window.Property(IsRadio))</visible>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19023</label>
-					<onleft>30</onleft>
-					<onright>9000</onright>
-					<onup>14</onup>
-					<ondown>31</ondown>
-				</control>
 				<control type="button" id="31">
-					<description>Edit channel Button</description>
-					<left>0</left>
-					<top>65</top>
-					<width>380</width>
-					<height>35</height>
-					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19203</label>
-					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>30</onup>
-					<ondown>32</ondown>
-				</control>
-				<control type="button" id="32">
-					<description>Delete channel Button</description>
-					<left>0</left>
-					<top>105</top>
-					<width>380</width>
-					<height>35</height>
-					<font>font12</font>
-					<texturefocus border="5">button-focus2.png</texturefocus>
-					<texturenofocus border="5">button-nofocus.png</texturenofocus>
-					<align>center</align>
-					<label>19211</label>
-					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>31</onup>
-					<ondown>33</ondown>
-				</control>
-				<control type="button" id="33">
 					<description>New channel Button</description>
 					<left>0</left>
-					<top>145</top>
+					<top>0</top>
 					<width>380</width>
-					<height>35</height>
+					<height>40</height>
 					<font>font12</font>
 					<texturefocus border="5">button-focus2.png</texturefocus>
 					<texturenofocus border="5">button-nofocus.png</texturenofocus>
 					<align>center</align>
 					<label>19204</label>
-					<onleft>20</onleft>
-					<onright>9000</onright>
-					<onup>32</onup>
-					<ondown>7</ondown>
+				</control>
+				<control type="button" id="30">
+					<description>Group Manager Button</description>
+					<left>0</left>
+					<top>0</top>
+					<width>380</width>
+					<height>40</height>
+					<font>font12</font>
+					<texturefocus border="5">button-focus2.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<align>center</align>
+					<label>19205</label>
+				</control>
+				<control type="togglebutton" id="34">
+					<description>TV/Radio toggle</description>
+					<left>0</left>
+					<top>0</top>
+					<width>380</width>
+					<height>40</height>
+					<font>font12</font>
+					<texturefocus border="5">button-focus2.png</texturefocus>
+					<texturenofocus border="5">button-nofocus.png</texturenofocus>
+					<alttexturefocus border="5">button-focus2.png</alttexturefocus>
+					<alttexturenofocus border="5">button-nofocus.png</alttexturenofocus>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>19024</label>
+					<altlabel>19023</altlabel>
+					<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
 				</control>
 			</control>
 		</control>

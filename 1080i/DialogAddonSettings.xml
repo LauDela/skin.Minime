@@ -17,7 +17,7 @@
 				<posy>-20</posy>
 				<width>1000</width>
 				<height>650</height>
-				<texture border="22">other_textures/ContentPanel.png</texture>
+				<texture border="22">fond_gris</texture>
 			</control>
 
 			<control type="label" id="20">
@@ -75,7 +75,7 @@
 
 			<control type="label" id="7">
 				<label>-</label>
-				<textcolor>blue</textcolor>
+				<textcolor>Orange</textcolor>
 			</control>
 
 			<control type="image" id="6">

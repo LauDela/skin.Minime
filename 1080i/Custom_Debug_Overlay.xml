@@ -132,6 +132,73 @@
 				<label>VideoFullScreen.xml</label>
 				<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
 			</control>
+                        
+			<control type="label">
+				<include>WindowID</include>
+				<label>IncludesTVShowsSubMenus.xml</label>
+				<visible>Window.IsVisible(IncludesTVShowsSubMenus.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>WindowID</include>
+				<label>MyPVR.xml</label>
+				<visible>Window.IsVisible(MyPVR.xml)</visible>
+			</control>
+                        
+			<control type="label">
+				<include>WindowID</include>
+				<label>MyPVRChannels.xml</label>
+				<visible>Window.IsVisible(MyPVRChannels.xml)</visible>
+			</control>
+                        
+                        <control type="label">
+				<include>WindowID</include>
+				<label>MyPVRGuide.xml</label>
+				<visible>Window.IsVisible(MyPVRGuide.xml)</visible>
+			</control>
+                        
+                        <control type="label">
+				<include>WindowID</include>
+				<label>MyPVRRecordings.xml</label>
+				<visible>Window.IsVisible(MyPVRRecordings.xml)</visible>
+			</control>
+
+                        <control type="label">
+				<include>WindowID</include>
+				<label>MyPVRSearch.xml</label>
+				<visible>Window.IsVisible(MyPVRSearch.xml)</visible>
+			</control>
+                        
+                        <control type="label">
+				<include>WindowID</include>
+				<label>MyPVRTimers.xml</label>
+				<visible>Window.IsVisible(MyPVRTimers.xml)</visible>
+			</control>
+
+                        <control type="label">
+				<include>WindowID</include>
+				<label>View_tv.xml</label>
+				<visible>Window.IsVisible(View_tv.xml)</visible>
+			</control>
+
+                        <control type="label">
+				<include>WindowID</include>
+				<label>ViewsLiveTV.xml</label>
+				<visible>Window.IsVisible(ViewsLiveTV.xml)</visible>
+			</control>
+
+                        <control type="label">
+				<include>WindowID</include>
+				<label>ViewsPVR.xml</label>
+				<visible>Window.IsVisible(ViewsPVR.xml)</visible>
+			</control>
+
+                        <control type="label">
+				<include>WindowID</include>
+				<label>ViewsPVRGuide.xml</label>
+				<visible>Window.IsVisible(ViewsPVRGuide.xml)</visible>
+			</control>
+
 
 			<!-- Dialog labels -->
 
@@ -440,6 +507,55 @@
 				<label>VisualisationPresetList.xml</label>
 				<visible>Window.IsVisible(VisualisationPresetList.xml)</visible>
 			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRChannelManager.xml</label>
+				<visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRChannelsOSD</label>
+				<visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRGroupManager</label>
+				<visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRGuideInfo</label>
+				<visible>Window.IsVisible(DialogPVRGuideInfo.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRGuideOSD</label>
+				<visible>Window.IsVisible(DialogPVRGuideOSD.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRGuideSearch</label>
+				<visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRRecordingInfo</label>
+				<visible>Window.IsVisible(DialogPVRRecordingInfo.xml)</visible>
+			</control>
+
+			<control type="label">
+				<include>DialogID</include>
+				<label>DialogPVRTimerSettings</label>
+				<visible>Window.IsVisible(DialogPVRTimerSettings)</visible>
+			</control>
+
 
 		</control>
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    
+	
+	<variable name="StatusOverlay">
+		<value condition="ListItem.IsResumable | [[Container.Content(tvshows) | Container.Content(seasons)] + IntegerGreaterThan(ListItem.Property(WatchedEpisodes),0) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)]">circle_play.png</value>
+		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">circle_ok.png</value>
+	</variable>
+
+	<variable name="StatusOverlayWide">
+		<value condition="ListItem.IsResumable | [[Container.Content(tvshows) | Container.Content(seasons)] + IntegerGreaterThan(ListItem.Property(WatchedEpisodes),0) + IntegerGreaterThan(ListItem.Property(UnWatchedEpisodes),0)]">circle_play.png</value>
+		<value condition="StringCompare(ListItem.Overlay,OverlayWatched.png)">circle_ok.png</value>
+	</variable>
+
+	
+	<variable name="PlayerStatus">
+		<value condition="Player.Forwarding2x">[B]x2[/B]</value>
+		<value condition="Player.Forwarding4x">[B]x4[/B]</value>
+		<value condition="Player.Forwarding8x">[B]x8[/B]</value>
+		<value condition="Player.Forwarding16x">[B]x16[/B]</value>
+		<value condition="Player.Forwarding32x">[B]x32[/B]</value>
+		<value condition="Player.Rewinding2x">[B]x2[/B]</value>
+		<value condition="Player.Rewinding4x">[B]x4[/B]</value>
+		<value condition="Player.Rewinding8x">[B]x8[/B]</value>
+		<value condition="Player.Rewinding16x">[B]x16[/B]</value>
+		<value condition="Player.Rewinding32x">[B]x32[/B]</value>
+	</variable>
+
+
+	<variable name="ContentType">
+		<value condition="Container.Content(movies) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20338]</value>
+		<value condition="Container.Content(movies) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[342]</value>
+		<value condition="Container.Content(tvshows) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20364]</value>
+		<value condition="Container.Content(tvshows) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20343]</value>
+		<value condition="Container.Content(seasons) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20373]</value>
+		<value condition="Container.Content(seasons) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[33054]</value>
+		<value condition="Container.Content(episodes) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20359]</value>
+		<value condition="Container.Content(episodes) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20360]</value>
+		<value condition="Container.Content(musicvideos) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20391]</value>
+		<value condition="Container.Content(musicvideos) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20389]</value>
+		<value condition="Container.Content(genres) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[515]</value>
+		<value condition="Container.Content(genres) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[135]</value>
+		<value condition="Container.Content(years) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[345]</value>
+		<value condition="Container.Content(years) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[652]</value>
+		<value condition="Container.Content(actors) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20337]</value>
+		<value condition="Container.Content(actors) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[344]</value>
+		<value condition="Container.Content(albums) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[558]</value>
+		<value condition="Container.Content(albums) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[132]</value>
+		<value condition="Container.Content(artists) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[557]</value>
+		<value condition="Container.Content(artists) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[133]</value>
+		<value condition="Container.Content(songs) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[179]</value>
+		<value condition="Container.Content(songs) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[134]</value>
+		<value condition="Container.Content(playlists) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[559]</value>
+		<value condition="Container.Content(playlists) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[136]</value>
+		<value condition="Container.Content(studios) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[572]</value>
+		<value condition="Container.Content(studios) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20388]</value>
+		<value condition="Container.Content(directors) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20339]</value>
+		<value condition="Container.Content(directors) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20348]</value>
+		<value condition="Container.Content(countries) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[574]</value>
+		<value condition="Container.Content(countries) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20451]</value>
+		<value condition="Container.Content(Addons) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[24000]</value>
+		<value condition="Container.Content(Addons) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[24001]</value>
+		<value condition="Container.Content(sets) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20141]</value>
+		<value condition="Container.Content(sets) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20434]</value>
+		<value condition="Container.Content(tags) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[31002]</value>
+		<value condition="Container.Content(tags) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[20459]</value>
+		<value condition="Window.IsVisible(pvr) + Control.IsVisible(13) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[19043]</value>
+		<value condition="Window.IsVisible(pvr) + Control.IsVisible(13) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[19163]</value>
+		<value condition="Window.IsVisible(pvr) + [Control.IsVisible(14) | Control.IsVisible(17)] + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[31000]</value>
+		<value condition="Window.IsVisible(pvr) + [Control.IsVisible(14) | Control.IsVisible(17)] + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[31001]</value>
+		<value condition="Window.IsVisible(pvr) + !IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[19029]</value>
+		<value condition="Window.IsVisible(pvr) + IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[19019]</value>
+		<value condition="!IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[31000]</value>
+		<value condition="IntegerGreaterThan(Container.NumItems,1)">$LOCALIZE[31001]</value>
+	</variable>
+
+	
+</includes>

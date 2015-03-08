@@ -214,6 +214,7 @@
 								<left>5</left>
 								<top>4</top>
 								<texture>$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -225,7 +226,7 @@
 								<aligny>center</aligny>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 							</control>
 						</itemlayout>
 						<focusedlayout height="45">
@@ -251,6 +252,7 @@
 								<left>5</left>
 								<top>4</top>
 								<texture>$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -262,7 +264,7 @@
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 							</control>
 						</focusedlayout>
 					</control>
@@ -331,6 +333,7 @@
 								<left>5</left>
 								<top>4</top>
 								<texture>$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -342,7 +345,7 @@
 								<aligny>center</aligny>
 								<textcolor>grey2</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 							</control>
 						</itemlayout>
 						<focusedlayout height="45">
@@ -368,6 +371,7 @@
 								<left>5</left>
 								<top>4</top>
 								<texture>$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
 							</control>
 							<control type="label">
 								<left>40</left>
@@ -379,7 +383,7 @@
 								<aligny>center</aligny>
 								<textcolor>white</textcolor>
 								<selectedcolor>selected</selectedcolor>
-								<label>$INFO[ListItem.ChannelNumber,(,) - ]$INFO[ListItem.ChannelName]</label>
+								<label>$INFO[ListItem.ChannelNumberLabel,(,) - ]$INFO[ListItem.ChannelName]</label>
 							</control>
 						</focusedlayout>
 					</control>
@@ -424,6 +428,12 @@
 						<width>200</width>
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>31504</label>
+					</control>
+					<control type="radiobutton" id="25">
+						<description>Hide Group</description>
+						<width>200</width>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>19289</label>
 					</control>
 					<control type="button" id="28">
 						<description>Delete Group</description>

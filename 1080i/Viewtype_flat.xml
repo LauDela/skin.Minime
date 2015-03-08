@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <include name="Viewtype_flat">
+
+        <control type="group">
+            <visible>Control.IsVisible(568)</visible>
+                
+                <control type="image">
+                    <include>Dimensions_Fullscreen</include>    
+                    <texture background="true">238800.jpg</texture>  
+                </control>
+                <control type="image">
+                        <posx>1900</posx>
+                        <posy>0</posy>
+                        <width>20</width>
+                        <height>1080</height>
+                        <texture background="true">elements/blanc.png</texture>
+                        <visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(artists)]</visible>
+                    </control> 
+                
+            <control type="wraplist" id="568">
+                <posx>940</posx>
+                <posy>0</posy>
+                <width>1710</width>
+                <height>1080</height>
+                <onup>568</onup>
+                <onleft>9000</onleft>
+                <ondown>568</ondown>
+                <onleft></onleft>
+                <scrolltime>200</scrolltime>
+                <viewtype label="Flat">Flat</viewtype>
+                <orientation>vertical</orientation>
+                <pagecontrol>63</pagecontrol>
+                <focusposition>1</focusposition>
+                <itemlayout width="400" height="180">
+                    <control type="image">
+                    <posx>15</posx>
+                    <posy>0</posy>
+                    <width>150</width>
+                    <height>200</height>
+                    <aspectratio>stretch</aspectratio>
+                    <!--<texture background="true" diffuse="other_textures/poster_matte.png">$INFO[ListItem.Art(thumb)]</texture>-->
+                    <texture background="true" diffuse="movieposter_mask.png">DefaultVideoBigPoster.png</texture>
+                        <bordertexture border="18">poster_shadow.png</bordertexture>
+                        <bordersize>18</bordersize>
+                        <info>ListItem.Art(thumb)</info>
+                    <visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(artists)|Container.Content(episodes)]</visible>
+                </control>
+                    
+                </itemlayout>
+
+                <focusedlayout width="400" height="520">
+                    <control type="image">
+                        <posx>15</posx>
+                        <posy>20</posy>
+                        <width>370</width>
+                        <height>500</height>
+                        <aspectratio scalediffuse="false">stretch</aspectratio>
+                        <!--<texture background="true" scalediffuse="false" diffuse="poster_shadow.png">$INFO[ListItem.Art(thumb)]</texture>-->
+                        <texture background="true" diffuse="movieposter_mask.png">DefaultVideoBigPoster.png</texture>
+                        <bordertexture border="18">poster_shadow.png</bordertexture>
+                        <bordersize>18</bordersize>
+                        <info>ListItem.Art(thumb)</info>
+                        <visible>[Container.Content(movies)|Container.Content(tvshows)|Container.Content(artists)]</visible>
+                        <animation type="Focus" reversible="false">
+                                <effect type="zoom" center="auto" start="81" end="100" time="600" tween="back" easing="out" />
+                        </animation>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="group">
+                  <posx>50</posx>
+                    <posy>250</posy>
+                    <visible>!Container(568).Scrolling</visible> 
+                    <control type="label">
+                    <posx>0</posx>
+                    <posy>0</posy>
+                    <height>50</height>
+                    <width>800</width>
+                    <font>F60</font>
+                    <scroll>true</scroll>
+                    <info>ListItem.Label</info>
+                    <align>left</align>
+                    <shadowcolor>Black</shadowcolor>
+                </control>
+                <control type="textbox"> <!--plot-->
+            <posx>0</posx>
+            <posy>100</posy>
+            <width>800</width>
+             <height>555</height>
+            <font>F30</font>
+            <label>[B]$INFO[ListItem.Plot][/B]</label>
+            <shadowcolor>Black</shadowcolor>
+
+        </control>
+            </control>    
+            
+            <control type="scrollbar" id="63">
+                <posx>1274</posx>
+                <posy>288</posy>
+                <width>6</width>
+                <height>315</height>
+                <texturesliderbackground></texturesliderbackground>
+                <textureslidernib>bar.png</textureslidernib>
+                <textureslidernibfocus>scroll_nib.png</textureslidernibfocus>
+                <texturesliderbar></texturesliderbar>
+                <texturesliderbarfocus></texturesliderbarfocus>
+                <showonepage>true</showonepage>
+                <orientation>vertical</orientation>
+            </control>
+
+        </control>
+    </include>
+</includes>

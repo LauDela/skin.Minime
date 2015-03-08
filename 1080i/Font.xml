@@ -23,6 +23,12 @@
 			<filename>font.ttf</filename>
 			<size>25</size>
 		</font>
+    <font>
+			<name>F25R</name>
+			<filename>font.ttf</filename>
+			<size>25</size>
+                        <linespacing>0.75</linespacing>
+		</font>            
 
     <font>
 			<name>F30</name>
@@ -118,6 +124,11 @@
 	<name>FF20</name>
 	<filename>coolvetica.ttf</filename>
 	<size>20</size>
+</font>
+<font>
+	<name>FF30</name>
+	<filename>coolvetica.ttf</filename>
+	<size>30</size>
 </font>
 <font>
 	<name>FF40</name>

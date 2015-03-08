@@ -4,27 +4,33 @@
 
 	<include file="Defaults.xml" />
 	<include file="CommonViews.xml" />
-    <include file="IncludesMoviesSubMenus.xml" />
-    <include file="IncludesVideosSubMenus.xml" />
-    <include file="IncludesMusicSubMenus.xml" />
-    <include file="IncludesHomeSubMenus.xml" />
-    <include file="Viewtype_Songs.xml" />
-    <include file="Viewtype_defaut.xml" />
-    <include file="View_tv.xml" />
-    <include condition="!Skin.HasSetting(cache_vue_extrafanart)" file="Viewtype_full.xml" />
-    <include condition="!Skin.HasSetting(cache_vue_logo)" file="Viewtype_logo.xml" />
-    <include condition="!Skin.HasSetting(cache_vue_banner)" file="Viewtype_banner.xml" />
-    <include file="IncludesTVShowsSubMenus.xml" />
-    <include file="IncludesShutdownSubMenus.xml" />
-    <include file="IncludesOthers.xml" />
+        <include file="IncludesMoviesSubMenus.xml" />
+        <include file="IncludesVideosSubMenus.xml" />
+        <include file="IncludesMusicSubMenus.xml" />
+        <include file="IncludesHomeSubMenus.xml" />
+        <include file="IncludesPVR.xml"/>
+        <include file="Viewtype_Songs.xml" />
+        <include file="Viewtype_defaut.xml" />
+        <include file="View_tv.xml" />
+        <include condition="!Skin.HasSetting(cache_vue_extrafanart)" file="Viewtype_full.xml" />
+        <include condition="!Skin.HasSetting(cache_vue_logo)" file="Viewtype_logo.xml" />
+        <include condition="!Skin.HasSetting(cache_vue_banner)" file="Viewtype_banner.xml" />
+        <include file="IncludesTVShowsSubMenus.xml" />
+        <include file="IncludesShutdownSubMenus.xml" />
+        <include file="IncludesOthers.xml" />
 	<include file="View_50_List.xml" />
-    <include file="View_59_BigList.xml" />
-    <include condition="!Skin.HasSetting(cache_vue_clearart)" file="View_58_Horizon.xml" />
-    <include file="View_51_albums.xml" />
-    <include file="HomePage.xml" />
-    <include file="ViewsLiveTV.xml"/>
-    <include file="ViewsPVR.xml"/>
-    <include name="BarClock">
+        <include file="View_59_BigList.xml" />
+        <include file="Viewtype52.xml" />
+        <include condition="!Skin.HasSetting(cache_vue_simple)" file="Viewtype_simple.xml" />
+        <include condition="!Skin.HasSetting(cache_vue_flat)" file="Viewtype_flat.xml" />
+        <include condition="!Skin.HasSetting(cache_vue_clearart)" file="View_58_Horizon.xml" />
+        <include file="View_51_albums.xml" />
+        <include file="HomePage.xml" />
+        <include file="ViewsLiveTV.xml"/>
+        <include file="ViewsPVRGuide.xml"/>
+        <include file="ViewsPVR.xml"/>
+        <include file="Variables.xml"/>
+        <include name="BarClock">
     
     <!-- Hide weather somewhere to make sure it loads for widgets -->
                     <control type="image">
@@ -130,7 +136,7 @@
 				<colordiffuse>FanartDiffuse</colordiffuse>
 				<texture background="true" fallback="striped_room.jpg">$INFO[ListItem.Property(Fanart_Image)]</texture>
 				<colordiffuse></colordiffuse>
-				<visible>[!IsEmpty(ListItem.foldername) + [Container.Content(Artists) | Container.Content(Movies) | Container.Content(episodes)] + !Control.IsVisible(566)] | !Window.IsVisible(videolibrary)</visible>
+				<visible>[!IsEmpty(ListItem.foldername) + [Container.Content(Artists) | Container.Content(Movies) | Container.Content(episodes)] + !Control.IsVisible(566) + !Control.IsVisible(568)] | !Window.IsVisible(videolibrary)</visible>
 			</control>
             
 			
@@ -274,6 +280,21 @@
                 <imagepath background="true">$INFO[Skin.String(Home_Custom_Back_CustomMusicFolder)]</imagepath>
                 <colordiffuse>FanartDiffuse</colordiffuse>
                 <visible>Skin.HasSetting(Use_CustomMusicFolder)</visible>
+                <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
+            </control>
+        </control>
+        <control type="group">
+            <visible>[Container(300).HasFocus(16)]</visible>
+            <control type="multiimage">
+                <include>Dimensions_Fullscreen</include>
+                <randomize>true</randomize>
+                <timeperimage>8000</timeperimage>
+                <fadetime>3000</fadetime>
+                <pauseatend>0</pauseatend>
+                <loop>true</loop>
+                <imagepath background="true">$INFO[Skin.String(Home_Custom_Back_CustomHomeEPGFolder)]</imagepath>
+                <colordiffuse>FanartDiffuse</colordiffuse>
+                <visible>Skin.HasSetting(Use_CustomHomeEPGFolder)</visible>
                 <animation effect="fade" time="500" condition="!Skin.HasSetting(animation_aucune)">Hidden</animation>
             </control>
         </control>     
@@ -1658,4 +1679,206 @@
             <colordiffuse>White60</colordiffuse>
         </control>
     </include>
+    <include name="TVNextAiredListCommonLayout">
+		<itemlayout height="150" width="280">
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>280</width>
+				<height>145</height>
+				<texture border="10">button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<description>Thumb</description>
+				<left>5</left>
+				<top>5</top>
+				<width>270</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+			</control>
+			<control type="image">
+				<description>Banner</description>
+				<left>5</left>
+				<top>5</top>
+				<width>270</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
+				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+			</control>
+			<control type="image">
+				<description>Logo</description>
+				<left>5</left>
+				<top>5</top>
+				<width>270</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
+				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+			</control>
+			<control type="label">
+				<description>Episode Number</description>
+				<left>10</left>
+				<top>60</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(NextNumber),$LOCALIZE[20359] [COLOR=blue]-[/COLOR] ]</label>
+				<textcolor>white</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>Episode Name</description>
+				<left>10</left>
+				<top>80</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(NextTitle)]</label>
+				<textcolor>white</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>Next air date/time</description>
+				<left>10</left>
+				<top>100</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(NextDate), [COLOR=blue]-[/COLOR] ]</label>
+				<textcolor>grey2</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>Duration</description>
+				<left>10</left>
+				<top>120</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]]$INFO[ListItem.Property(Network), [COLOR=blue]-[/COLOR] (,)]</label>
+				<textcolor>grey2</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+		</itemlayout>
+		<focusedlayout height="150" width="280">
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>280</width>
+				<height>145</height>
+				<texture border="10">button-focus2.png</texture>
+			</control>
+			<control type="image">
+				<description>Thumb</description>
+				<left>5</left>
+				<top>5</top>
+				<width>270</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(poster))]</texture>
+				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),0)</visible>
+			</control>
+			<control type="image">
+				<description>Banner</description>
+				<left>5</left>
+				<top>5</top>
+				<width>270</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Art(banner))]</texture>
+				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),1)</visible>
+			</control>
+			<control type="image">
+				<description>Logo</description>
+				<left>5</left>
+				<top>5</top>
+				<width>270</width>
+				<height>55</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Property(Path),,logo.png]</texture>
+				<visible>StringCompare(Window(Home).Property(TVGuide.ThumbType),2)</visible>
+			</control>
+			<control type="label">
+				<description>Episode Number</description>
+				<left>10</left>
+				<top>60</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(NextNumber),$LOCALIZE[20359] [COLOR=blue]-[/COLOR] ]</label>
+				<textcolor>selected</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>Episode Name</description>
+				<left>10</left>
+				<top>80</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(NextTitle)]</label>
+				<textcolor>selected</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>Next air date/time</description>
+				<left>10</left>
+				<top>100</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(ShortTime)]$INFO[ListItem.Property(NextDate), [COLOR=blue]-[/COLOR] ]</label>
+				<textcolor>white</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>Duration</description>
+				<left>10</left>
+				<top>120</top>
+				<width>260</width>
+				<height>15</height>
+				<label>$INFO[ListItem.Property(Runtime),, $LOCALIZE[12391]]$INFO[ListItem.Property(Network), [COLOR=blue]-[/COLOR] (,)]</label>
+				<textcolor>white</textcolor>
+				<font>font12</font>
+				<align>center</align>
+			</control>
+		</focusedlayout>
+	</include>
+        <include name="Window_OpenClose_Animation">
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+	</include>
+        <include name="dialogeffect">
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="300">Visible</animation>
+		<animation effect="fade" time="300">Hidden</animation>
+	</include>
+        <include name="WindowTitleCommons">
+		<left>0</left>
+		<top>0</top>
+		<width min="0" max="800">auto</width>
+		<height>30</height>
+		<font>font14</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<scroll>false</scroll>
+		<align>left</align>
+		<aligny>center</aligny>
+	</include>
+        <include name="KeyboardButton">
+		<width>60</width>
+		<height>60</height>
+		<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+		<texturefocus>orange.png</texturefocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font13</font>
+		<focusedcolor>black</focusedcolor>
+	</include>
 </includes>

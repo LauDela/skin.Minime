@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <colors>
 	<color name="Black">FF000000</color>
+        <color name="Noir">FF000000</color>
 	<color name="White">FFFFFFFF</color>
+        <color name="Blanc">FFFFFFFF</color>
 	<color name="Red">FFFF0000</color>
 	<color name="Blue">FF0284C3</color>
 	<color name="Green">FF00FF00</color>
@@ -9,4 +11,9 @@
   	<color name="Gris">FF595A61</color>
   	<color name="Orange">FFF59806</color>
   	<color name="Accent">FFF59806</color>
+        <color name="Bleu">FF26a6d1</color>
+	<color name="Vert">FF3db39e</color>
+	<color name="Rouge">FFe2574c</color>
+	<color name="Jaune">FFefc75e</color>
+        <color name="Rose">FFe19178</color>
 </colors>

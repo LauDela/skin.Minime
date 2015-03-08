@@ -55,7 +55,7 @@
 		<textcolor>White</textcolor>
 		<focusedcolor>Black</focusedcolor>
 		<disabledcolor>Red</disabledcolor>
-		<texturefocus >orange.png</texturefocus>
+		<texturefocus>orange.png</texturefocus>
 		<texturenofocus ></texturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</default>

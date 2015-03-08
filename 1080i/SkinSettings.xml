@@ -156,11 +156,11 @@
 
         <control type="button" id="813">
 			<description>Multi Image button</description>
-			<width>700</width>
+			<width>800</width>
 			<height>40</height>
 			<label>$LOCALIZE[573]</label>
-    		<label2>$INFO[Skin.String(Home_Custom_Back_CustomOtherFolder)]</label2>
-			<align>center</align>
+                        <label2>$INFO[Skin.String(Home_Custom_Back_CustomOtherFolder)]</label2>
+			<align>left</align>
 			<onclick>Skin.SetPath(Home_Custom_Back_CustomOtherFolder)</onclick>
 		    <enable>Skin.HasSetting(Use_CustomOtherFolder)</enable>
 		</control>
@@ -176,11 +176,11 @@
 
         <control type="button" id="814">
 			<description>Multi Image button</description>
-			<width>700</width>
+			<width>800</width>
 			<height>40</height>
 			<label>$LOCALIZE[573]</label>
-    		<label2>$INFO[Skin.String(Home_Custom_Back_CustomMusicFolder)]</label2>
-			<align>center</align>
+                        <label2>$INFO[Skin.String(Home_Custom_Back_CustomMusicFolder)]</label2>
+			<align>left</align>
 			<onclick>Skin.SetPath(Home_Custom_Back_CustomMusicFolder)</onclick>
 		    <enable>Skin.HasSetting(Use_CustomMusicFolder)</enable>
 		</control>
@@ -195,11 +195,11 @@
 
         <control type="button" id="820">
 			<description>Multi Image button</description>
-			<width>700</width>
+			<width>800</width>
 			<height>40</height>
 			<label>$LOCALIZE[573]</label>
-    		<label2>$INFO[Skin.String(Music_Folder_Path)]</label2>
-			<align>center</align>
+                        <label2>$INFO[Skin.String(Music_Folder_Path)]</label2>
+			<align>left</align>
 			<onclick>Skin.SetPath(Music_Folder_Path)</onclick>
 		    <enable>Skin.HasSetting(CustomArtistLogo)</enable>
 		</control>
@@ -217,11 +217,11 @@
 
         <control type="button" id="815">
 			<description>Multi Image button</description>
-			<width>700</width>
+			<width>800</width>
 			<height>40</height>
 			<label>$LOCALIZE[573]</label>
-    		<label2>$INFO[Skin.String(Home_Custom_Back_CustomPicturesFolder)]</label2>
-			<align>center</align>
+                        <label2>$INFO[Skin.String(Home_Custom_Back_CustomPicturesFolder)]</label2>
+			<align>left</align>
 			<onclick>Skin.SetPath(Home_Custom_Back_CustomPicturesFolder)</onclick>
 		    <enable>Skin.HasSetting(Use_CustomPicturesFolder)</enable>
 		</control>
@@ -229,22 +229,22 @@
          <!--video-->
 
         <control type="radiobutton" id="806">
-						<width>750</width>
-						<height>40</height>
-            			<align>left</align>
-						<!--<font>font13</font>-->
-						<label>$LOCALIZE[33068] $LOCALIZE[3]</label>
-						<onclick>Skin.ToggleSetting(Use_CustomVideosFolder)</onclick>
-						<selected>Skin.HasSetting(Use_CustomVideosFolder)</selected>
-					</control>
+		<width>750</width>
+		<height>40</height>
+            	<align>left</align>
+		<!--<font>font13</font>-->
+		<label>$LOCALIZE[33068] $LOCALIZE[3]</label>
+		<onclick>Skin.ToggleSetting(Use_CustomVideosFolder)</onclick>
+		<selected>Skin.HasSetting(Use_CustomVideosFolder)</selected>
+	</control>
 
         <control type="button" id="816">
 				<description>Multi Image button</description>
-				<width>700</width>
+				<width>800</width>
 				<height>40</height>
 				<label>$LOCALIZE[573]</label>
-            	<label2>$INFO[Skin.String(Home_Custom_Back_CustomVideosFolder)]</label2>
-				<align>center</align>
+                                <label2>$INFO[Skin.String(Home_Custom_Back_CustomVideosFolder)]</label2>
+				<align>left</align>
 				<onclick>Skin.SetPath(Home_Custom_Back_CustomVideosFolder)</onclick>
 			    <enable>Skin.HasSetting(Use_CustomVideosFolder)</enable>
 		</control>
@@ -254,7 +254,7 @@
         <control type="radiobutton" id="807">
 						<width>750</width>
 						<height>40</height>
-            			<align>left</align>
+                                                <align>left</align>
 						<label>$LOCALIZE[33068] $LOCALIZE[513] - $LOCALIZE[20338]</label>
 						<onclick>Skin.ToggleSetting(Use_CustomHomeMovieFolder)</onclick>
 						<selected>Skin.HasSetting(Use_CustomHomeMovieFolder)</selected>
@@ -262,11 +262,11 @@
 
         <control type="button" id="817">
 				<description>Multi Image button</description>
-				<width>700</width>
+				<width>800</width>
 				<height>40</height>
 				<label>$LOCALIZE[573]</label>
-            	<label2>$INFO[Skin.String(Home_Custom_Back_CustomHomeMovieFolder)]</label2>
-				<align>center</align>
+                                <label2>$INFO[Skin.String(Home_Custom_Back_CustomHomeMovieFolder)]</label2>
+				<align>left</align>
 				<onclick>Skin.SetPath(Home_Custom_Back_CustomHomeMovieFolder)</onclick>
 			    <enable>Skin.HasSetting(Use_CustomHomeMovieFolder)</enable>
 		</control>
@@ -276,7 +276,7 @@
         <control type="radiobutton" id="808">
 			<width>750</width>
 			<height>40</height>
-            <align>left</align>
+                        <align>left</align>
 			<!--<font>font13</font>-->
 			<label>$LOCALIZE[33068] $LOCALIZE[513] - $LOCALIZE[2]</label>
 			<onclick>Skin.ToggleSetting(Use_CustomHomeMusicFolder)</onclick>
@@ -285,35 +285,57 @@
 
         <control type="button" id="818">
 				<description>Multi Image button</description>
-				<width>700</width>
+				<width>800</width>
 				<height>40</height>
 				<label>$LOCALIZE[573]</label>
-            	<label2>$INFO[Skin.String(Home_Custom_Back_CustomHomeMusicFolder)]</label2>
-				<align>center</align>
+                                <label2>$INFO[Skin.String(Home_Custom_Back_CustomHomeMusicFolder)]</label2>
+				<align>left</align>
 				<onclick>Skin.SetPath(Home_Custom_Back_CustomHomeMusicFolder)</onclick>
 			    <enable>Skin.HasSetting(Use_CustomHomeMusicFolder)</enable>
 		</control>
 
 		 <!--HOME - TV SHOW-->
 
-        <control type="radiobutton" id="809">
+                <control type="radiobutton" id="809">
 			<width>750</width>
 			<height>40</height>
-            <align>left</align>
+                        <align>left</align>
 			<label>$LOCALIZE[33068] $LOCALIZE[513] - $LOCALIZE[20343]</label>
 			<onclick>Skin.ToggleSetting(Use_CustomHomeTVFolder)</onclick>
 			<selected>Skin.HasSetting(Use_CustomHomeTVFolder)</selected>
 		</control>
 
-        <control type="button" id="819">
+                <control type="button" id="819">
 				<description>Multi Image button</description>
-				<width>700</width>
+				<width>800</width>
 				<height>40</height>
 				<label>$LOCALIZE[573]</label>
-            	<label2>$INFO[Skin.String(Home_Custom_Back_CustomHomeTVFolder)]</label2>
-				<align>center</align>
+                                <label2>$INFO[Skin.String(Home_Custom_Back_CustomHomeTVFolder)]</label2>
+				<align>left</align>
 				<onclick>Skin.SetPath(Home_Custom_Back_CustomHomeTVFolder)</onclick>
-			    <enable>Skin.HasSetting(Use_CustomHomeTVFolder)</enable>
+                                <enable>Skin.HasSetting(Use_CustomHomeTVFolder)</enable>
+		</control>
+                
+                <!--HOME - EPG-->
+
+                <control type="radiobutton" id="810">
+			<width>750</width>
+			<height>40</height>
+                        <align>left</align>
+			<label>$LOCALIZE[33068] $LOCALIZE[513] - $LOCALIZE[31952]</label>
+			<onclick>Skin.ToggleSetting(Use_CustomHomeEPGFolder)</onclick>
+			<selected>Skin.HasSetting(Use_CustomHomeEPGFolder)</selected>
+		</control>
+
+                <control type="button" id="821">
+				<description>Multi Image button</description>
+				<width>800</width>
+				<height>40</height>
+				<label>$LOCALIZE[573]</label>
+                                <label2>$INFO[Skin.String(Home_Custom_Back_CustomHomeEPGFolder)]</label2>
+				<align>left</align>
+				<onclick>Skin.SetPath(Home_Custom_Back_CustomHomeEPGFolder)</onclick>
+                                <enable>Skin.HasSetting(Use_CustomHomeEPGFolder)</enable>
 		</control>
 		
         
@@ -532,23 +554,32 @@
 			<onclick>Skin.ToggleSetting(cache_vue_banner)</onclick>
 			<selected>Skin.HasSetting(cache_vue_banner)</selected>
 		</control>
+                <control type="radiobutton" id="617">
+			<label>Grid view</label>
+                        <width>750</width>
+                        <align>left</align>
+			<include>Default_SettingRadioButton</include>
+			<onclick>Skin.ToggleSetting(cache_vue_grid)</onclick>
+			<selected>Skin.HasSetting(cache_vue_grid)</selected>
+		</control>
 		<control type="radiobutton" id="610">
 			<label>31960</label>
-            <width>750</width>
-           	<align>left</align>
+                        <width>750</width>
+                        <align>left</align>
 			<include>Default_SettingRadioButton</include>
 			<onclick>Skin.ToggleSetting(cache_vue_clearart)</onclick>
 			<selected>Skin.HasSetting(cache_vue_clearart)</selected>
 		</control>
 		<control type="radiobutton" id="611">
 			<label>31961</label>
-            <width>750</width>
-           	<align>left</align>
+                        <width>750</width>
+                        <align>left</align>
 			<include>Default_SettingRadioButton</include>
 			<onclick>Skin.ToggleSetting(vue_clearart_show_logo)</onclick>
 			<selected>Skin.HasSetting(vue_clearart_show_logo)</selected>
   		    <enable>!Skin.HasSetting(cache_vue_clearart)</enable>
 		</control>
+                
 		<!--Meteo-->
         <control type="radiobutton" id="612">
 			<width>750</width>
@@ -647,7 +678,7 @@
 						<font>font13</font>
 						<label>15311</label>
 						<label2>$INFO[Skin.String(custom1_Playlist_Path)]</label2>
-						<onclick>Skin.SetFile(custom1_Playlist_Path,,special://VideoPlaylists/)</onclick>
+						<onclick>Skin.SetFile(custom1_Playlist_Path,,special://videoplaylists/)</onclick>
 						<enable>Skin.HasSetting(Use_custom1_Playlist)</enable>
 					</control>
           			<control type="button" id="712">
@@ -667,12 +698,12 @@
 							<onclick>Skin.SetFile(custom1_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
                 			<enable>Skin.HasSetting(Use_custom1_Playlist)</enable>
 					</control>
-		<!--FIN CUSTOM MOVIE PLAYLIST 1-->
-		<!--CUSTOM HOME MOVIE PLAYLIST 2-->
+					<!--FIN CUSTOM MOVIE PLAYLIST 1-->
+					<!--CUSTOM HOME MOVIE PLAYLIST 2-->
 					<control type="radiobutton" id="720">
 						<width>750</width>
 						<height>40</height>
-            <align>left</align>
+            			<align>left</align>
 						<label>$LOCALIZE[524] 2</label>
 						<onclick>Skin.ToggleSetting(Use_custom2_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_custom2_Playlist)</selected>
@@ -680,37 +711,37 @@
 					<control type="button" id="721">
 						<description>Startup custom 2 Playlist Path</description>
 						<width>750</width>
-            <align>left</align>
+            			<align>left</align>
 						<height>40</height>
 						<font>font13</font>
 						<label>15311</label>
 						<label2>$INFO[Skin.String(custom2_Playlist_Path)]</label2>
-						<onclick>Skin.SetFile(custom2_Playlist_Path,,special://VideoPlaylists/)</onclick>
+						<onclick>Skin.SetFile(custom2_Playlist_Path,,special://videoplaylists/)</onclick>
 						<enable>Skin.HasSetting(Use_custom2_Playlist)</enable>
 					</control>
-          <control type="button" id="722">
-							<label>Name</label>
-              <label2>$INFO[Skin.String(custom2_Playlist_Label)]</label2>
-							<onclick>Skin.SetString(custom2_Playlist_Label)</onclick>
-              <align>left</align>
-              <enable>Skin.HasSetting(Use_custom2_Playlist)</enable>
-						</control>
-          <control type="button" id="723">
-								<description>Single Image button</description>
-								<width>680</width>
-								<height>40</height>
-                <align>left</align>
-								<label>Icon</label>
-                <label2>$INFO[Skin.String(custom2_Playlist_Icon)]</label2>
-								<onclick>Skin.SetFile(custom2_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
-                <enable>Skin.HasSetting(Use_custom2_Playlist)</enable>
+          			<control type="button" id="722">
+						<label>Name</label>
+              			<label2>$INFO[Skin.String(custom2_Playlist_Label)]</label2>
+						<onclick>Skin.SetString(custom2_Playlist_Label)</onclick>
+              			<align>left</align>
+              			<enable>Skin.HasSetting(Use_custom2_Playlist)</enable>
 					</control>
-<!--FIN CUSTOM MOVIE PLAYLIST 2-->
-<!--CUSTOM MOVIE PLAYLIST 3-->
+          			<control type="button" id="723">
+						<description>Single Image button</description>
+						<width>680</width>
+						<height>40</height>
+                		<align>left</align>
+						<label>Icon</label>
+                		<label2>$INFO[Skin.String(custom2_Playlist_Icon)]</label2>
+						<onclick>Skin.SetFile(custom2_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                		<enable>Skin.HasSetting(Use_custom2_Playlist)</enable>
+					</control>
+					<!--FIN CUSTOM MOVIE PLAYLIST 2-->
+					<!--CUSTOM MOVIE PLAYLIST 3-->
 					<control type="radiobutton" id="730">
 						<width>750</width>
 						<height>40</height>
-            <align>left</align>
+            			<align>left</align>
 						<label>$LOCALIZE[524] 3</label>
 						<onclick>Skin.ToggleSetting(Use_custom3_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_custom3_Playlist)</selected>
@@ -718,37 +749,37 @@
 					<control type="button" id="731">
 						<description>Startup custom 3 Playlist Path</description>
 						<width>750</width>
-            <align>left</align>
+            			<align>left</align>
 						<height>40</height>
 						<font>font13</font>
 						<label>15311</label>
 						<label2>$INFO[Skin.String(custom3_Playlist_Path)]</label2>
-						<onclick>Skin.SetFile(custom3_Playlist_Path,,special://VideoPlaylists/)</onclick>
+						<onclick>Skin.SetFile(custom3_Playlist_Path,,special://videoplaylists/)</onclick>
 						<enable>Skin.HasSetting(Use_custom3_Playlist)</enable>
 					</control>
-          <control type="button" id="732">
-							<label>Name</label>
-              <label2>$INFO[Skin.String(custom3_Playlist_Label)]</label2>
-							<onclick>Skin.SetString(custom3_Playlist_Label)</onclick>
-              <align>left</align>
-              <enable>Skin.HasSetting(Use_custom3_Playlist)</enable>
-						</control>
-          <control type="button" id="733">
-								<description>Single Image button</description>
-								<width>680</width>
-								<height>40</height>
-                <align>left</align>
-								<label>Icon</label>
-                <label2>$INFO[Skin.String(custom3_Playlist_Icon)]</label2>
-								<onclick>Skin.SetFile(custom3_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
-                <enable>Skin.HasSetting(Use_custom3_Playlist)</enable>
+          			<control type="button" id="732">
+						<label>Name</label>
+              			<label2>$INFO[Skin.String(custom3_Playlist_Label)]</label2>
+						<onclick>Skin.SetString(custom3_Playlist_Label)</onclick>
+              			<align>left</align>
+              			<enable>Skin.HasSetting(Use_custom3_Playlist)</enable>
 					</control>
-<!--FIN CUSTOM MOVIE PLAYLIST 3-->
-<!--CUSTOM MOVIE PLAYLIST 4-->
+          			<control type="button" id="733">
+						<description>Single Image button</description>
+						<width>680</width>
+						<height>40</height>
+                		<align>left</align>
+						<label>Icon</label>
+                		<label2>$INFO[Skin.String(custom3_Playlist_Icon)]</label2>
+						<onclick>Skin.SetFile(custom3_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                		<enable>Skin.HasSetting(Use_custom3_Playlist)</enable>
+					</control>
+					<!--FIN CUSTOM MOVIE PLAYLIST 3-->
+					<!--CUSTOM MOVIE PLAYLIST 4-->
 					<control type="radiobutton" id="740">
 						<width>750</width>
 						<height>40</height>
-            <align>left</align>
+            			<align>left</align>
 						<label>$LOCALIZE[524] 4</label>
 						<onclick>Skin.ToggleSetting(Use_custom4_Playlist)</onclick>
 						<selected>Skin.HasSetting(Use_custom4_Playlist)</selected>
@@ -756,50 +787,49 @@
 					<control type="button" id="741">
 						<description>Startup custom 4 Playlist Path</description>
 						<width>750</width>
-            <align>left</align>
+            			<align>left</align>
 						<height>40</height>
 						<font>font13</font>
 						<label>15311</label>
 						<label2>$INFO[Skin.String(custom4_Playlist_Path)]</label2>
-						<onclick>Skin.SetFile(custom4_Playlist_Path,,special://VideoPlaylists/)</onclick>
+						<onclick>Skin.SetFile(custom4_Playlist_Path,,special://videoplaylists/)</onclick>
 						<enable>Skin.HasSetting(Use_custom4_Playlist)</enable>
 					</control>
-          <control type="button" id="742">
-							<label>Name</label>
-              <label2>$INFO[Skin.String(custom4_Playlist_Label)]</label2>
-							<onclick>Skin.SetString(custom4_Playlist_Label)</onclick>
-              <align>left</align>
-              <enable>Skin.HasSetting(Use_custom4_Playlist)</enable>
-						</control>
-          <control type="button" id="743">
-								<description>Single Image button</description>
-								<width>680</width>
-								<height>40</height>
-                <align>left</align>
-								<label>Icon</label>
-                <label2>$INFO[Skin.String(custom4_Playlist_Icon)]</label2>
-								<onclick>Skin.SetFile(custom4_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
-                <enable>Skin.HasSetting(Use_custom4_Playlist)</enable>
+          			<control type="button" id="742">
+						<label>Name</label>
+              			<label2>$INFO[Skin.String(custom4_Playlist_Label)]</label2>
+						<onclick>Skin.SetString(custom4_Playlist_Label)</onclick>
+              			<align>left</align>
+              			<enable>Skin.HasSetting(Use_custom4_Playlist)</enable>
 					</control>
-<!--FIN CUSTOM MOVIE PLAYLIST 4-->
+          			<control type="button" id="743">
+						<description>Single Image button</description>
+						<width>680</width>
+						<height>40</height>
+                		<align>left</align>
+						<label>Icon</label>
+                		<label2>$INFO[Skin.String(custom4_Playlist_Icon)]</label2>
+						<onclick>Skin.SetFile(custom4_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                		<enable>Skin.HasSetting(Use_custom4_Playlist)</enable>
+					</control>
+					<!--FIN CUSTOM MOVIE PLAYLIST 4-->
+				</control>
 
-</control>
+				<!-- CUSTOM HOME MUSIC PLAYLISTE -->
 
-<!-- CUSTOM HOME MUSIC PLAYLISTE -->
+      			<control type="grouplist" id="800">
+					<description>Général Area</description>
+					<width>820</width>
+					<height>900</height>
+					<itemgap>2</itemgap>
+					<onup>500</onup>
+					<ondown>500</ondown>
+					<onleft>100</onleft>
+					<onright>-</onright>
+					<orientation>vertical</orientation>
+					<visible>Container(100).Hasfocus(6)</visible>
 
-      <control type="grouplist" id="800">
-				<description>Général Area</description>
-				<width>820</width>
-				<height>900</height>
-				<itemgap>2</itemgap>
-				<onup>500</onup>
-				<ondown>500</ondown>
-				<onleft>100</onleft>
-				<onright>-</onright>
-				<orientation>vertical</orientation>
-				<visible>Container(100).Hasfocus(6)</visible>
-
-        <!--CUSTOM HOME MUSIC PLAYLIST 1-->
+        			<!--CUSTOM HOME MUSIC PLAYLIST 1-->
 					<control type="radiobutton" id="810">
 						<width>750</width>
 						<height>40</height>
@@ -820,24 +850,24 @@
 						<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
 					</control>
           			<control type="button" id="812">
-							<label>Name</label>
-              				<label2>$INFO[Skin.String(custom10_Playlist_Label)]</label2>
-							<onclick>Skin.SetString(custom10_Playlist_Label)</onclick>
-              				<align>left</align>
-              				<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
+						<label>Name</label>
+              			<label2>$INFO[Skin.String(custom10_Playlist_Label)]</label2>
+						<onclick>Skin.SetString(custom10_Playlist_Label)</onclick>
+              			<align>left</align>
+              			<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
 					</control>
           			<control type="button" id="813">
-							<description>Single Image button</description>
-							<width>680</width>
-							<height>40</height>
-                			<align>left</align>
-							<label>Icon</label>
-                			<label2>$INFO[Skin.String(custom10_Playlist_Icon)]</label2>
-							<onclick>Skin.SetFile(custom10_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
-                			<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
+						<description>Single Image button</description>
+						<width>680</width>
+						<height>40</height>
+                		<align>left</align>
+						<label>Icon</label>
+                		<label2>$INFO[Skin.String(custom10_Playlist_Icon)]</label2>
+						<onclick>Skin.SetFile(custom10_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
+                		<enable>Skin.HasSetting(Use_custom10_Playlist)</enable>
 					</control>
-		<!--FIN CUSTOM MOVIE PLAYLIST 1-->
-		<!--CUSTOM HOME MOVIE PLAYLIST 2-->
+					<!--FIN CUSTOM MOVIE PLAYLIST 1-->
+					<!--CUSTOM HOME MOVIE PLAYLIST 2-->
 					<control type="radiobutton" id="820">
 						<width>750</width>
 						<height>40</height>
@@ -950,9 +980,8 @@
 						<onclick>Skin.SetFile(custom40_Playlist_Icon,.png|.jpg|.gif,special://skin/media/ico/)</onclick>
                 		<enable>Skin.HasSetting(Use_custom40_Playlist)</enable>
 					</control>
-				<!--FIN CUSTOM MOVIE PLAYLIST 4-->
-
-</control>
+					<!--FIN CUSTOM MOVIE PLAYLIST 4-->
+				</control>
 
 			</control>
 <!-- FIN SPECIFIQUE -->

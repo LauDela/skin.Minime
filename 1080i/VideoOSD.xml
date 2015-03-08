@@ -15,7 +15,7 @@
 				<posy>-10</posy>
 				<width>1280</width>
 				<height>720</height>
-				<texture>other_textures/black-back.png</texture>
+				<texture>elements/gris02.png</texture>
 				<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
 				<visible>Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings)</visible>
 			</control>
@@ -23,13 +23,7 @@
 			<control type="group">
 				<visible>!Window.IsVisible(sliderdialog)</visible>
 
-				<control type="image">
-					<posx>440</posx>
-					<posy>70</posy>
-					<width>400</width>
-					<height>50</height>
-					<texture border="22,0,22,22">other_textures/DialogContextBottom.png</texture>
-				</control>
+				
 
 				<control type="label">
 					<description>Current Control</description>
@@ -44,8 +38,8 @@
 					<posx>120</posx>
 					<posy>-80</posy>
 					<width>1040</width>
-					<height>160</height>
-					<texture border="22">other_textures/ContentPanel.png</texture>
+					<height>150</height>
+					<texture border="22">elements/gris02.png</texture>
 				</control>
 
 				<control type="grouplist" id="100">

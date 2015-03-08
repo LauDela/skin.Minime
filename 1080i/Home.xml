@@ -192,10 +192,10 @@
 				</item>
 				<item id="16">
 						<label>31952</label>
-						<onclick>ActivateWindow(PVR)</onclick>
+						<onclick>ActivateWindow(TVChannels)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>System.GetBool(pvrmanager.enabled)</visible>
+						<visible>PVR.HasTVChannels</visible>
 					</item>
 				<item id="4">
 					<description>Pictures</description>

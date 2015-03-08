@@ -3,13 +3,14 @@
 <window id="2">
 	<defaultcontrol always="true">504</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>504,59</views>
+	<views>504,59,52</views>
 
 	<controls>
 
 		<include>GlobalBackground</include>
 		<include>View_59_BigList</include>
 		<include>Viewtype_defaut</include>
+                <include condition="!Skin.HasSetting(cache_vue_grid)" >Viewtype52</include>
 
 		<control type="image">
             <posx>0</posx>
