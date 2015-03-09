@@ -105,7 +105,7 @@
                         <top>0</top>
                         <width>170</width>
                         <height>27</height>
-                        <font>Font72</font>
+                        <font>F64</font>
                         <align>center</align>
                         <label>$INFO[ListItem.Property(TotalSeasons)]</label>
                         <textcolor>Blanc</textcolor>    
@@ -117,14 +117,14 @@
                         <height>27</height>
                         <font>Font20</font>
                         <align>center</align>
-                        <label>Saisons</label>
+                        <label>$LOCALIZE[33054]</label>
                         <textcolor>Blanc</textcolor>
                     </control>
                     
                     
                 </control>
                 <control type="group">
-                    <left>200</left>
+                    <left>105</left>
                     <top>50</top>
                     <visible>Container.Content(tvshows)</visible>
                     <control type="label">
@@ -132,7 +132,7 @@
                         <top>0</top>
                         <width>170</width>
                         <height>27</height>
-                        <font>Font72</font>
+                        <font>F64</font>
                         <align>center</align>
                         <label>$INFO[ListItem.Property(TotalEpisodes)]</label>
                         <textcolor>Blanc</textcolor>
@@ -144,30 +144,36 @@
                         <height>27</height>
                         <font>Font20</font>
                         <align>center</align>
-                        <label>Episodes</label>
+                        <label>$LOCALIZE[20360]</label>
                         <textcolor>Blanc</textcolor>
+                    </control>
+                    
+                </control>  
+                <control type="group">
+                    <left>220</left>
+                    <top>50</top>
+                    <visible>Container.Content(tvshows)</visible>
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>170</width>
+                        <height>27</height>
+                        <font>F64</font>
+                        <align>center</align>
+                        <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+                        <textcolor>Orange</textcolor>
                     </control>
                     <control type="label">
                         <left>0</left>
-                        <top>90</top>
+                        <top>50</top>
                         <width>170</width>
                         <height>27</height>
-                        <font>Font48</font>
+                        <font>Font20</font>
                         <align>center</align>
-                        <label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-                        <textcolor>Bleu</textcolor>
+                        <label>16101</label>
+                        <textcolor>Orange</textcolor>
                     </control>
-                    <control type="label">
-                        <left>120</left>
-                        <top>110</top>
-                        <width>62</width>
-                        <height>27</height>
-                        <font>Font15</font>
-                        <align>right</align>
-                        <label>non vus</label>
-                        <textcolor>Bleu</textcolor>
-                    </control>
-                </control>  
+                </control>    
                   
                 <!-- END TV SHOW-->
                 <control type="image">

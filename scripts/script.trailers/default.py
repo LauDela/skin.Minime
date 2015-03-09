@@ -1,8 +1,8 @@
 # Trailers (local)
 # Author - LauDela
 # Version - 1.1
-# Compatibility - FRODO
-# AVR 2013
+# Compatibility - HELIX
+# MARCH 2015
 
 import xbmc
 import xbmcgui
@@ -11,7 +11,7 @@ import os
 import sqlite3
 
 #FRODO
-bdd_video = os.path.join(xbmc.translatePath("special://database"), 'MyVideos75.db')
+bdd_video = os.path.join(xbmc.translatePath("special://database"), 'MyVideos91.db')
 
 
 def log(txt):

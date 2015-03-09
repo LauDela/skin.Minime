@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.Minime" version="1.0.0" name="Minime" provider-name="LauDela">
+<addon id="skin.Minime" version="2.0.0" name="Minime" provider-name="LauDela">
 	<requires>
 		<import addon="xbmc.gui" version="4.0.0"/>
 		<import version="0.0.16" addon="service.skin.widgets"/>	
@@ -12,6 +12,6 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary>Created by LauDela</summary>
-		<description>A basic skin for XBMC.</description>
+		<description>A basic skin for KODI.</description>
 	</extension>
 </addon>

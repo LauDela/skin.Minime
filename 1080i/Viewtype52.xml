@@ -614,7 +614,7 @@
                             <texture>$VAR[StatusOverlayWide]</texture>
 			</control>
 			<control type="label">
-                            <left>60</left>
+                            <left>70</left>
                             <top>395</top>
                             <width>1500</width>
                             <height>27</height>
@@ -625,13 +625,13 @@
                             <visible>!Container.Content(episodes)</visible>
 			</control>
       			<control type="label">
-                            <left>50</left>
+                            <left>70</left>
                             <top>395</top>
                             <width>1740</width>
                             <height>27</height>
                             <font>F50</font>
                             <align>left</align>
-                            <label>Saison $INFO[ListItem.Season], épisode $INFO[ListItem.Label]</label>
+                            <label>$LOCALIZE[20373] $INFO[ListItem.Season], $LOCALIZE[20452] $INFO[ListItem.Label]</label>
                             <textcolor>Blanc</textcolor>
                             <visible>Container.Content(episodes)+ !IsEmpty(ListItem.Season)</visible>
 			</control>
@@ -947,13 +947,7 @@
                     </control>
                     
                     
-                    
-                    
-                    
-                    
-                    
-		</control>
-                <control type="image">
+                    <control type="image">
                     <left>0</left>
                     <bottom>0</bottom>
                     <width>1950</width>
@@ -961,6 +955,12 @@
                     <texture>orange.png</texture>
                     <aspectratio>stretch</aspectratio>
                 </control>
+                    
+                    
+                    
+                    
+		</control>
+                
             
         </include>
             
