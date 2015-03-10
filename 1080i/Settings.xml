@@ -17,9 +17,9 @@
 			</control>
 
 		<control type="list" id="9000">
-			<posx>810</posx>
+			<posx>770</posx>
 			<posy>108</posy>
-			<width>240</width>
+			<width>350</width>
 			<height>644</height>
 			<onup>9000</onup>
 			<ondown>9000</ondown>
@@ -27,14 +27,10 @@
 			<scrolltime>200</scrolltime>
 			<itemlayout width="350" height="46">
 
-				<control type="image">
-					<width>240</width>
-					<height>44</height>
-					<texture border="2"></texture>
-				</control>
+				
 
 				<control type="label">
-					<posx>120</posx>
+					<posx>0</posx>
 					<width>340</width>
 					<font>Medium</font>
 					<align>center</align>
@@ -46,17 +42,18 @@
 			<focusedlayout width="350" height="46">
 
 				<control type="image">
-					<width>240</width>
+					<width>340</width>
 					<height>44</height>
 					<texture border="5">orange.png</texture>
 				</control>
 
 				<control type="label">
-					<posx>120</posx>
+					<posx>0</posx>
 					<width>340</width>
 					<font>Medium</font>
+                                        <textcolor>Noir</textcolor>
 					<align>center</align>
-					<label>$INFO[ListItem.Label]</label>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
 				</control>
 
 			</focusedlayout>
@@ -126,20 +123,6 @@
 			</content>
 		</control>
 <!-- Settings level -->
-			<control type="button" id="8004">
-				<width>970</width>
-				<height>42</height>
-				<font>F30</font>
-				<label>31016</label>
-				<textcolor>TextColor2</textcolor>
-				<focusedcolor>TextColor1</focusedcolor>
-				<invalidcolor>TextColor4</invalidcolor>
-				<disabledcolor>TextColor4</disabledcolor>
-				<onright>SetProperty(ChangeSettingsLevel,true)</onright>
-				<onright>ActivateWindow(appearancesettings)</onright>
-				<onclick>SetProperty(ChangeSettingsLevel,true)</onclick>
-				<onclick>ActivateWindow(appearancesettings)</onclick>
-			</control>
 	</controls>
 
 </window>
