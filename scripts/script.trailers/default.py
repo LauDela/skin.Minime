@@ -11,7 +11,7 @@ import os
 import sqlite3
 
 #FRODO
-bdd_video = os.path.join(xbmc.translatePath("special://database"), 'MyVideos91.db')
+bdd_video = os.path.join(xbmc.translatePath("special://database"), 'MyVideos90.db')
 
 
 def log(txt):
