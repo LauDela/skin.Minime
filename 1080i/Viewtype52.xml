@@ -34,7 +34,7 @@
 			<preloaditems>4</preloaditems>
 			<focusposition>1</focusposition>
 			<orientation>vertical</orientation>
-			<viewtype label="Grid">list</viewtype>
+			<viewtype label="Grid 52">list</viewtype>
 			<scrolltime tween="sine" easing="out">240</scrolltime>
                         <itemlayout width="280" height="350" condition="Container.Content(artists) | Container.Content(albums)| Container.Content(songs)">    <!--MUSIC -->                            
                             <control type="group">
@@ -226,23 +226,23 @@
                                     <visible>!Container.Content(genres) + !SubString(ListItem.Icon,Default)</visible>
 				</control>
                                 <control type="label">
-                                    <left>360</left>
-                                    <top>230</top>
-                                    <width>370</width>
+                                    <left>0</left>
+                                    <top>240</top>
+                                    <width>350</width>
                                     <height>27</height>
                                     <font>F20</font>
                                     <align>right</align>
-                                    <label>Saison [B]$INFO[ListItem.Season][/B]</label>
+                                    <label>$LOCALIZE[20373] [B]$INFO[ListItem.Season][/B]</label>
                                     <textcolor>Blanc</textcolor>
 				</control>
                                 <control type="label">
-                                    <left>360</left>
-                                    <top>250</top>
-                                    <width>370</width>
+                                    <left>0</left>
+                                    <top>260</top>
+                                    <width>350</width>
                                     <height>27</height>
                                     <font>F20</font>
                                     <align>right</align>
-                                    <label>Episode [B]$INFO[ListItem.Episode][/B]</label>
+                                    <label>$LOCALIZE[20359] [B]$INFO[ListItem.Episode][/B]</label>
                                     <textcolor>Blanc</textcolor>
 				</control>
 
@@ -644,7 +644,7 @@
                             <font>F50</font>
                             <align>right</align>
                             <textcolor>Blanc</textcolor>
-                            <label>$INFO[ListItem.Duration] min</label>
+                            <label>$VAR[Duration]</label>
                             <visible>!IsEmpty(ListItem.Duration)</visible>
 			</control>
 			<control type="image">

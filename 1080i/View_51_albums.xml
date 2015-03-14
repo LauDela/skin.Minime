@@ -26,7 +26,7 @@
 			<ondown>9000</ondown>
 			<orientation>horizontal</orientation>
 			<pagecontrol>60</pagecontrol>
-			<viewtype label="Albums">Albums</viewtype>
+			<viewtype label="Albums 51">Albums</viewtype>
 			<scrolltime>100</scrolltime>
 			<visible>Container.Content(albums)</visible>
 			<animation type="Conditional" condition="ControlGroup(9000).HasFocus()">

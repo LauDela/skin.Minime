@@ -29,7 +29,7 @@
 			<ondown condition="Container.Content(artists)">900</ondown>
 			<orientation>horizontal</orientation>
 			<pagecontrol>60</pagecontrol>
-			<viewtype label="535">list-50</viewtype>
+			<viewtype label="List 50">list-50</viewtype>
 			<scrolltime>100</scrolltime>
 			<focusposition>0</focusposition>
 			<!--<visible>!Container.Content(songs)+!Container.Content(albums)</visible>-->
@@ -679,7 +679,7 @@
 				<font>F30</font>
 				<align>left</align>
 				<shadowcolor>Black</shadowcolor>
-				<label>$INFO[ListItem.Duration] [COLOR Accent]min.[/COLOR]</label>
+				<label>$VAR[Duration]</label>
 				<visible>!IsEmpty(ListItem.Title) + [Container.Content(movies)]</visible>
 			</control>
         
