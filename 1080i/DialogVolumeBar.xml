@@ -16,7 +16,7 @@
 				<posy>0</posy>
 				<width>400</width>
 				<height>44</height>
-				<texture border="20">other_textures/OverlayDialogBackground.png</texture>
+				<texture border="20">elements/gris01.png</texture>
 			</control>
 
 			<control type="group">
@@ -37,8 +37,9 @@
 					<posx>50</posx>
 					<posy>12</posy>
 					<width>330</width>
-					<height>18</height>
+					<height>5</height>
 					<info>Player.Volume</info>
+                                        
 				</control>
 
 			</control>
